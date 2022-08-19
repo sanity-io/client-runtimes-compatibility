@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "format": "npx prettier --ignore-path .gitignore --write ."
+  },
   "prettier": {
     "semi": false,
     "singleQuote": true

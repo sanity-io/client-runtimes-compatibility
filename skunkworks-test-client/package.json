@@ -1,0 +1,11 @@
+{
+  "name": "skunkworks-test-client",
+  "version": "0.0.0",
+  "homepage": "https://www.sanity.io/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes.git"
+  },
+  "license": "MIT",
+  "author": "Sanity.io <hello@sanity.io>"
+}
