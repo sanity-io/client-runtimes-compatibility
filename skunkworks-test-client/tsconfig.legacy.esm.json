@@ -1,7 +1,0 @@
-{
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "target": "es5",
-    "outFile": "dist/index.legacy.esm.js"
-  }
-}

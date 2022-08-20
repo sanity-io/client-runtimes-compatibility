@@ -1,7 +1,0 @@
-{
-  "extends": "./tsconfig.legacy.esm.json",
-  "compilerOptions": {
-    "module": "commonjs",
-    "outFile": "dist/index.legacy.esm.js"
-  }
-}

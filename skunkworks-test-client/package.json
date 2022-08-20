@@ -9,24 +9,36 @@
   "license": "MIT",
   "author": "Sanity.io <hello@sanity.io>",
   "type": "module",
-  "imports": {
-    "#fetch": {
+  "exports": {
+    ".": {
+      "worker": "./lib/index.worker.js",
+      "deno": "./lib/index.deno.js",
+      "browser": "./lib/index.browser.js",
       "node": {
-        "require": "node-fetch"
+        "module": "./lib/index.node.js",
+        "import": "./lib/index.node.wrapper.js",
+        "require": "./lib/index.node.cjs"
       },
-      "default": "./src/fetch.ts"
-    }
+      "require": "./lib/index.require.cjs",
+      "default": "./lib/index.default.js"
+    },
+    "./package.json": "./package.json"
   },
+  "main": "./lib/main.cjs",
+  "module": "./lib/module.js",
+  "browser": {
+    "node-fetch": "./lib/browser.fetch.cjs",
+    "./lib/main.node.condition.cjs": "./lib/main.browser.condition.js",
+    "./lib/module.node.condition.cjs": "./lib/module.browser.condition.js"
+  },
+  "types": "./lib/types.d.ts",
   "files": [
-    "dist"
+    "lib"
   ],
   "dependencies": {
     "node-fetch": "^2.6.7"
   },
   "devDependencies": {
-    "@sanity/semantic-release-preset": "^2.0.0",
-    "@tsconfig/strictest": "^1.0.1",
-    "@types/node": "^18.7.8",
-    "typescript": "^4.7.4"
+    "@sanity/semantic-release-preset": "^2.0.0"
   }
 }
