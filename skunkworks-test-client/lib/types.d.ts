@@ -11,3 +11,6 @@ export default function createClient({
 }: ClientOptions): {
   fetch(query: string): Promise<any>
 }
+
+export const environment: string
+export const condition: string
