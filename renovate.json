@@ -6,6 +6,11 @@
       "packageNames": ["skunkworks-test-client", "next-sanity"],
       "rangeStrategy": "pin",
       "schedule": ["at any time"]
+    },
+    {
+      "packageNames": ["node-fetch"],
+      "followTag": "cjs",
+      "rangeStrategy": "pin"
     }
   ]
 }
