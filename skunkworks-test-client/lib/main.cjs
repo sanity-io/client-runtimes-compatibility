@@ -1,7 +1,7 @@
 // This import is used by legacy tooling that don't support pkg.exports, and don't understand pkg.module, or is bundling for ESM and is ignoring pkg.module
 
 const fetch = require('node-fetch')
-const condition = require('./main.node.condition.cjs')
+const _condition = require('./main.node.condition.cjs')
 
 module.exports = function (options) {
   var projectId = options.projectId
@@ -24,4 +24,4 @@ module.exports = function (options) {
   }
 }
 export var environment = 'CJS+ES5'
-export var condition = condition
+export var condition = _condition

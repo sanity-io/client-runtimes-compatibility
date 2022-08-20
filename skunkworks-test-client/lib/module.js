@@ -1,7 +1,7 @@
 // This import is only used by tooling that doesn't support pkg.exports, and is using ESM formats for tree-shaking and expects ES5, and expects node as the environment
 
 import fetch from 'node-fetch'
-import condition from './module.node.condition.js'
+import _condition from './module.node.condition.js'
 
 export default function (options) {
   var projectId = options.projectId
@@ -24,4 +24,4 @@ export default function (options) {
   }
 }
 export var environment = 'ESM+ES5'
-export var condition = condition
+export var condition = _condition
