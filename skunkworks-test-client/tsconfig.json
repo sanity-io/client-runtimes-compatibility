@@ -1,8 +1,12 @@
-{"extends": "@tsconfig/strictest/tsconfig.json","compilerOptions": {
-  "target": "esnext",
-  "lib": ["esnext","webworker"],
-  "moduleResolution": "nodenext",
-  "declaration": true,
-  "declarationMap": true,
-  "sourceMap": true
-},"include": ["src/**/*"]}
+{
+  "extends": "@tsconfig/strictest/tsconfig.json",
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": ["esnext", "webworker"],
+    "moduleResolution": "nodenext",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true
+  },
+  "include": ["src/**/*"]
+}
