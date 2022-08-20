@@ -5,6 +5,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.2](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v1.1.1...v1.1.2) (2022-08-20)
+
+### Bug Fixes
+
+- **deps:** pin dependencies ([#3](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/3)) ([0893f41](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/0893f41f73c0ff949744ab2df7b23577a5276598))
+
 ## [1.1.1](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v1.1.0...v1.1.1) (2022-08-20)
 
 ### Bug Fixes
