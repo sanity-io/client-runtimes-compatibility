@@ -5,6 +5,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v1.1.2...v1.1.3) (2022-08-20)
+
+### Bug Fixes
+
+- export missing types ([cc28c53](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/cc28c53899bec0c5bc639764c6675249664c6c2b))
+
 ## [1.1.2](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v1.1.1...v1.1.2) (2022-08-20)
 
 ### Bug Fixes
