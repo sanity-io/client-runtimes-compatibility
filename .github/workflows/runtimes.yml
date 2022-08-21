@@ -91,6 +91,7 @@ jobs:
           name: node-${{ env.nodeMajor }}
           path: runtimes/${{ matrix.test }}/artifacts/*.json
           if-no-files-found: error
+          retention-days: 1
       - run: git status
 
   artifacts:
