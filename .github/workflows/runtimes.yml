@@ -3,6 +3,7 @@ name: Build Runtimes
 
 on:
   push:
+    branches: [main]
     paths:
       - 'runtimes/node-cjs-script/**'
       - 'runtimes/node-esm-script/**'
@@ -78,18 +79,20 @@ jobs:
           node-version: ${{ matrix.node-version }}
       # they test two packages, one with type: module + index.cjs, the other type: commonjs + index.mjs
       - run: cat package.json
+      - uses: actions/upload-artifact@v3
+        with:
+          name: node-${{ matrix.node-version }}
+          path: '{expected,actual}.json'
       - run: git status
 
   artifacts:
     runs-on: ubuntu-latest
     needs: [bun, deno, node]
-    if: github.ref_name == 'main'
+    # if: github.ref_name == 'main'
     steps:
       - uses: actions/checkout@v3
       - uses: actions/download-artifact@v3
         id: download
-        with:
-          path: artifacts
       - name: 'Dump download outputs'
         run: echo '${{ toJSON(steps.download.outputs) }}'
       - run: ls ${{steps.download.outputs.download-path}}
