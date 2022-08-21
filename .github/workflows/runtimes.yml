@@ -107,7 +107,7 @@ jobs:
           path: dashboard/public/artifacts
       - name: 'Dump download outputs'
         run: echo '${{ toJSON(steps.download.outputs) }}'
-      - run: ls ${{steps.download.outputs.download-path}}
+      - run: ls -R ${{steps.download.outputs.download-path}}
       - run: git status
       - run: npx prettier --ignore-path .gitignore --write dashboard/public/artifacts
       - uses: EndBug/add-and-commit@v9
