@@ -2,11 +2,13 @@
 
 import fetch from 'node-fetch'
 import _condition from './module.node.condition.js'
+import env from './env.mjs'
 
 export default function (options) {
   var projectId = options.projectId
   var dataset = options.dataset
   return {
+    env,
     fetch(query) {
       return fetch(
         'https://'

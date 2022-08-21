@@ -9,6 +9,9 @@ export default function createClient({
   dataset,
   apiVersion,
 }: ClientOptions): {
+  env: {
+    [key: string]: unknown
+  }
   fetch(query: string): Promise<any>
 }
 
