@@ -19,6 +19,8 @@ jobs:
     # https://github.com/oven-sh/bun#buntranspiler
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
       - run: git diff --quiet HEAD^ HEAD ./
       - uses: antongolub/action-setup-bun@v1
         with:
@@ -34,6 +36,8 @@ jobs:
     # Run https://deno.land/manual/node/compatibility_mode#module-resolution mode on one test, and https://esm.sh/ on the other (https://deno.land/manual/node/cdns)
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
       - run: git diff --quiet HEAD^ HEAD ./
       - uses: denoland/setup-deno@v1
         with:
@@ -50,6 +54,8 @@ jobs:
     name: Node.js ${{ matrix.node-version }}
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
       - run: git diff --quiet HEAD^ HEAD ./
       - uses: actions/setup-node@v3
         with:
