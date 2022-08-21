@@ -34,7 +34,7 @@ jobs:
     strategy:
       matrix:
         bun-version: [0.1.x, '*']
-    name: Bun ${{ matrix.node-version }}
+    name: Bun ${{ matrix.bun-version }}
     # Bun can specify "--platform": browser | node | bun
     # Add bun condition to skunk client
     # https://github.com/oven-sh/bun#buntranspiler
@@ -60,12 +60,10 @@ jobs:
       - run: git status
 
   node:
-    # matrix of all node versions
-    # they test two packages, one with type: module + index.cjs, the other type: commonjs + index.mjs
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x, 18.x, current]
+        node-version: [12.x, lts/*, current]
     name: Node.js ${{ matrix.node-version }}
     steps:
       - uses: actions/checkout@v3
@@ -73,6 +71,7 @@ jobs:
         with:
           cache: npm
           node-version: ${{ matrix.node-version }}
+      # they test two packages, one with type: module + index.cjs, the other type: commonjs + index.mjs
       - run: git status
 
   artifacts:
