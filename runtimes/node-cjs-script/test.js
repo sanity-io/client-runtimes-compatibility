@@ -14,7 +14,7 @@ async function expected() {
   env['process.version'] = process.version
 
   await fs.writeFile(
-    'expected.json',
+    'artifacts/expected.json',
     JSON.stringify({ result, env, target, condition })
   )
 }
@@ -35,7 +35,7 @@ async function actual() {
     json = { error: err.toString() }
   }
 
-  await fs.writeFile('actual.json', JSON.stringify(json))
+  await fs.writeFile('artifacts/actual.json', JSON.stringify(json))
 }
 
 async function main() {

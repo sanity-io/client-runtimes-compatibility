@@ -77,12 +77,11 @@ jobs:
         with:
           cache: npm
           node-version: ${{ matrix.node-version }}
-      # they test two packages, one with type: module + index.cjs, the other type: commonjs + index.mjs
-      - run: cat package.json
+      - run: npm test
       - uses: actions/upload-artifact@v3
         with:
           name: node-${{ matrix.node-version }}
-          path: '{expected,actual}.json'
+          path: artifacts/*.json
       - run: git status
 
   artifacts:
