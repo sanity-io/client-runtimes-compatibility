@@ -45,7 +45,7 @@ jobs:
       - run: git diff --quiet HEAD^ HEAD ./
 
   node:
-    # matrix of ALL node versions we support
+    # matrix of all node versions we support
     # they test two packages, one with type: module + index.cjs, the other type: commonjs + index.mjs
     runs-on: ubuntu-latest
     strategy:
