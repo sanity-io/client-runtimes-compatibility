@@ -79,7 +79,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm test
-      - run: node -e "console.log(`nodeMajor=${process.version.split('.')[0]}`)" >> $GITHUB_ENV
+      - id: version
+        run: node -e "console.log(process.version.split('.')[0])"
+      - name: 'Dump version outputs'
+        run: echo '${{ toJSON(steps.version.outputs) }}'
       - uses: actions/upload-artifact@v3
         with:
           name: node-${{ env.nodeMajor }}
