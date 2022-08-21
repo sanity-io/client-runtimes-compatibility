@@ -13,7 +13,7 @@ export default async function handler(req) {
       result,
       environment,
       condition,
-      'process.env.NEXT_RUNTIME': process.env.NEXT_RUNTIME
+      'process.env.NEXT_RUNTIME': process.env.NEXT_RUNTIME,
     }),
     {
       status: 200,
