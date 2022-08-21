@@ -5,21 +5,12 @@ export const config = {
   runtime: 'nodejs',
 }
 
-export default async function handler(req) {
+export default async function handler(req,res) {
   const client = createClient({ projectId, dataset, apiVersion, useCdn: true })
   const result = await client.fetch(query)
-  return new Response(
-    JSON.stringify({
-      result,
-      environment,
-      condition,
-      'process.env.NEXT_RUNTIME': process.env.NEXT_RUNTIME,
-    }),
-    {
-      status: 200,
-      headers: {
-        'content-type': 'application/json',
-      },
-    }
-  )
+  return res.json({result,
+    environment,
+    condition,
+    'process.env.NEXT_RUNTIME': process.env.NEXT_RUNTIME,})
+  
 }
