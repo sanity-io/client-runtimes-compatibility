@@ -104,8 +104,14 @@ jobs:
       - uses: actions/download-artifact@v3
         id: download
         with:
-          path: dashboard/public
+          path: dashboard/public/artifacts
       - name: 'Dump download outputs'
         run: echo '${{ toJSON(steps.download.outputs) }}'
       - run: ls ${{steps.download.outputs.download-path}}
       - run: git status
+      - run: npx prettier --ignore-path .gitignore --write dashboard/public/artifacts
+      - uses: EndBug/add-and-commit@v9
+        with:
+          commit: --no-verify
+          message: 'chore(artifacts): update outputs'
+          default_author: github_actions
