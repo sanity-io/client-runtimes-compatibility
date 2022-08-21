@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "skunkworks-test-client": "1.2.0"
+    "skunkworks-test-client": "2.0.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.42",
