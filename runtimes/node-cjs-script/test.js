@@ -1,4 +1,3 @@
-const path = require('path')
 const writeFile = require('write-file-atomic')
 
 const projectId = '81pocpw8'
@@ -15,7 +14,7 @@ async function expected() {
   client.env['process.version'] = process.version
 
   await writeFile(
-    path.resolve(process.cwd(), 'artifacts/expected.json'),
+    'artifacts/expected.json',
     JSON.stringify({ result, env: client.env, target, condition })
   )
 }
@@ -36,10 +35,7 @@ async function actual() {
     json = { error: err.toString() }
   }
 
-  await writeFile(
-    path.resolve(process.cwd(), 'artifacts/actual.json'),
-    JSON.stringify(json)
-  )
+  await writeFile('artifacts/actual.json', JSON.stringify(json))
 }
 
 async function main() {
