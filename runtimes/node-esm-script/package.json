@@ -1,7 +1,9 @@
 {
   "type": "module",
   "scripts": {
-    "test": "node test.cjs"
+    "test:cjs": "node test.cjs",
+    "pretest:cjs": "cp ../node-cjs-scripts/test.js test.cjs",
+    "test": "npm run test:cjs"
   },
   "dependencies": {
     "write-file-atomic": "^4.0.2"

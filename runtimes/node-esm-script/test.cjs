@@ -1,1 +1,0 @@
-../node-cjs-script/test.js
