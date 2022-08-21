@@ -82,7 +82,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: node-${{ matrix.node-version }}
-          path: artifacts/*.json
+          path: runtimes/${{ matrix.test }}/artifacts/*.json
       - run: git status
 
   artifacts:

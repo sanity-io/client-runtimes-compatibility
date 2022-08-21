@@ -15,7 +15,7 @@ async function expected() {
   client.env['process.version'] = process.version
 
   await writeFile(
-    path.resolve(process.cwd(), 'artifacts/expected.json'),
+    path.resolve(process.cwd(), 'artifacts/expected.cjs.json'),
     JSON.stringify({ result, env: client.env, target, condition })
   )
 }
@@ -37,7 +37,7 @@ async function actual() {
   }
 
   await writeFile(
-    path.resolve(process.cwd(), 'artifacts/actual.json'),
+    path.resolve(process.cwd(), 'artifacts/actual.cjs.json'),
     JSON.stringify(json)
   )
 }
