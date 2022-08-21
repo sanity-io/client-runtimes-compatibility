@@ -82,7 +82,7 @@ jobs:
       - id: version
         run: node -e "console.log(process.version.split('.')[0])"
       - name: 'Dump version outputs'
-        run: echo '${{ toJSON(steps.version.outputs) }}'
+        run: echo '${{ toJSON(steps.version) }}'
       - uses: actions/upload-artifact@v3
         with:
           name: node-${{ env.nodeMajor }}
@@ -93,11 +93,14 @@ jobs:
   artifacts:
     runs-on: ubuntu-latest
     needs: [bun, deno, node]
+    name: Commit artifacts to dashboard/public
     # if: github.ref_name == 'main'
     steps:
       - uses: actions/checkout@v3
       - uses: actions/download-artifact@v3
         id: download
+        with:
+          path: dashboard/public
       - name: 'Dump download outputs'
         run: echo '${{ toJSON(steps.download.outputs) }}'
       - run: ls ${{steps.download.outputs.download-path}}
