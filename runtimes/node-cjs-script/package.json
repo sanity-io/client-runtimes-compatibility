@@ -1,9 +1,9 @@
 {
   "type": "commonjs",
-  "dependencies": {
-    "skunkworks-test-client": "^2.0.0"
-  },
   "scripts": {
     "test": ""
+  },
+  "dependencies": {
+    "skunkworks-test-client": "^2.0.0"
   }
 }
