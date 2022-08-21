@@ -1,0 +1,73 @@
+---
+name: Build Runtimes
+
+on: [push, pull_request, workflow_dispatch]
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  bun:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        bun-version: [0.1.x, '*']
+    name: Bun ${{ matrix.node-version }}
+    # Bun can specify "--platform": browser | node | bun
+    # Add bun condition to skunk client
+    # https://github.com/oven-sh/bun#buntranspiler
+    steps:
+      - uses: actions/checkout@v3
+      - run: git diff --quiet HEAD^ HEAD ./
+      - uses: antongolub/action-setup-bun@v1
+        with:
+          bun-version: ${{ matrix.bun-version }}
+      - run: git diff --quiet HEAD^ HEAD ./
+
+  deno:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        deno-version: [1.x, canary]
+    name: Deno ${{ matrix.deno-version }}
+    # Run https://deno.land/manual/node/compatibility_mode#module-resolution mode on one test, and https://esm.sh/ on the other (https://deno.land/manual/node/cdns)
+    steps:
+      - uses: actions/checkout@v3
+      - run: git diff --quiet HEAD^ HEAD ./
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: ${{ matrix.deno-version }}
+      - run: git diff --quiet HEAD^ HEAD ./
+
+  node:
+    # matrix of ALL node versions we support
+    # they test two packages, one with type: module + index.cjs, the other type: commonjs + index.mjs
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x, 16.x, 18.x, current]
+    name: Node.js ${{ matrix.node-version }}
+    steps:
+      - uses: actions/checkout@v3
+      - run: git diff --quiet HEAD^ HEAD ./
+      - uses: actions/setup-node@v3
+        with:
+          cache: npm
+          node-version: ${{ matrix.node-version }}
+      - run: git diff --quiet HEAD^ HEAD ./
+
+  artifacts:
+    runs-on: ubuntu-latest
+    needs: [bun, deno, node]
+    if: always()
+    steps:
+      - uses: actions/checkout@v2
+      - run: git diff --quiet HEAD^ HEAD ./
+      - uses: actions/download-artifact@v3
+        id: download
+        with:
+          path: artifacts
+      - run: git diff --quiet HEAD^ HEAD ./
+      - name: 'Echo download path'
+        run: echo ${{steps.download.outputs.download-path}}

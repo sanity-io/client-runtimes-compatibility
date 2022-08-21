@@ -1,14 +1,17 @@
-[
-  {
-    "name": "Vercel Edge Functions",
-    "docs": "https://vercel.com/docs/concepts/functions/edge-functions",
-    "expected": "https://ecosystem-skunkworks-edge-api-route.sanity.build/api/expected",
-    "actual": "https://ecosystem-skunkworks-edge-api-route.sanity.build/api/actual"
-  },
-  {
-    "name": "Vercel Serverless Functions",
-    "docs": "https://vercel.com/docs/concepts/functions/serverless-functions",
-    "expected": "https://ecosystem-skunkworks-serverless-api-route.sanity.build/api/expected",
-    "actual": "https://ecosystem-skunkworks-serverless-api-route.sanity.build/api/actual"
-  }
-]
+{
+  "services": [
+    {
+      "name": "Vercel Edge Functions",
+      "docs": "https://vercel.com/docs/concepts/functions/edge-functions",
+      "expected": "https://ecosystem-skunkworks-edge-api-route.sanity.build/api/expected",
+      "actual": "https://ecosystem-skunkworks-edge-api-route.sanity.build/api/actual"
+    },
+    {
+      "name": "Vercel Serverless Functions",
+      "docs": "https://vercel.com/docs/concepts/functions/serverless-functions",
+      "expected": "https://ecosystem-skunkworks-serverless-api-route.sanity.build/api/expected",
+      "actual": "https://ecosystem-skunkworks-serverless-api-route.sanity.build/api/actual"
+    }
+  ],
+  "artifacts": []
+}
