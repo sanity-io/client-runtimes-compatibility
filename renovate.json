@@ -6,6 +6,7 @@
       "packageNames": ["skunkworks-test-client"],
       "rangeStrategy": "pin",
       "automerge": true,
+      "semanticCommitType": "chore",
       "schedule": ["at any time"]
     },
     {
