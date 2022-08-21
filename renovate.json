@@ -3,8 +3,9 @@
   "extends": ["github>sanity-io/renovate-presets//ecosystem/auto"],
   "packageRules": [
     {
-      "packageNames": ["skunkworks-test-client", "next-sanity"],
+      "packageNames": ["skunkworks-test-client"],
       "rangeStrategy": "pin",
+      "automerge": true,
       "schedule": ["at any time"]
     },
     {
