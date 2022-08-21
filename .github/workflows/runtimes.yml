@@ -79,8 +79,11 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm test
-      - id: version
-        run: node -e "console.log(process.version.split('.')[0])"
+      - name: Get Node.js major version
+        uses: mathiasvr/command-output@v1
+        id: version
+        with:
+          run: node -e "console.log(process.version.split('.')[0])"
       - name: 'Dump version outputs'
         run: echo '${{ toJSON(steps.version) }}'
       - uses: actions/upload-artifact@v3
