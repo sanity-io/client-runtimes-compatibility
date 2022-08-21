@@ -2,7 +2,7 @@ import createClient, { environment, condition } from 'skunkworks-test-client'
 import { projectId, dataset, apiVersion, query } from './_config.mjs'
 
 export const config = {
-  runtime: 'experimental-edge',
+  runtime: 'nodejs',
 }
 
 export default async function handler(req) {
