@@ -79,10 +79,12 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm test
+      - run: node -e "console.log(`nodeMajor=${process.version.split('.')[0]}`)" >> $GITHUB_ENV
       - uses: actions/upload-artifact@v3
         with:
-          name: node-${{ matrix.node-version }}
+          name: node-${{ env.nodeMajor }}
           path: runtimes/${{ matrix.test }}/artifacts/*.json
+          if-no-files-found: error
       - run: git status
 
   artifacts:
