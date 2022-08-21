@@ -1,3 +1,5 @@
+const fetch = require('node-fetch')
+
 module.exports.createClient = ({ projectId, dataset }) => ({
   async fetch(query) {
     const res = await fetch(
