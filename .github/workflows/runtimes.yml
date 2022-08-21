@@ -12,22 +12,23 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  dump_contexts_to_log:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Dump GitHub context
-        id: github_context_step
-        run: echo '${{ toJSON(github) }}'
-      - name: Dump job context
-        run: echo '${{ toJSON(job) }}'
-      - name: Dump steps context
-        run: echo '${{ toJSON(steps) }}'
-      - name: Dump runner context
-        run: echo '${{ toJSON(runner) }}'
-      - name: Dump strategy context
-        run: echo '${{ toJSON(strategy) }}'
-      - name: Dump matrix context
-        run: echo '${{ toJSON(matrix) }}'
+  # dump_contexts_to_log:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Dump GitHub context
+  #       id: github_context_step
+  #       run: echo '${{ toJSON(github) }}'
+  #     - name: Dump job context
+  #       run: echo '${{ toJSON(job) }}'
+  #     - name: Dump steps context
+  #       run: echo '${{ toJSON(steps) }}'
+  #     - name: Dump runner context
+  #       run: echo '${{ toJSON(runner) }}'
+  #     - name: Dump strategy context
+  #       run: echo '${{ toJSON(strategy) }}'
+  #     - name: Dump matrix context
+  #       run: echo '${{ toJSON(matrix) }}'
+
   bun:
     runs-on: ubuntu-latest
     strategy:
@@ -77,8 +78,7 @@ jobs:
   artifacts:
     runs-on: ubuntu-latest
     needs: [bun, deno, node]
-    # At least one must succeed, but not all
-    if: always() && github.ref == 'main' && contains(needs.*.result, 'success')
+    if: github.ref_name == 'main'
     steps:
       - uses: actions/checkout@v3
       - uses: actions/download-artifact@v3
