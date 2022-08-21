@@ -3,8 +3,9 @@ name: Build Runtimes
 
 on:
   push:
-    paths-ignore:
-      - 'skunkworks-test-client/**'
+    paths:
+      - 'runtimes/node-cjs-script/**'
+      - 'runtimes/node-esm-script/**'
   workflow_dispatch:
 
 concurrency:
@@ -12,22 +13,22 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # dump_contexts_to_log:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Dump GitHub context
-  #       id: github_context_step
-  #       run: echo '${{ toJSON(github) }}'
-  #     - name: Dump job context
-  #       run: echo '${{ toJSON(job) }}'
-  #     - name: Dump steps context
-  #       run: echo '${{ toJSON(steps) }}'
-  #     - name: Dump runner context
-  #       run: echo '${{ toJSON(runner) }}'
-  #     - name: Dump strategy context
-  #       run: echo '${{ toJSON(strategy) }}'
-  #     - name: Dump matrix context
-  #       run: echo '${{ toJSON(matrix) }}'
+  dump_contexts_to_log:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump GitHub context
+        id: github_context_step
+        run: echo '${{ toJSON(github) }}'
+      - name: Dump job context
+        run: echo '${{ toJSON(job) }}'
+      - name: Dump steps context
+        run: echo '${{ toJSON(steps) }}'
+      - name: Dump runner context
+        run: echo '${{ toJSON(runner) }}'
+      - name: Dump strategy context
+        run: echo '${{ toJSON(strategy) }}'
+      - name: Dump matrix context
+        run: echo '${{ toJSON(matrix) }}'
 
   bun:
     runs-on: ubuntu-latest
@@ -63,7 +64,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        test: [node-cjs-script]
+        test: [node-cjs-script, node-esm-script]
         node-version: [12.x, lts/*, current]
     defaults:
       run:

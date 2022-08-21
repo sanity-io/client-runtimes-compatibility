@@ -11,6 +11,8 @@ async function expected() {
   const client = createClient({ projectId, dataset, apiVersion, useCdn: true })
   const result = await client.fetch(query)
 
+  env['process.version'] = process.version
+
   await fs.writeFile(
     'expected.json',
     JSON.stringify({ result, env, target, condition })
