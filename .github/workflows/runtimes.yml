@@ -66,7 +66,7 @@ jobs:
     strategy:
       matrix:
         test: [node-cjs-script, node-esm-script]
-        node-version: [12.x, lts/*, current]
+        node-version: [6.x, 8.x, 10.x, 12.x, lts/*, current]
     defaults:
       run:
         working-directory: runtimes/${{ matrix.test }}
