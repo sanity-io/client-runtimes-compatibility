@@ -80,7 +80,7 @@ jobs:
     # At least one must succeed, but not all
     if: always() && github.ref == 'main' && contains(needs.*.result, 'success')
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: actions/download-artifact@v3
         id: download
         with:
