@@ -2,7 +2,7 @@
   "type": "module",
   "scripts": {
     "test:cjs": "node test.cjs",
-    "pretest:cjs": "cp ../node-cjs-scripts/test.js test.cjs",
+    "pretest:cjs": "cp ../node-cjs-script/test.js test.cjs",
     "test": "npm run test:cjs"
   },
   "dependencies": {
