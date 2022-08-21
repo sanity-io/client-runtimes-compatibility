@@ -1,4 +1,4 @@
-import createClient, { environment, condition } from 'skunkworks-test-client'
+import createClient, { target, condition } from 'skunkworks-test-client'
 import { projectId, dataset, apiVersion, query } from './_config.mjs'
 
 export const config = {
@@ -11,7 +11,8 @@ export default async function handler(req) {
   return new Response(
     JSON.stringify({
       result,
-      environment,
+      env: client.env,
+      target,
       condition,
       'process.env.NEXT_RUNTIME': process.env.NEXT_RUNTIME,
     }),

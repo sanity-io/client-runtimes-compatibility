@@ -3,7 +3,7 @@
 
 import createClient from './index.node.cjs'
 
-export const target = `ESM+${createClient.environment}`
+export const target = `ESM+${createClient.target}`
 export const condition = `node.import+${createClient.condition}`
 
 export default createClient
