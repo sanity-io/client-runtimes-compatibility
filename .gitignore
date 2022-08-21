@@ -105,3 +105,7 @@ dist
 
 .vercel
 artifacts
+
+# Test outputs, uploaded as artifacts
+expected.json
+actual.json

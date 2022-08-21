@@ -1,9 +1,10 @@
 {
   "type": "commonjs",
   "scripts": {
-    "test": ""
+    "test": "node test.js"
   },
   "dependencies": {
+    "@sanity/client": "^3.3.3",
     "skunkworks-test-client": "^2.0.0"
   }
 }
