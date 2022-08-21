@@ -104,8 +104,7 @@ dist
 .tern-port
 
 .vercel
-artifacts
 
 # Test outputs, uploaded as artifacts
-expected.json
-actual.json
+/**/artifacts/**
+!/**/artifacts/.gitkeep

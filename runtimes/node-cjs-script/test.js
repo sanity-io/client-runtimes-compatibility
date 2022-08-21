@@ -1,4 +1,4 @@
-const fs = require('fs/promises')
+const writeFile = require('write-file-atomic')
 
 const projectId = '81pocpw8'
 const dataset = 'production'
@@ -7,15 +7,15 @@ const query = /* groq */ `count(*[studioVersion == 3])`
 
 async function expected() {
   const createClient = require('skunkworks-test-client')
-  const { env, target, condition } = createClient
+  const { target, condition } = createClient
   const client = createClient({ projectId, dataset, apiVersion, useCdn: true })
   const result = await client.fetch(query)
 
-  env['process.version'] = process.version
+  client.env['process.version'] = process.version
 
-  await fs.writeFile(
+  await writeFile(
     'artifacts/expected.json',
-    JSON.stringify({ result, env, target, condition })
+    JSON.stringify({ result, env: client.env, target, condition })
   )
 }
 async function actual() {
@@ -35,7 +35,7 @@ async function actual() {
     json = { error: err.toString() }
   }
 
-  await fs.writeFile('artifacts/actual.json', JSON.stringify(json))
+  await writeFile('artifacts/actual.json', JSON.stringify(json))
 }
 
 async function main() {
