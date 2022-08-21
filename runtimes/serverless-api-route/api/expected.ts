@@ -1,5 +1,5 @@
 import createClient, { environment, condition } from 'skunkworks-test-client'
-import { projectId, dataset, apiVersion, query } from './_config.mjs'
+import { projectId, dataset, apiVersion, query } from './_config'
 
 export const config = {
   runtime: 'nodejs',
