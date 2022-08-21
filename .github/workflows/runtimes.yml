@@ -77,7 +77,7 @@ jobs:
         with:
           cache: npm
           node-version: ${{ matrix.node-version }}
-      - run: npm ci
+      - run: npm install
       - run: npm test
       - name: Get Node.js major version
         uses: mathiasvr/command-output@v1
