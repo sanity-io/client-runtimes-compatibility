@@ -84,11 +84,9 @@ jobs:
         id: version
         with:
           run: node -e "console.log(process.version.split('.')[0])"
-      - name: 'Dump version outputs'
-        run: echo '${{ toJSON(steps.version) }}'
       - uses: actions/upload-artifact@v3
         with:
-          name: node-${{ steps.version.outputs.stdout }}
+          name: ${{ matrix.test }}-${{ steps.version.outputs.stdout }}
           path: runtimes/${{ matrix.test }}/artifacts/*.json
           if-no-files-found: error
           retention-days: 1
