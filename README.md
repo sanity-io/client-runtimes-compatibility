@@ -5,4 +5,4 @@ A sandbox to try out @sanity/client in tons of different runtimes, workers and e
 Related projects:
 
 - https://vercel.com/sanity-io/ecosystem-skunkworks-edge-api-route
--
+- https://vercel.com/sanity-io/ecosystem-skunkworks-serverless-api-route
