@@ -1,9 +1,10 @@
 {
   "type": "module",
   "scripts": {
-    "test": "npm run test:cjs",
+    "test": "npm run test:esm && npm run test:cjs",
     "pretest:cjs": "cp ../node-cjs-script/test.js test.cjs",
-    "test:cjs": "node test.cjs"
+    "test:cjs": "node test.cjs",
+    "test:esm": "node test.js"
   },
   "dependencies": {
     "@sanity/client": "^3.3.3",
