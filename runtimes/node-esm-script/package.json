@@ -6,6 +6,8 @@
     "test:cjs": "node test.cjs"
   },
   "dependencies": {
+    "@sanity/client": "^3.3.3",
+    "skunkworks-test-client": "2.0.0",
     "write-file-atomic": "^4.0.2"
   }
 }
