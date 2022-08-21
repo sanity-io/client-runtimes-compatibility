@@ -5,6 +5,14 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v1.1.4...v1.1.5) (2022-08-21)
+
+### Bug Fixes
+
+- add nodejs test ([88f6932](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/88f6932b7eb6837305996fbde80de84bc096b441))
+- bump ([e8aa981](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/e8aa9810faa49a14e0077aa3f137aa72cbccc5cf))
+- use node-fetch in client.cjs ([2fa6251](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/2fa625112a77f254e0fe201347ab61151895010c))
+
 ## [1.1.4](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v1.1.3...v1.1.4) (2022-08-20)
 
 ### Bug Fixes
