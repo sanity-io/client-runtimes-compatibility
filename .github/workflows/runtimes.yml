@@ -1,7 +1,11 @@
 ---
 name: Build Runtimes
 
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    paths-ignore:
+      - 'skunkworks-test-client/**'
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}
@@ -19,13 +23,10 @@ jobs:
     # https://github.com/oven-sh/bun#buntranspiler
     steps:
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 2
-      - run: git diff --quiet HEAD^ HEAD ./
       - uses: antongolub/action-setup-bun@v1
         with:
           bun-version: ${{ matrix.bun-version }}
-      - run: git diff --quiet HEAD^ HEAD ./
+      - run: git status
 
   deno:
     runs-on: ubuntu-latest
@@ -36,16 +37,13 @@ jobs:
     # Run https://deno.land/manual/node/compatibility_mode#module-resolution mode on one test, and https://esm.sh/ on the other (https://deno.land/manual/node/cdns)
     steps:
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 2
-      - run: git diff --quiet HEAD^ HEAD ./
       - uses: denoland/setup-deno@v1
         with:
           deno-version: ${{ matrix.deno-version }}
-      - run: git diff --quiet HEAD^ HEAD ./
+      - run: git status
 
   node:
-    # matrix of all node versions we support
+    # matrix of all node versions
     # they test two packages, one with type: module + index.cjs, the other type: commonjs + index.mjs
     runs-on: ubuntu-latest
     strategy:
@@ -54,14 +52,11 @@ jobs:
     name: Node.js ${{ matrix.node-version }}
     steps:
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 2
-      - run: git diff --quiet HEAD^ HEAD ./
       - uses: actions/setup-node@v3
         with:
           cache: npm
           node-version: ${{ matrix.node-version }}
-      - run: git diff --quiet HEAD^ HEAD ./
+      - run: git status
 
   artifacts:
     runs-on: ubuntu-latest
@@ -69,11 +64,10 @@ jobs:
     if: always()
     steps:
       - uses: actions/checkout@v2
-      - run: git diff --quiet HEAD^ HEAD ./
       - uses: actions/download-artifact@v3
         id: download
         with:
           path: artifacts
-      - run: git diff --quiet HEAD^ HEAD ./
+      - run: git status
       - name: 'Echo download path'
         run: echo ${{steps.download.outputs.download-path}}
