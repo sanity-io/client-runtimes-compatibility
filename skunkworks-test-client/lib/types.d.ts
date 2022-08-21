@@ -15,5 +15,5 @@ export default function createClient({
   fetch(query: string): Promise<any>
 }
 
-export declare const environment: string
+export declare const target: string
 export declare const condition: string

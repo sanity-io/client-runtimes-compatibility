@@ -2,7 +2,7 @@
 
 import { createClient } from './client.mjs'
 
-export const environment = 'ESM+ES2020'
+export const target = 'ESM+ES2020'
 export const condition = 'default'
 
 export default createClient

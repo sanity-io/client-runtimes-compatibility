@@ -25,5 +25,5 @@ export default function (options) {
     },
   }
 }
-export var environment = 'ESM+ES5'
+export var target = 'ESM+ES5'
 export var condition = _condition

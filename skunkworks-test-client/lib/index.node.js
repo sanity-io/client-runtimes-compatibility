@@ -5,7 +5,7 @@
 
 import { createClient } from './client.mjs'
 
-export const environment = 'ESM+Node16'
+export const target = 'ESM+Node16'
 export const condition = 'node.module'
 
 export default createClient
