@@ -1,0 +1,11 @@
+{
+  "result": 2,
+  "env": {
+    "typeof document": "undefined",
+    "typeof fetch": "undefined",
+    "typeof window": "undefined",
+    "process.version": "v12.22.12"
+  },
+  "target": "CJS+Node16",
+  "condition": "node.require"
+}
