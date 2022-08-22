@@ -1,5 +1,4 @@
 var navigator$UserAgent = undefined
-var dirname = undefined
 var Deno$version$deno = undefined
 var process$env$NEXT_RUNTIME = undefined
 var process$version = undefined
@@ -7,11 +6,6 @@ var process$versions = undefined
 
 try {
   navigator$UserAgent = navigator.userAgent
-} catch (err) {
-  // ignore
-}
-try {
-  dirname = __dirname
 } catch (err) {
   // ignore
 }
@@ -74,7 +68,6 @@ module.exports = {
     typeof navigator !== 'undefined' && 'navigator',
   ].filter(Boolean),
   'navigator.userAgent': navigator$UserAgent,
-  __dirname: dirname,
   'Deno.version.deno': Deno$version$deno,
   'process.version': process$version,
   'process.versions': process$versions,
