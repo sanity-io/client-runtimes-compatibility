@@ -9,7 +9,7 @@ try {
   // ignore
 }
 try {
-  process$env$NEXT_RUNTIME = process.env.NEXT_RUNTIME || ''
+  process$env$NEXT_RUNTIME = process.env.NEXT_RUNTIME || false
 } catch (err) {
   // ignore
 }
