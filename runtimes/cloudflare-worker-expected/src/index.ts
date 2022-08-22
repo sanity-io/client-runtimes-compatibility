@@ -1,0 +1,32 @@
+import createClient, { target, condition } from 'skunkworks-test-client'
+
+const projectId = '81pocpw8'
+const dataset = 'production'
+const apiVersion = 'v2021-03-25'
+const query = /* groq */ `count(*[studioVersion == 3])`
+
+export default {
+  async fetch(): Promise<Response> {
+    const client = createClient({
+      projectId,
+      dataset,
+      apiVersion,
+      useCdn: true,
+    })
+    const result = await client.fetch(query)
+    return new Response(
+      JSON.stringify({
+        result,
+        env: client.env,
+        target,
+        condition,
+      }),
+      {
+        status: 200,
+        headers: {
+          'content-type': 'application/json',
+        },
+      }
+    )
+  },
+}
