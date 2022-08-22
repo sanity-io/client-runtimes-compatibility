@@ -5,11 +5,14 @@ on:
   push:
     branches: [main]
     paths:
+      - 'runtimes/bun-script/**'
       - 'runtimes/deno-cdn-script/**'
       - 'runtimes/deno-compat-script/**'
       - 'runtimes/node-cjs-script/**'
       - 'runtimes/node-esm-script/**'
   workflow_dispatch:
+  schedule:
+    - '30 1 * * *'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
@@ -37,8 +40,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
+        platform: [browser, node, bun]
         bun-version: [0.1.x, '*']
-    name: Bun ${{ matrix.bun-version }}
+    name: Bun ${{ matrix.bun-version }} ${{ matrix.platform }}
     # Bun can specify "--platform": browser | node | bun
     # Add bun condition to skunk client
     # https://github.com/oven-sh/bun#buntranspiler
@@ -47,6 +51,7 @@ jobs:
       - uses: antongolub/action-setup-bun@v1
         with:
           bun-version: ${{ matrix.bun-version }}
+      - run: bun install
       - run: git status
 
   deno:
@@ -54,12 +59,11 @@ jobs:
     strategy:
       matrix:
         test: [deno-cdn-script, deno-compat-script]
-        deno-version: [1.x, canary]
+        deno-version: [1.x]
     defaults:
       run:
         working-directory: runtimes/${{ matrix.test }}
     name: Deno ${{ matrix.deno-version }} ${{ matrix.test }}
-    # Run https://deno.land/manual/node/compatibility_mode#module-resolution mode on one test, and https://esm.sh/ on the other (https://deno.land/manual/node/cdns)
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
