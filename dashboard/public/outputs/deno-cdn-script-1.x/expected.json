@@ -1,34 +1,23 @@
 {
   "result": 2,
   "env": {
+    "document": false,
+    "fetch": true,
+    "global": true,
+    "globalThis": true,
+    "window": true,
     "Deno.version.deno": "1.24.3",
-    "process.env.NEXT_RUNTIME": false,
     "process.version": "v16.11.1",
     "process.versions": {
       "node": "16.11.1",
-      "uv": "1.42.0",
-      "zlib": "1.2.11",
-      "brotli": "1.0.9",
-      "ares": "1.17.2",
       "modules": "93",
-      "nghttp2": "1.45.1",
-      "napi": "8",
-      "llhttp": "6.0.4",
-      "openssl": "1.1.1l",
-      "cldr": "39.0",
       "icu": "69.1",
       "tz": "2021a",
       "unicode": "13.0",
       "deno": "1.24.3",
       "v8": "10.4.132.20",
       "typescript": "4.7.4"
-    },
-    "document": false,
-    "EdgeRuntime": false,
-    "fetch": true,
-    "global": true,
-    "globalThis": true,
-    "window": true
+    }
   },
   "target": "ESM+ES2020",
   "condition": "deno"
