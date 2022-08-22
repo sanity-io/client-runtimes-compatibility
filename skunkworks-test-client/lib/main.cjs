@@ -9,8 +9,8 @@ module.exports = function (options) {
   return {
     env,
     fetch(query) {
-      var fetch = typeof fetch === 'function' ? fetch : require('node-fetch')
-      return fetch(
+      var _fetch = typeof fetch === 'function' ? fetch : require('node-fetch')
+      return _fetch(
         'https://'
           .concat(projectId, '.apicdn.sanity.io/v2021-10-21/data/query/')
           .concat(dataset, '?query=')

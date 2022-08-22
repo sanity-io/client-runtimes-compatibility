@@ -3,9 +3,9 @@ import env from './env.mjs'
 export const createClient = ({ projectId, dataset }) => ({
   env,
   async fetch(query) {
-    const fetch =
+    const _fetch =
       typeof fetch === 'function' ? fetch : await import('node-fetch')
-    const res = await fetch(
+    const res = await _fetch(
       `https://${projectId}.apicdn.sanity.io/v2021-10-21/data/query/${dataset}?query=${encodeURIComponent(
         query
       )}`
