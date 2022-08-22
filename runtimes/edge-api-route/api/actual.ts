@@ -7,17 +7,8 @@ export const config = {
   runtime: 'experimental-edge',
 }
 
-export default async function handler(req) {
+export default async function handler() {
   try {
-    const { default: createClient } = await import(
-      /* webpackIgnore: true */ '@sanity/client'
-    )
-    const client = createClient({
-      projectId,
-      dataset,
-      apiVersion,
-      useCdn: true,
-    })
     const result = await client.fetch(query)
     return new Response(
       JSON.stringify({

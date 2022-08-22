@@ -6,7 +6,7 @@ export const config = {
   runtime: 'experimental-edge',
 }
 
-export default async function handler(req) {
+export default async function handler() {
   const {
     default: createClient,
     target,
