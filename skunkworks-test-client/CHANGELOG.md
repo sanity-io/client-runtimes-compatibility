@@ -5,6 +5,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.0](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.0.3...v2.1.0) (2022-08-22)
+
+### Features
+
+- more debug vars ([31aa81d](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/31aa81d7d76efce73be19d44634e360cdcd8160f))
+- use native fetch when available ([e1a10a8](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/e1a10a890d327eeacbda9d1c660d5954f32b2870))
+
 ## [2.0.3](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.0.2...v2.0.3) (2022-08-22)
 
 ### Bug Fixes
