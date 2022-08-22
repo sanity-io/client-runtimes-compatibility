@@ -44,7 +44,8 @@ jobs:
         # https://github.com/oven-sh/bun#buntranspiler
         # platform: [browser, node, bun]
         test: [bun-script]
-        bun-version: [0.1.x, '*']
+        #bun-version: [0.1.x, '*']
+        bun-version: [0.1.x]
     defaults:
       run:
         working-directory: runtimes/${{ matrix.test }}
