@@ -1,11 +1,16 @@
+import createClient from '@sanity/client'
+import { projectId, dataset, apiVersion, query } from './_config.mjs'
+
 export const config = {
   runtime: 'experimental-edge',
 }
 
 export default async function handler(req) {
+  const client = createClient({ projectId, dataset, apiVersion, useCdn: true })
+  const result = await client.fetch(query)
   return new Response(
     JSON.stringify({
-      result: 'TODO',
+      result,
       'process.env.NEXT_RUNTIME': process.env.NEXT_RUNTIME,
     }),
     {
