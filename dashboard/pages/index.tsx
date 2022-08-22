@@ -12,7 +12,7 @@ type Props = {
   }
 }
 
-// success/fail icon | name | 
+// success/fail icon | name |
 // available only in dialog: globals, document
 
 const useDashboardData = () => {
