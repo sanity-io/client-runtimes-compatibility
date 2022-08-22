@@ -3,7 +3,9 @@
   "env": {
     "document": false,
     "fetch": true,
-    "globals": ["globalThis", "self", "window", "global"],
+    "globals": ["globalThis", "self", "window", "global", "navigator"],
+    "navigator.userAgent": "Deno/1.24.3",
+    "import.meta.url": "file:///home/runner/work/ecosystem-skunkworks-client-runtimes/ecosystem-skunkworks-client-runtimes/runtimes/deno-compat-script/node_modules/skunkworks-test-client/lib/env.mjs",
     "Deno.version.deno": "1.24.3",
     "process.version": "v16.11.1",
     "process.versions": {

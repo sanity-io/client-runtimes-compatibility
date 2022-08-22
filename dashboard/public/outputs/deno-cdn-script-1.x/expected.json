@@ -3,7 +3,9 @@
   "env": {
     "document": false,
     "fetch": true,
-    "globals": ["globalThis", "self", "global"],
+    "globals": ["globalThis", "self", "global", "navigator"],
+    "navigator.userAgent": "Deno/1.24.3",
+    "import.meta.url": "https://esm.sh/v92/skunkworks-test-client@2.2.11/deno/skunkworks-test-client.js",
     "Deno.version.deno": "1.24.3",
     "process.version": "v16.11.1",
     "process.versions": {
