@@ -16,8 +16,6 @@ async function expected() {
   })
   const result = await client.fetch(query)
 
-  client.env['Deno.version.deno'] = Deno.version.deno
-
   await Deno.writeTextFile(
     'artifacts/expected.json',
     JSON.stringify({ result, env: client.env, target, condition })

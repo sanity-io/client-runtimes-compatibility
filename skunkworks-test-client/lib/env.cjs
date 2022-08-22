@@ -1,10 +1,21 @@
 module.exports = {
+  'Deno.version.deno':
+    typeof Deno !== 'undefined' &&
+    typeof Deno.version !== 'undefined' &&
+    typeof Deno.version.deno !== 'undefined' &&
+    Deno.version.deno,
+  'process.version':
+    typeof process !== 'undefined' &&
+    typeof process.version !== 'undefined' &&
+    process.version,
+  'process.versions':
+    typeof process !== 'undefined' &&
+    typeof process.versions !== 'undefined' &&
+    process.versions,
   document: typeof document === 'object',
   EdgeRuntime: typeof EdgeRuntime === 'string' && EdgeRuntime,
   fetch: typeof fetch === 'function',
   global: typeof global === 'object',
   globalThis: typeof globalThis === 'object',
-  version: typeof process.version !== 'undefined' && process.version,
-  versions: typeof process.versions !== 'undefined' && process.versions,
   window: typeof window === 'object',
 }
