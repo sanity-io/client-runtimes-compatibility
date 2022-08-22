@@ -150,6 +150,7 @@ jobs:
       - run: ls -R ${{steps.download.outputs.download-path}}
       - run: git status
       - run: npx prettier --ignore-path .gitignore --write dashboard/public/outputs
+      - run: git status
       - uses: EndBug/add-and-commit@v9
         with:
           commit: --no-verify
