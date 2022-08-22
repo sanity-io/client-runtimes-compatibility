@@ -3,20 +3,9 @@
   "env": {
     "document": false,
     "fetch": true,
-    "global": true,
-    "globalThis": true,
-    "window": false,
+    "globals": ["globalThis", "global"],
     "process.version": "v18.7.0",
-    "process.versions": {
-      "node": "18.7.0",
-      "v8": "10.2.154.13-node.9",
-      "modules": "108",
-      "icu": "71.1",
-      "tz": "2022a",
-      "unicode": "14.0",
-      "ngtcp2": "0.1.0-DEV",
-      "nghttp3": "0.1.0-DEV"
-    }
+    "process.versions": { "node": "18.7.0", "v8": "10.2.154.13-node.9" }
   },
   "target": "ESM+CJS+Node16",
   "condition": "node.import+node.require"

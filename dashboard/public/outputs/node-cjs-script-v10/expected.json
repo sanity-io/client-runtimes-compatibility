@@ -3,19 +3,9 @@
   "env": {
     "document": false,
     "fetch": false,
-    "global": true,
-    "globalThis": false,
-    "window": false,
+    "globals": ["global"],
     "process.version": "v10.24.1",
-    "process.versions": {
-      "http_parser": "2.9.4",
-      "node": "10.24.1",
-      "v8": "6.8.275.32-node.59",
-      "modules": "64",
-      "icu": "64.2",
-      "unicode": "12.1",
-      "tz": "2019c"
-    }
+    "process.versions": { "node": "10.24.1", "v8": "6.8.275.32-node.59" }
   },
   "target": "CJS+ES5",
   "condition": "pkg.main"
