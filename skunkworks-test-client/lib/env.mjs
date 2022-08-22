@@ -20,33 +20,43 @@ try {
 }
 try {
   process$versions = Object.assign({}, process.versions, {
-    webkit: undefined,
-    mimalloc: undefined,
-    libarchive: undefined,
-    picohttpparser: undefined,
-    boringssl: undefined,
-    zlib: undefined,
-    zig: undefined,
-    uv: undefined,
-    zlib: undefined,
-    brotli: undefined,
     ares: undefined,
-    nghttp2: undefined,
-    napi: undefined,
-    llhttp: undefined,
-    openssl: undefined,
+    boringssl: undefined,
+    brotli: undefined,
     cldr: undefined,
+    http_parser: undefined,
+    icu: false,
+    libarchive: undefined,
+    llhttp: undefined,
+    mimalloc: undefined,
+    modules: false,
+    napi: undefined,
+    nghttp2: undefined,
+    nghttp3: undefined,
+    ngtcp2: undefined,
+    openssl: undefined,
+    picohttpparser: undefined,
+    tz: false,
+    unicode: false,
+    uv: undefined,
+    zig: undefined,
+    zlib: undefined,
   })
 } catch (err) {
   // ignore
 }
 
 export default {
+  // As deno defines `window` the preferred way to check for the browser is `document`
   document: typeof document === 'object',
+  // Check if native fetch is available
   fetch: typeof fetch === 'function',
-  global: typeof global === 'object',
-  globalThis: typeof globalThis === 'object',
-  window: typeof window === 'object',
+  globals: [
+    typeof globalThis !== 'undefined' && 'globalThis',
+    typeof self !== 'undefined' && 'self',
+    typeof window !== 'undefined' && 'window',
+    typeof global !== 'undefined' && 'global',
+  ].filter(Boolean),
   'Deno.version.deno': Deno$version$deno,
   'process.version': process$version,
   'process.versions': process$versions,
