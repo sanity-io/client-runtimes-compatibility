@@ -4,10 +4,12 @@
   },
   "prettier": {
     "semi": false,
-    "singleQuote": true
+    "singleQuote": true,
+    "tailwindConfig": "./dashboard/tailwind.config.js"
   },
   "devDependencies": {
     "prettier": "^2.7.1",
-    "prettier-plugin-packagejson": "^2.2.18"
+    "prettier-plugin-packagejson": "^2.2.18",
+    "prettier-plugin-tailwindcss": "^0.1.13"
   }
 }

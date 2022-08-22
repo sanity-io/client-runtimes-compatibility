@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root svg {
+  display: inline;
+}
+
+body {
+  @apply bg-slate-100;
+}
