@@ -6,6 +6,6 @@
   },
   "dependencies": {
     "@sanity/client": "^3.3.3",
-    "skunkworks-test-client": "2.2.0"
+    "skunkworks-test-client": "2.2.1"
   }
 }
