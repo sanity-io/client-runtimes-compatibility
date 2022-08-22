@@ -12,7 +12,7 @@ on:
       - 'runtimes/node-esm-script/**'
   workflow_dispatch:
   schedule:
-    - '30 1 * * *'
+    - cron: '30 1 * * *'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
