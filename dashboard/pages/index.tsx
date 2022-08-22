@@ -12,7 +12,7 @@ type Props = {
   }
 }
 
-// success/fail icon | name | runtime(node,bun,deno,edge,worker) 
+// success/fail icon | name | runtime(node,bun,deno,edge,worker)
 // available only in dialog: globals, document
 
 const useDashboardData = () => {
