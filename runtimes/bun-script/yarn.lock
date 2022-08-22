@@ -260,10 +260,10 @@ simple-concat@^1.0.1:
   resolved "https://registry.npmjs.org/simple-concat/-/simple-concat-1.0.1.tgz"
   integrity sha512-cSFtAPtRhljv69IK0hTVZQ+OfE9nePi/rtJmw5UjHeVyVroEqJXP1sFztKUy1qU+xvz3u/sfYJLa947b7nAN2Q==
 
-skunkworks-test-client@2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/skunkworks-test-client/-/skunkworks-test-client-2.0.3.tgz#414442ed3dfd19869637d32971fc241462e9cf45"
-  integrity sha512-UprwXjbsjvHVlsJVO7hz7jIRVDUm7i8WgDIoMy5IkPJNaSdRvVsFk1hGDufMDJvress4Eis+xp8nQmlRp2611Q==
+skunkworks-test-client@2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/skunkworks-test-client/-/skunkworks-test-client-2.1.2.tgz#2eba48fc23d3be5f986e92627f2c3359418805d9"
+  integrity sha512-lnHo9I6M6gMuZqRh7wTcbxq4ZtnLwiRuOEzWZ5b3DBCVHhc6kq9cPRrVQu5JN3dDpCaLM8xrTSpW43Ic9YkUPg==
   dependencies:
     node-fetch "2.6.7"
 
