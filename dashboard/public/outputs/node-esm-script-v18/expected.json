@@ -1,9 +1,9 @@
 {
   "result": 2,
   "env": {
-    "typeof document === 'object'": false,
-    "typeof fetch === 'function'": true,
-    "typeof window === 'object'": false,
+    "document": false,
+    "fetch": true,
+    "window": false,
     "process.version": "v18.7.0"
   },
   "target": "ESM+CJS+Node16",

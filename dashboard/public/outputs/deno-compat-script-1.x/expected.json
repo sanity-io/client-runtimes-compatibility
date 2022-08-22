@@ -1,9 +1,9 @@
 {
   "result": 2,
   "env": {
-    "typeof document === 'object'": false,
-    "typeof fetch === 'function'": true,
-    "typeof window === 'object'": true,
+    "document": false,
+    "fetch": true,
+    "window": true,
     "Deno.version.deno": "1.24.3"
   },
   "target": "ESM+ES2020",
