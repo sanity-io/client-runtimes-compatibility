@@ -19,7 +19,24 @@ try {
   // ignore
 }
 try {
-  process$versions = process.versions
+  process$versions = Object.assign({}, process.versions, {
+    webkit: undefined,
+    mimalloc: undefined,
+    libarchive: undefined,
+    picohttpparser: undefined,
+    boringssl: undefined,
+    zlib: undefined,
+    zig: undefined,
+    uv: undefined,
+    zlib: undefined,
+    brotli: undefined,
+    ares: undefined,
+    nghttp2: undefined,
+    napi: undefined,
+    llhttp: undefined,
+    openssl: undefined,
+    cldr: undefined,
+  })
 } catch (err) {
   // ignore
 }
