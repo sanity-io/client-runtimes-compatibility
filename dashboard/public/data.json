@@ -54,5 +54,12 @@
     "docs": "https://vercel.com/docs/concepts/functions/serverless-functions",
     "expected": "https://ecosystem-skunkworks-serverless-api-route.sanity.build/api/expected",
     "actual": "https://ecosystem-skunkworks-serverless-api-route.sanity.build/api/actual"
+  },
+  {
+    "type": "service",
+    "name": "Cloudflare Worker",
+    "docs": "https://workers.cloudflare.com/",
+    "expected": "https://expected.ecosystem-skunkworks.workers.dev",
+    "actual": "https://actual.ecosystem-skunkworks.workers.dev"
   }
 ]
