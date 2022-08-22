@@ -3,17 +3,15 @@
   "env": {
     "document": false,
     "fetch": true,
-    "global": true,
-    "globalThis": true,
-    "window": true,
+    "globals": ["globalThis", "self", "window", "global"],
     "Deno.version.deno": "1.24.3",
     "process.version": "v16.11.1",
     "process.versions": {
       "node": "16.11.1",
-      "modules": "93",
-      "icu": "69.1",
-      "tz": "2021a",
-      "unicode": "13.0",
+      "modules": false,
+      "icu": false,
+      "tz": false,
+      "unicode": false,
       "deno": "1.24.3",
       "v8": "10.4.132.20",
       "typescript": "4.7.4"
