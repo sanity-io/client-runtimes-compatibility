@@ -1,5 +1,4 @@
-// @TODO testing webpackIgnore
-// import createClient, { target, condition } from 'skunkworks-test-client'
+import createClient, { target, condition } from 'skunkworks-test-client'
 import { projectId, dataset, apiVersion, query } from './_config.mjs'
 
 export const config = {
@@ -7,11 +6,6 @@ export const config = {
 }
 
 export default async function handler() {
-  const {
-    default: createClient,
-    target,
-    condition,
-  } = await import(/* webpackIgnore: true */ 'skunkworks-test-client')
   const client = createClient({ projectId, dataset, apiVersion, useCdn: true })
   const result = await client.fetch(query)
   return new Response(
