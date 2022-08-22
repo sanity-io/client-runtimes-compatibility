@@ -103,8 +103,8 @@ jobs:
         test: [node-cjs-script, node-esm-script]
         node-version: [10.x, lts/*, current]
         exclude:
-        - test: node-esm-script
-          node-version: 10.x
+          - test: node-esm-script
+            node-version: 10.x
     defaults:
       run:
         working-directory: runtimes/${{ matrix.test }}
