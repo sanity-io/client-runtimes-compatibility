@@ -1,4 +1,3 @@
-import path from 'path'
 import writeFile from 'write-file-atomic'
 import createClientExpected, { target, condition } from 'skunkworks-test-client'
 import createClientActual from '@sanity/client'
@@ -20,7 +19,7 @@ async function expected() {
   client.env['process.version'] = process.version
 
   await writeFile(
-    path.resolve(process.cwd(), 'artifacts/expected.esm.json'),
+    'artifacts/expected.json',
     JSON.stringify({ result, env: client.env, target, condition })
   )
 }
@@ -40,10 +39,7 @@ async function actual() {
     json = { error: err.toString() }
   }
 
-  await writeFile(
-    path.resolve(process.cwd(), 'artifacts/actual.esm.json'),
-    JSON.stringify(json)
-  )
+  await writeFile('artifacts/actual.json', JSON.stringify(json))
 }
 
 async function main() {

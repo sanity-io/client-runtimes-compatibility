@@ -67,6 +67,9 @@ jobs:
       matrix:
         test: [node-cjs-script, node-esm-script]
         node-version: [10.x, 12.x, lts/*, current]
+        exclude:
+        - test: node-esm-script
+          version: 10.x
     defaults:
       run:
         working-directory: runtimes/${{ matrix.test }}
@@ -78,10 +81,7 @@ jobs:
           cache: npm
           node-version: ${{ matrix.node-version }}
       - run: npm install
-      - run: npm run test:cjs
-        if: matrix.node-version == '10.x'
       - run: npm test
-        if: matrix.node-version != '10.x'
       - name: Get Node.js major version
         uses: mathiasvr/command-output@v1
         id: version

@@ -1,10 +1,7 @@
 {
   "type": "commonjs",
   "scripts": {
-    "test": "npm run test:cjs && npm run test:esm",
-    "test:cjs": "node test.js",
-    "pretest:esm": "cp ../node-esm-script/test.js test.mjs",
-    "test:esm": "node test.mjs"
+    "test": "node test.js"
   },
   "dependencies": {
     "@sanity/client": "^3.3.3",
