@@ -1,0 +1,11 @@
+{
+  "result": 2,
+  "env": {
+    "typeof document": "undefined",
+    "typeof fetch": "function",
+    "typeof window": "undefined",
+    "process.version": "v0.1.10"
+  },
+  "target": "ESM+ES2020",
+  "condition": "worker"
+}
