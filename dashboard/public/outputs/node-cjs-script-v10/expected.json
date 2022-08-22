@@ -2,6 +2,7 @@
   "result": 2,
   "env": {
     "Deno.version.deno": false,
+    "process.env.NEXT_RUNTIME": "",
     "process.version": "v10.24.1",
     "process.versions": {
       "http_parser": "2.9.4",

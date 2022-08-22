@@ -2,6 +2,7 @@
   "result": 2,
   "env": {
     "Deno.version.deno": "1.24.3",
+    "process.env.NEXT_RUNTIME": "",
     "process.version": "v16.11.1",
     "process.versions": {
       "node": "16.11.1",
