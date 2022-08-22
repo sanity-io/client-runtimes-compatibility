@@ -9,7 +9,9 @@ export const config = {
 
 export default async function handler(req) {
   try {
-    const { default: createClient } = await import('@sanity/client')
+    const { default: createClient } = await import(
+      /* webpackIgnore: true */ '@sanity/client'
+    )
     const client = createClient({
       projectId,
       dataset,
