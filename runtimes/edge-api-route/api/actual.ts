@@ -1,4 +1,4 @@
-// import createClient from '@sanity/client'
+import createClient from '@sanity/client'
 import { projectId, dataset, apiVersion, query } from './_config.mjs'
 
 export const config = {
@@ -6,7 +6,7 @@ export const config = {
 }
 
 export default async function handler() {
-  // /*
+  /*
   return new Response(
     JSON.stringify({
       error: `Build failed with 29 errors:
