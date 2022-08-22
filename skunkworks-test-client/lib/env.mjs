@@ -1,21 +1,34 @@
+var Deno$version$deno = false
+var process$env$NEXT_RUNTIME = false
+var process$version = false
+var process$versions = false
+
+try {
+  Deno$version$deno = Deno.version.deno
+} catch (err) {
+  // ignore
+}
+try {
+  process$env$NEXT_RUNTIME = process.env.NEXT_RUNTIME
+} catch (err) {
+  // ignore
+}
+try {
+  process$version = process.version
+} catch (err) {
+  // ignore
+}
+try {
+  process$versions = process.versions
+} catch (err) {
+  // ignore
+}
+
 export default {
-  'Deno.version.deno':
-    typeof Deno !== 'undefined' &&
-    typeof Deno.version !== 'undefined' &&
-    typeof Deno.version.deno !== 'undefined' &&
-    Deno.version.deno,
-  'process.env.NEXT_RUNTIME':
-    typeof process !== 'undefined' &&
-    typeof process.env !== 'undefined' &&
-    process.env.NEXT_RUNTIME,
-  'process.version':
-    typeof process !== 'undefined' &&
-    typeof process.version !== 'undefined' &&
-    process.version,
-  'process.versions':
-    typeof process !== 'undefined' &&
-    typeof process.versions !== 'undefined' &&
-    process.versions,
+  'Deno.version.deno': Deno$version$deno,
+  'process.env.NEXT_RUNTIME': process$env$NEXT_RUNTIME,
+  'process.version': process$version,
+  'process.versions': process$versions,
   document: typeof document === 'object',
   EdgeRuntime: typeof EdgeRuntime === 'string' && EdgeRuntime,
   fetch: typeof fetch === 'function',
