@@ -1,9 +1,9 @@
 {
   "result": 2,
   "env": {
-    "typeof document": "undefined",
-    "typeof fetch": "function",
-    "typeof window": "undefined",
+    "typeof document === 'object'": false,
+    "typeof fetch === 'function'": true,
+    "typeof window === 'object'": false,
     "process.version": "v0.1.10"
   },
   "target": "ESM+ES2020",

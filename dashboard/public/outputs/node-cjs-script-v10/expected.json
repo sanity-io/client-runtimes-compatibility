@@ -1,9 +1,9 @@
 {
   "result": 2,
   "env": {
-    "typeof document": "undefined",
-    "typeof fetch": "undefined",
-    "typeof window": "undefined",
+    "typeof document === 'object'": false,
+    "typeof fetch === 'function'": false,
+    "typeof window === 'object'": false,
     "process.version": "v10.24.1"
   },
   "target": "CJS+ES5",
