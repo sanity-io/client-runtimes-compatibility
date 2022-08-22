@@ -19,29 +19,31 @@ try {
   // ignore
 }
 try {
-  process$versions = Object.assign({}, process.versions, {
-    ares: undefined,
-    boringssl: undefined,
-    brotli: undefined,
-    cldr: undefined,
-    http_parser: undefined,
-    icu: false,
-    libarchive: undefined,
-    llhttp: undefined,
-    mimalloc: undefined,
-    modules: false,
-    napi: undefined,
-    nghttp2: undefined,
-    nghttp3: undefined,
-    ngtcp2: undefined,
-    openssl: undefined,
-    picohttpparser: undefined,
-    tz: false,
-    unicode: false,
-    uv: undefined,
-    zig: undefined,
-    zlib: undefined,
-  })
+  process$versions = process.versions
+    ? Object.assign({}, process.versions, {
+        ares: undefined,
+        boringssl: undefined,
+        brotli: undefined,
+        cldr: undefined,
+        http_parser: undefined,
+        icu: undefined,
+        libarchive: undefined,
+        llhttp: undefined,
+        mimalloc: undefined,
+        modules: undefined,
+        napi: undefined,
+        nghttp2: undefined,
+        nghttp3: undefined,
+        ngtcp2: undefined,
+        openssl: undefined,
+        picohttpparser: undefined,
+        tz: undefined,
+        unicode: undefined,
+        uv: undefined,
+        zig: undefined,
+        zlib: undefined,
+      })
+    : undefined
 } catch (err) {
   // ignore
 }
