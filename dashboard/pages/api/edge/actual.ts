@@ -1,5 +1,5 @@
 import createClient from '@sanity/client'
-import { projectId, dataset, apiVersion, query } from '../_config'
+import { projectId, dataset, apiVersion, query } from 'config'
 
 export const config = {
   runtime: 'experimental-edge',

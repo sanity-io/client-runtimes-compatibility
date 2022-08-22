@@ -12,11 +12,11 @@ type Props = {
   }
 }
 
-const fetcher = (url) => fetch(url).then((res) => res.json())
+// success/fail icon | name | 
+// available only in dialog: globals, document
+
 const useDashboardData = () => {
-  const { data, error } = useSWR('/data.json', fetcher, {
-    revalidateOnMount: false,
-  })
+  const { data, error } = useSWR('/data.json')
   const [initial] = useState(() => stringify(data))
   const hash = useMemo(() => stringify(data), [data])
   const changed = initial !== hash
@@ -38,9 +38,10 @@ function Dashboard() {
   )
 }
 
+const fetcher = (url) => fetch(url).then((res) => res.json())
 export default function IndexPage({ fallback }: Props) {
   return (
-    <SWRConfig value={{ fallback }}>
+    <SWRConfig value={{ fallback, revalidateOnMount: false, fetcher }}>
       <Dashboard />
     </SWRConfig>
   )
