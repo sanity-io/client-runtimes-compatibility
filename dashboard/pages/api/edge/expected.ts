@@ -1,5 +1,5 @@
 import createClient, { target, condition } from 'skunkworks-test-client'
-import { projectId, dataset, apiVersion, query } from './_config.mjs'
+import { projectId, dataset, apiVersion, query } from './_config'
 
 export const config = {
   runtime: 'experimental-edge',
@@ -14,6 +14,7 @@ export default async function handler() {
       env: client.env,
       target,
       condition,
+      'process.env.NEXT_RUNTIME': process.env.NEXT_RUNTIME,
     }),
     {
       status: 200,

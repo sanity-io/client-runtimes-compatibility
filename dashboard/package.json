@@ -1,1 +1,19 @@
-{}
+{
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@sanity/client": "^3.3.3",
+    "next": "^12.2.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "skunkworks-test-client": "^2.1.3"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "eslint": "^8.22.0",
+    "eslint-config-next": "^12.2.5"
+  }
+}

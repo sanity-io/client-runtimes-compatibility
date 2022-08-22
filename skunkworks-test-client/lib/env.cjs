@@ -4,6 +4,10 @@ module.exports = {
     typeof Deno.version !== 'undefined' &&
     typeof Deno.version.deno !== 'undefined' &&
     Deno.version.deno,
+  'process.env.NEXT_RUNTIME':
+    typeof process !== 'undefined' &&
+    typeof process.env !== 'undefined' &&
+    process.env.NEXT_RUNTIME,
   'process.version':
     typeof process !== 'undefined' &&
     typeof process.version !== 'undefined' &&
