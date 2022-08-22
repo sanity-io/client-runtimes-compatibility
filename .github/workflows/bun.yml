@@ -11,6 +11,9 @@ on:
 jobs:
   run:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: runtimes/bun-script
     steps:
       - uses: actions/checkout@v3
       - uses: antongolub/action-setup-bun@v1
