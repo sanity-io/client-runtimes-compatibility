@@ -2,8 +2,8 @@
   "type": "commonjs",
   "scripts": {
     "test": "npm run test:cjs && npm run test:esm",
-    "pretest:esm": "cp ../node-esm-script/test.js test.mjs",
     "test:cjs": "node test.js",
+    "pretest:esm": "cp ../node-esm-script/test.js test.mjs",
     "test:esm": "node test.mjs"
   },
   "dependencies": {
