@@ -5,6 +5,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.7](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.2.6...v2.2.7) (2022-08-22)
+
+### Bug Fixes
+
+- better handling of versions ([23a806b](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/23a806bf4054631b5cac77d28b12dbec1ccca823))
+
 ## [2.2.6](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.2.5...v2.2.6) (2022-08-22)
 
 ### Bug Fixes
