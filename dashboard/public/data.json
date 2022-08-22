@@ -1,0 +1,56 @@
+[
+  {
+    "type": "artifact",
+    "name": "Bun v0.1",
+    "docs": "https://bun.sh/"
+  },
+  {
+    "type": "artifact",
+    "name": "Deno v1 Packages from CDN",
+    "docs": "https://deno.land/manual@v1.24.3/node/cdns#packages-from-cdns"
+  },
+  {
+    "type": "artifact",
+    "name": "Deno v1 Node compatibility mode",
+    "docs": "https://deno.land/manual@v1.24.3/node/compatibility_mode"
+  },
+  {
+    "type": "artifact",
+    "name": "Node.js CJS v10",
+    "docs": "https://nodejs.org/docs/latest-v10.x/api/modules.html#modules_all_together"
+  },
+  {
+    "type": "artifact",
+    "name": "Node.js CJS v16",
+    "docs": "https://nodejs.org/dist/latest-v16.x/docs/api/packages.html#determining-module-system"
+  },
+  {
+    "type": "artifact",
+    "name": "Node.js CJS v18",
+    "docs": "https://nodejs.org/dist/latest-v18.x/docs/api/packages.html#determining-module-system"
+  },
+  {
+    "type": "artifact",
+    "name": "Node.js ESM v16",
+    "docs": "https://nodejs.org/dist/latest-v16.x/docs/api/packages.html#determining-module-system"
+  },
+  {
+    "type": "artifact",
+    "name": "Node.js ESM v18",
+    "docs": "https://nodejs.org/dist/latest-v18.x/docs/api/packages.html#determining-module-system"
+  },
+  {
+    "type": "service",
+    "name": "Vercel Edge Function",
+    "docs": "https://vercel.com/docs/concepts/functions/edge-functions",
+    "expected": "https://ecosystem-skunkworks-edge-api-route.sanity.build/api/expected",
+    "actual": "https://ecosystem-skunkworks-edge-api-route.sanity.build/api/actual"
+  },
+  {
+    "type": "service",
+    "name": "Vercel Serverless Function",
+    "docs": "https://vercel.com/docs/concepts/functions/serverless-functions",
+    "expected": "https://ecosystem-skunkworks-serverless-api-route.sanity.build/api/expected",
+    "actual": "https://ecosystem-skunkworks-serverless-api-route.sanity.build/api/actual"
+  },
+]

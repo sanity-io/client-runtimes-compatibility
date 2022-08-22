@@ -1,8 +1,20 @@
+var dirname = undefined
+var import$meta$url = undefined
 var Deno$version$deno = undefined
 var process$env$NEXT_RUNTIME = undefined
 var process$version = undefined
 var process$versions = undefined
 
+try {
+  dirname = __dirname
+} catch (err) {
+  // ignore
+}
+try {
+  import$meta$url = import.meta.url
+} catch (err) {
+  // ignore
+}
 try {
   Deno$version$deno = Deno.version.deno
 } catch (err) {
@@ -58,7 +70,10 @@ module.exports = {
     typeof self !== 'undefined' && 'self',
     typeof window !== 'undefined' && 'window',
     typeof global !== 'undefined' && 'global',
+    typeof location !== 'undefined' && 'location',
   ].filter(Boolean),
+  __dirname: dirname,
+  'import.meta.url': import$meta$url,
   'Deno.version.deno': Deno$version$deno,
   'process.version': process$version,
   'process.versions': process$versions,
