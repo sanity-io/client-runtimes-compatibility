@@ -3,11 +3,13 @@
   "env": {
     "document": false,
     "fetch": true,
-    "global": true,
-    "globalThis": true,
-    "window": false,
+    "globals": ["globalThis", "self", "global"],
     "process.version": "v0.1.10",
-    "process.versions": { "node": "16.14.0", "bun": "0.1.10", "modules": "67" }
+    "process.versions": {
+      "node": "16.14.0",
+      "bun": "0.1.10",
+      "webkit": "208963e47abaf762c5c132a596afc36a86eb6192"
+    }
   },
   "target": "ESM+ES2020",
   "condition": "worker"
