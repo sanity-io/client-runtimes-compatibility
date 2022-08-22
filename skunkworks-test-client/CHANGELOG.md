@@ -5,6 +5,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.10](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.2.9...v2.2.10) (2022-08-22)
+
+### Bug Fixes
+
+- can't use import.meta outside module ([813744a](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/813744a3d8fd06d7641201c0bfa310663bbf7e2c))
+
 ## [2.2.9](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.2.8...v2.2.9) (2022-08-22)
 
 ### Bug Fixes
