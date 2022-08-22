@@ -2,7 +2,23 @@
   "result": 2,
   "env": {
     "document": false,
+    "EdgeRuntime": false,
     "fetch": true,
+    "global": true,
+    "globalThis": true,
+    "version": "v0.1.10",
+    "versions": {
+      "node": "16.14.0",
+      "bun": "0.1.10",
+      "webkit": "208963e47abaf762c5c132a596afc36a86eb6192",
+      "mimalloc": "817569dfad79732233fb86649c89e04387ce02e9",
+      "libarchive": "dc321febde83dd0f31158e1be61a7aedda65e7a2",
+      "picohttpparser": "066d2b1e9ab820703db0837a7255d92d30f0c9f5",
+      "boringssl": "b3ed071ecc4efb77afd0a025ea1078da19578bfd",
+      "zlib": "959b4ea305821e753385e873ec4edfaa9a5d49b7",
+      "zig": "0.10.0",
+      "modules": "67"
+    },
     "window": false,
     "process.version": "v0.1.10"
   },
