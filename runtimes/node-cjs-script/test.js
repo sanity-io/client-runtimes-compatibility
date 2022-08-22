@@ -32,7 +32,7 @@ async function actual() {
     json = { result }
   } catch (err) {
     console.error(err)
-    json = { error: err.toString() }
+    json = { error: err.stack || err.toString() }
   }
 
   await writeFile('artifacts/actual.json', JSON.stringify(json))

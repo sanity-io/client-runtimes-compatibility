@@ -1,6 +1,9 @@
-import writeFile from 'write-file-atomic'
-import createClientExpected, { target, condition } from 'skunkworks-test-client'
-import createClientActual from '@sanity/client'
+// Run with `deno task test`
+import createClientExpected, {
+  target,
+  condition,
+} from 'https://esm.sh/skunkworks-test-client'
+import createClientActual from 'https://esm.sh/@sanity/client'
 
 const projectId = '81pocpw8'
 const dataset = 'production'
@@ -16,9 +19,9 @@ async function expected() {
   })
   const result = await client.fetch(query)
 
-  client.env['process.version'] = process.version
+  client.env['Deno.version.deno'] = Deno.version.deno
 
-  await writeFile(
+  await Deno.writeTextFile(
     'artifacts/expected.json',
     JSON.stringify({ result, env: client.env, target, condition })
   )
@@ -39,18 +42,7 @@ async function actual() {
     json = { error: err.stack || err.toString() }
   }
 
-  await writeFile('artifacts/actual.json', JSON.stringify(json))
+  await Deno.writeTextFile('artifacts/actual.json', JSON.stringify(json))
 }
 
-async function main() {
-  await Promise.all([expected(), actual()])
-
-  return 0
-}
-
-main()
-  .then(process.exit)
-  .catch((err) => {
-    console.error(err)
-    process.exit(1)
-  })
+await Promise.all([expected(), actual()])

@@ -5,6 +5,8 @@ on:
   push:
     branches: [main]
     paths:
+      - 'runtimes/deno-cdn-script/**'
+      - 'runtimes/deno-compat-script/**'
       - 'runtimes/node-cjs-script/**'
       - 'runtimes/node-esm-script/**'
   workflow_dispatch:
@@ -51,14 +53,25 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
+        test: [deno-cdn-script, deno-compat-script]
         deno-version: [1.x, canary]
-    name: Deno ${{ matrix.deno-version }}
+    defaults:
+      run:
+        working-directory: runtimes/${{ matrix.test }}
+    name: Deno ${{ matrix.deno-version }} ${{ matrix.test }}
     # Run https://deno.land/manual/node/compatibility_mode#module-resolution mode on one test, and https://esm.sh/ on the other (https://deno.land/manual/node/cdns)
     steps:
       - uses: actions/checkout@v3
       - uses: denoland/setup-deno@v1
         with:
           deno-version: ${{ matrix.deno-version }}
+      - run: deno task test
+      - uses: actions/upload-artifact@v3
+        with:
+          name: ${{ matrix.test }}-${{ matrix.deno-version }}
+          path: runtimes/${{ matrix.test }}/artifacts/*.json
+          if-no-files-found: error
+          retention-days: 1
       - run: git status
 
   node:
@@ -66,7 +79,7 @@ jobs:
     strategy:
       matrix:
         test: [node-cjs-script, node-esm-script]
-        node-version: [10.x, 12.x, lts/*, current]
+        node-version: [10.x, lts/*, current]
         exclude:
         - test: node-esm-script
           node-version: 10.x
