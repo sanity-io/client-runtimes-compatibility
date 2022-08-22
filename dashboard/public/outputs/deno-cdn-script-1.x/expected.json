@@ -1,13 +1,9 @@
 {
   "result": 2,
   "env": {
-    "document": false,
-    "EdgeRuntime": false,
-    "fetch": true,
-    "global": true,
-    "globalThis": true,
-    "version": "v16.11.1",
-    "versions": {
+    "Deno.version.deno": "1.24.3",
+    "process.version": "v16.11.1",
+    "process.versions": {
       "node": "16.11.1",
       "uv": "1.42.0",
       "zlib": "1.2.11",
@@ -26,8 +22,12 @@
       "v8": "10.4.132.20",
       "typescript": "4.7.4"
     },
-    "window": true,
-    "Deno.version.deno": "1.24.3"
+    "document": false,
+    "EdgeRuntime": false,
+    "fetch": true,
+    "global": true,
+    "globalThis": true,
+    "window": true
   },
   "target": "ESM+ES2020",
   "condition": "deno"

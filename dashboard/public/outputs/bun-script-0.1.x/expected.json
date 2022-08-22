@@ -1,13 +1,9 @@
 {
   "result": 2,
   "env": {
-    "document": false,
-    "EdgeRuntime": false,
-    "fetch": true,
-    "global": true,
-    "globalThis": true,
-    "version": "v0.1.10",
-    "versions": {
+    "Deno.version.deno": false,
+    "process.version": "v0.1.10",
+    "process.versions": {
       "node": "16.14.0",
       "bun": "0.1.10",
       "webkit": "208963e47abaf762c5c132a596afc36a86eb6192",
@@ -19,8 +15,12 @@
       "zig": "0.10.0",
       "modules": "67"
     },
-    "window": false,
-    "process.version": "v0.1.10"
+    "document": false,
+    "EdgeRuntime": false,
+    "fetch": true,
+    "global": true,
+    "globalThis": true,
+    "window": false
   },
   "target": "ESM+ES2020",
   "condition": "worker"

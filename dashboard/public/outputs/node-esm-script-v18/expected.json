@@ -1,13 +1,9 @@
 {
   "result": 2,
   "env": {
-    "document": false,
-    "EdgeRuntime": false,
-    "fetch": true,
-    "global": true,
-    "globalThis": true,
-    "version": "v18.7.0",
-    "versions": {
+    "Deno.version.deno": false,
+    "process.version": "v18.7.0",
+    "process.versions": {
       "node": "18.7.0",
       "v8": "10.2.154.13-node.9",
       "uv": "1.43.0",
@@ -26,8 +22,12 @@
       "ngtcp2": "0.1.0-DEV",
       "nghttp3": "0.1.0-DEV"
     },
-    "window": false,
-    "process.version": "v18.7.0"
+    "document": false,
+    "EdgeRuntime": false,
+    "fetch": true,
+    "global": true,
+    "globalThis": true,
+    "window": false
   },
   "target": "ESM+CJS+Node16",
   "condition": "node.import+node.require"

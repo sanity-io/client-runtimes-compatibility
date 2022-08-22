@@ -1,13 +1,9 @@
 {
   "result": 2,
   "env": {
-    "document": false,
-    "EdgeRuntime": false,
-    "fetch": false,
-    "global": true,
-    "globalThis": false,
-    "version": "v10.24.1",
-    "versions": {
+    "Deno.version.deno": false,
+    "process.version": "v10.24.1",
+    "process.versions": {
       "http_parser": "2.9.4",
       "node": "10.24.1",
       "v8": "6.8.275.32-node.59",
@@ -24,8 +20,12 @@
       "cldr": "35.1",
       "tz": "2019c"
     },
-    "window": false,
-    "process.version": "v10.24.1"
+    "document": false,
+    "EdgeRuntime": false,
+    "fetch": false,
+    "global": true,
+    "globalThis": false,
+    "window": false
   },
   "target": "CJS+ES5",
   "condition": "main"
