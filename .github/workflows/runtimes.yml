@@ -57,8 +57,9 @@ jobs:
           bun-version: ${{ matrix.bun-version }}
       - run: bun install
       - run: bun run test:expected
-      # - run: bun run test:actual
-      # timeout-minutes: 1
+      - run: bun run test:actual
+        continue-on-error: true
+        timeout-minutes: 1
       - uses: actions/upload-artifact@v3
         with:
           name: ${{ matrix.test }}-${{ matrix.bun-version }}

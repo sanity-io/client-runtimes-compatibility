@@ -1,5 +1,5 @@
 module.exports = {
-  'typeof document': typeof document,
-  'typeof fetch': typeof fetch,
-  'typeof window': typeof window,
+  "typeof document === 'object'": typeof document === 'object',
+  "typeof fetch === 'function'": typeof fetch === 'function',
+  "typeof window === 'object'": typeof window === 'object',
 }
