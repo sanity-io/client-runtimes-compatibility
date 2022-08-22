@@ -5,6 +5,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.9](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.2.8...v2.2.9) (2022-08-22)
+
+### Bug Fixes
+
+- add navigator.userAgent ([60d9856](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/60d98565553d3e010fa8454547447a87a2c2738f))
+
 ## [2.2.8](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.2.7...v2.2.8) (2022-08-22)
 
 ### Bug Fixes
