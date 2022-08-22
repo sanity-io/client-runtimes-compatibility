@@ -2,7 +2,7 @@
   "result": 2,
   "env": {
     "Deno.version.deno": false,
-    "process.env.NEXT_RUNTIME": "",
+    "process.env.NEXT_RUNTIME": false,
     "process.version": "v10.24.1",
     "process.versions": {
       "http_parser": "2.9.4",
@@ -29,5 +29,5 @@
     "window": false
   },
   "target": "CJS+ES5",
-  "condition": "main"
+  "condition": "pkg.main"
 }
