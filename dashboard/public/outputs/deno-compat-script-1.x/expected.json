@@ -8,10 +8,6 @@
     "process.version": "v16.11.1",
     "process.versions": {
       "node": "16.11.1",
-      "modules": false,
-      "icu": false,
-      "tz": false,
-      "unicode": false,
       "deno": "1.24.3",
       "v8": "10.4.132.20",
       "typescript": "4.7.4"
