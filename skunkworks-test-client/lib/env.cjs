@@ -1,3 +1,4 @@
+var navigator$UserAgent = undefined
 var dirname = undefined
 var import$meta$url = undefined
 var Deno$version$deno = undefined
@@ -5,6 +6,11 @@ var process$env$NEXT_RUNTIME = undefined
 var process$version = undefined
 var process$versions = undefined
 
+try {
+  navigator$UserAgent = navigator.userAgent
+} catch (err) {
+  // ignore
+}
 try {
   dirname = __dirname
 } catch (err) {
@@ -71,7 +77,9 @@ module.exports = {
     typeof window !== 'undefined' && 'window',
     typeof global !== 'undefined' && 'global',
     typeof location !== 'undefined' && 'location',
+    typeof navigator !== 'undefined' && 'navigator',
   ].filter(Boolean),
+  'navigator.userAgent': navigator$UserAgent,
   __dirname: dirname,
   'import.meta.url': import$meta$url,
   'Deno.version.deno': Deno$version$deno,

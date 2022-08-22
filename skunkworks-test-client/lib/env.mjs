@@ -1,3 +1,4 @@
+let navigator$UserAgent = undefined
 let dirname = undefined
 let import$meta$url = undefined
 let Deno$version$deno = undefined
@@ -5,6 +6,11 @@ let process$env$NEXT_RUNTIME = undefined
 let process$version = undefined
 let process$versions = undefined
 
+try {
+  navigator$UserAgent = navigator.userAgent
+} catch (err) {
+  // ignore
+}
 try {
   dirname = __dirname
 } catch (err) {
@@ -71,7 +77,9 @@ export default {
     typeof window !== 'undefined' && 'window',
     typeof global !== 'undefined' && 'global',
     typeof location !== 'undefined' && 'location',
+    typeof navigator !== 'undefined' && 'navigator',
   ].filter(Boolean),
+  'navigator.userAgent': navigator$UserAgent,
   __dirname: dirname,
   'import.meta.url': import$meta$url,
   'Deno.version.deno': Deno$version$deno,
