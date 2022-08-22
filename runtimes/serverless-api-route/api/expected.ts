@@ -13,6 +13,5 @@ export default async function handler(req, res) {
     env: client.env,
     target,
     condition,
-    'process.env.NEXT_RUNTIME': process.env.NEXT_RUNTIME,
   })
 }

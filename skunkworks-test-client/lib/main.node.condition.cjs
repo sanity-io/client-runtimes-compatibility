@@ -1,1 +1,1 @@
-module.exports = 'main'
+module.exports = 'pkg.main'

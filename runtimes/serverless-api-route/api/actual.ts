@@ -6,6 +6,5 @@ export default async function handler(req, res) {
   const result = await client.fetch(query)
   return res.json({
     result,
-    'process.env.NEXT_RUNTIME': process.env.NEXT_RUNTIME,
   })
 }

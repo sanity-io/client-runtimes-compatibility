@@ -1,1 +1,1 @@
-module.exports = 'browser.main'
+module.exports = 'pkg.browser.main'

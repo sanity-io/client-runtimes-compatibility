@@ -1,1 +1,1 @@
-export default 'module'
+export default 'pkg.module'

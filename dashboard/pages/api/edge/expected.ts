@@ -14,7 +14,6 @@ export default async function handler() {
       env: client.env,
       target,
       condition,
-      'process.env.NEXT_RUNTIME': process.env.NEXT_RUNTIME,
     }),
     {
       status: 200,

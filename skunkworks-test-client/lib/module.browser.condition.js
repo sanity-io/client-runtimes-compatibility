@@ -1,1 +1,1 @@
-export default 'browser.module'
+export default 'pkg.browser.module'

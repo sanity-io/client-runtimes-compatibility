@@ -1,12 +1,12 @@
-// import createClient from '@sanity/client'
-import { projectId, dataset, apiVersion, query } from './_config.mjs'
+import createClient from '@sanity/client'
+import { projectId, dataset, apiVersion, query } from './_config'
 
 export const config = {
   runtime: 'experimental-edge',
 }
 
 export default async function handler() {
-  // /*
+  /*
   return new Response(
     JSON.stringify({
       error: `Build failed with 29 errors:
