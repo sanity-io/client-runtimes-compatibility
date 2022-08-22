@@ -6,6 +6,8 @@
   },
   "dependencies": {
     "@sanity/client": "^3.3.3",
+    "@tanstack/react-table": "^8.5.11",
+    "fast-json-stable-stringify": "^2.1.0",
     "next": "^12.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
