@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "test": "bun test.js"
+    "test": "bun run test:expected && bun run test:actual",
+    "test:expected": "bun test.expected.js",
+    "test:actual": "bun test.actual.js"
   },
   "dependencies": {
     "@sanity/client": "^3.3.3",

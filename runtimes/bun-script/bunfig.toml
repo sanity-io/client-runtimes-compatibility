@@ -1,0 +1,6 @@
+[install]
+optional = false
+dev = false
+
+[install.lockfile]
+print = "yarn"

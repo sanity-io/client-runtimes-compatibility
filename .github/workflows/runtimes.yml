@@ -40,18 +40,29 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        platform: [browser, node, bun]
+        # Bun can specify "--platform": browser | node | bun
+        # https://github.com/oven-sh/bun#buntranspiler
+        # platform: [browser, node, bun]
+        test: [bun-script]
         bun-version: [0.1.x, '*']
-    name: Bun ${{ matrix.bun-version }} ${{ matrix.platform }}
-    # Bun can specify "--platform": browser | node | bun
-    # Add bun condition to skunk client
-    # https://github.com/oven-sh/bun#buntranspiler
+    defaults:
+      run:
+        working-directory: runtimes/${{ matrix.test }}
+    name: Bun ${{ matrix.bun-version }} ${{ matrix.test }}
     steps:
       - uses: actions/checkout@v3
       - uses: antongolub/action-setup-bun@v1
         with:
           bun-version: ${{ matrix.bun-version }}
       - run: bun install
+      - run: bun run test:expected
+      - run: bun run test:actual
+      - uses: actions/upload-artifact@v3
+        with:
+          name: ${{ matrix.test }}-${{ matrix.bun-version }}
+          path: runtimes/${{ matrix.test }}/artifacts/*.json
+          if-no-files-found: error
+          retention-days: 1
       - run: git status
 
   deno:
