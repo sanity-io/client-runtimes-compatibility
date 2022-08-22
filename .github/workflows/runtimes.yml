@@ -78,7 +78,10 @@ jobs:
           cache: npm
           node-version: ${{ matrix.node-version }}
       - run: npm install
+      - run: npm run test:cjs
+        if: matrix.node-version == '10.x'
       - run: npm test
+        if: matrix.node-version != '10.x'
       - name: Get Node.js major version
         uses: mathiasvr/command-output@v1
         id: version
