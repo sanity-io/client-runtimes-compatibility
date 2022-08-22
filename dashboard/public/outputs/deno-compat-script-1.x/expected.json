@@ -1,0 +1,11 @@
+{
+  "result": 2,
+  "env": {
+    "typeof document": "undefined",
+    "typeof fetch": "function",
+    "typeof window": "object",
+    "Deno.version.deno": "1.24.3"
+  },
+  "target": "ESM+ES2020",
+  "condition": "deno"
+}
