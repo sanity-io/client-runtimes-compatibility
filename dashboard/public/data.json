@@ -2,7 +2,9 @@
   {
     "type": "artifact",
     "name": "Bun v0.1",
-    "docs": "https://bun.sh/"
+    "docs": "https://bun.sh/",
+    "expected": "/outputs/bun-script-0.1.x/expected.json",
+    "actual": "/outputs/bun-script-0.1.x/actual.json"
   },
   {
     "type": "artifact",
