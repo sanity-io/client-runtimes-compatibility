@@ -2,10 +2,10 @@
   "result": 2,
   "env": {
     "Deno.version.deno": false,
-    "process.version": "v16.16.0",
+    "process.version": "v16.17.0",
     "process.versions": {
-      "node": "16.16.0",
-      "v8": "9.4.146.24-node.21",
+      "node": "16.17.0",
+      "v8": "9.4.146.26-node.22",
       "uv": "1.43.0",
       "zlib": "1.2.11",
       "brotli": "1.0.9",
@@ -15,9 +15,9 @@
       "napi": "8",
       "llhttp": "6.0.7",
       "openssl": "1.1.1q+quic",
-      "cldr": "40.0",
-      "icu": "70.1",
-      "tz": "2021a3",
+      "cldr": "41.0",
+      "icu": "71.1",
+      "tz": "2022a",
       "unicode": "14.0",
       "ngtcp2": "0.1.0-DEV",
       "nghttp3": "0.1.0-DEV"
