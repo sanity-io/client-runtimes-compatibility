@@ -24,6 +24,7 @@ export default {
       {
         status: 200,
         headers: {
+          'Access-Control-Allow-Origin': '*',
           'content-type': 'application/json',
         },
       }

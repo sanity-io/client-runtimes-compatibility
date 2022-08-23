@@ -39,7 +39,8 @@ vc-file-system:runtimes/edge-api-route/node_modules/follow-redirects/index.js:1:
       {
         status: 200,
         headers: {
-          'content-type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          'Content-Type': 'application/json',
         },
       }
     )
@@ -51,7 +52,8 @@ vc-file-system:runtimes/edge-api-route/node_modules/follow-redirects/index.js:1:
       {
         status: 500,
         headers: {
-          'content-type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          'Content-Type': 'application/json',
         },
       }
     )
