@@ -1,4 +1,4 @@
-import writeFile from 'write-file-atomic'
+import { writeFile } from 'node:fs/promises'
 import createClientExpected, { target, condition } from 'skunkworks-test-client'
 import createClientActual from '@sanity/client'
 
@@ -40,15 +40,4 @@ async function actual() {
   await writeFile('artifacts/actual.json', JSON.stringify(json))
 }
 
-async function main() {
-  await Promise.all([expected(), actual()])
-
-  return 0
-}
-
-main()
-  .then(process.exit)
-  .catch((err) => {
-    console.error(err)
-    process.exit(1)
-  })
+await Promise.all([expected(), actual()])
