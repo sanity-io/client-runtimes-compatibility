@@ -1,4 +1,4 @@
-import fs from 'node:fs/promises'
+import { write } from 'bun'
 import createClient from '@sanity/client'
 
 import { projectId, dataset, apiVersion, query } from './config.js'
@@ -13,4 +13,4 @@ try {
   json = { error: err.stack || err.toString() }
 }
 
-await fs.writeFile('artifacts/actual.json', JSON.stringify(json))
+await write('artifacts/actual.json', JSON.stringify(json))
