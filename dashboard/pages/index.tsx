@@ -6,11 +6,11 @@ import Head from 'next/head'
 import { useMemo, useState } from 'react'
 import useSWR, { SWRConfig } from 'swr'
 
-import data from 'public/data.json'
+import data from 'public/checks.json'
 
 type Props = {
   fallback: {
-    '/data.json': typeof data
+    '/checks.json': Data
     [key: string]: any
   }
 }
@@ -19,7 +19,7 @@ type Props = {
 // available only in dialog: globals, document
 
 const useDashboardData = () => {
-  const { data, error } = useSWR('/data.json')
+  const { data, error } = useSWR('/checks.json')
   const [initial] = useState(() => stringify(data))
   const hash = useMemo(() => stringify(data), [data])
   const changed = initial !== hash
@@ -121,7 +121,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   return {
     props: {
       fallback: {
-        '/data.json': data,
+        '/checks.json': data,
       },
     },
   }
