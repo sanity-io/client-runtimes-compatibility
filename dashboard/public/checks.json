@@ -9,37 +9,51 @@
   {
     "type": "artifact",
     "name": "Deno v1 Packages from CDN",
-    "docs": "https://deno.land/manual@v1.24.3/node/cdns#packages-from-cdns"
+    "docs": "https://deno.land/manual@v1.24.3/node/cdns#packages-from-cdns",
+    "expected": "/outputs/deno-cdn-script-1.x/expected.json",
+    "actual": "/outputs/deno-cdn-script-1.x/actual.json"
   },
   {
     "type": "artifact",
     "name": "Deno v1 Node compatibility mode",
-    "docs": "https://deno.land/manual@v1.24.3/node/compatibility_mode"
+    "docs": "https://deno.land/manual@v1.24.3/node/compatibility_mode",
+    "expected": "/outputs/deno-compat-script-1.x/expected.json",
+    "actual": "/outputs/deno-compat-script-1.x/actual.json"
   },
   {
     "type": "artifact",
     "name": "Node.js CJS v10",
-    "docs": "https://nodejs.org/docs/latest-v10.x/api/modules.html#modules_all_together"
+    "docs": "https://nodejs.org/docs/latest-v10.x/api/modules.html#modules_all_together",
+    "expected": "/outputs/node-cjs-script-v10/expected.json",
+    "actual": "/outputs/node-cjs-script-v10/actual.json"
   },
   {
     "type": "artifact",
     "name": "Node.js CJS v16",
-    "docs": "https://nodejs.org/dist/latest-v16.x/docs/api/packages.html#determining-module-system"
+    "docs": "https://nodejs.org/dist/latest-v16.x/docs/api/packages.html#determining-module-system",
+    "expected": "/outputs/node-cjs-script-v16/expected.json",
+    "actual": "/outputs/node-cjs-script-v16/actual.json"
   },
   {
     "type": "artifact",
     "name": "Node.js CJS v18",
-    "docs": "https://nodejs.org/dist/latest-v18.x/docs/api/packages.html#determining-module-system"
+    "docs": "https://nodejs.org/dist/latest-v18.x/docs/api/packages.html#determining-module-system",
+    "expected": "/outputs/node-cjs-script-v18/expected.json",
+    "actual": "/outputs/node-cjs-script-v18/actual.json"
   },
   {
     "type": "artifact",
     "name": "Node.js ESM v16",
-    "docs": "https://nodejs.org/dist/latest-v16.x/docs/api/packages.html#determining-module-system"
+    "docs": "https://nodejs.org/dist/latest-v16.x/docs/api/packages.html#determining-module-system",
+    "expected": "/outputs/node-esm-script-v16/expected.json",
+    "actual": "/outputs/node-esm-script-v16/actual.json"
   },
   {
     "type": "artifact",
     "name": "Node.js ESM v18",
-    "docs": "https://nodejs.org/dist/latest-v18.x/docs/api/packages.html#determining-module-system"
+    "docs": "https://nodejs.org/dist/latest-v18.x/docs/api/packages.html#determining-module-system",
+    "expected": "/outputs/node-esm-script-v18/expected.json",
+    "actual": "/outputs/node-esm-script-v18/actual.json"
   },
   {
     "type": "service",
@@ -54,6 +68,20 @@
     "docs": "https://vercel.com/docs/concepts/functions/serverless-functions",
     "expected": "https://ecosystem-skunkworks-serverless-api-route.sanity.build/api/expected",
     "actual": "https://ecosystem-skunkworks-serverless-api-route.sanity.build/api/actual"
+  },
+  {
+    "type": "service",
+    "name": "Next.js Edge Function",
+    "docs": "https://nextjs.org/docs/api-routes/edge-api-routes",
+    "expected": "https://client-runtimes-dashboard.sanity.build/api/edge/expected",
+    "actual": "https://client-runtimes-dashboard.sanity.build/api/edge/actual"
+  },
+  {
+    "type": "service",
+    "name": "Next.js Serverless Function",
+    "docs": "https://nextjs.org/docs/api-routes/introduction",
+    "expected": "https://client-runtimes-dashboard.sanity.build/api/nodejs/expected",
+    "actual": "https://client-runtimes-dashboard.sanity.build/api/nodejs/actual"
   },
   {
     "type": "service",
