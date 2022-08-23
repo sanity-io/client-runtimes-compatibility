@@ -5,6 +5,17 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.0](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.2.11...v2.3.0) (2022-08-23)
+
+### Features
+
+- add `process.isBun` ([8b68d59](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/8b68d59a820befe196cabef55eaba582c10f5ad7))
+- add `process.release.name` ([4d3ab50](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/4d3ab5098a3c87c82380f2cc24f03ad8291cc263))
+
+### Bug Fixes
+
+- start listing out the tests ([c0a6616](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/c0a66168825e15db1124d5463b9ca6a1a6ddbc85))
+
 ## [2.2.11](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.2.10...v2.2.11) (2022-08-22)
 
 ### Bug Fixes
