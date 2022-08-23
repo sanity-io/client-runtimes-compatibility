@@ -21,11 +21,12 @@ export default async function handler() {
       {
         status: 200,
         headers: {
-          'content-type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          'Content-Type': 'application/json',
         },
       }
     )
-  } catch (err) {
+  } catch (err: any) {
     return new Response(
       JSON.stringify({
         error: err.stack || err.toString(),
@@ -33,7 +34,8 @@ export default async function handler() {
       {
         status: 500,
         headers: {
-          'content-type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          'Content-Type': 'application/json',
         },
       }
     )

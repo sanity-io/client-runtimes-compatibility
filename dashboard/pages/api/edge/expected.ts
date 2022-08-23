@@ -18,7 +18,8 @@ export default async function handler() {
     {
       status: 200,
       headers: {
-        'content-type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
       },
     }
   )
