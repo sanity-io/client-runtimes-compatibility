@@ -98,6 +98,34 @@ const columns: ColumnDef<Check, any>[] = [
   columnHelper.accessor('name', {
     header: 'Name',
   }),
+  columnHelper.display({
+    header: 'Condition',
+    id: 'condition',
+    cell: ({ row }) => {
+      const { expected } = row.original
+      // eslint-disable-next-line react-hooks/rules-of-hooks
+      const { data } = useSWR(expected)
+      if (data?.condition) {
+        return data.condition
+      }
+
+      return null
+    },
+  }),
+  columnHelper.display({
+    header: 'Target',
+    id: 'target',
+    cell: ({ row }) => {
+      const { expected } = row.original
+      // eslint-disable-next-line react-hooks/rules-of-hooks
+      const { data } = useSWR(expected)
+      if (data?.target) {
+        return data.target
+      }
+
+      return null
+    },
+  }),
 ]
 
 function Table() {
