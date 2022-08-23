@@ -1,3 +1,4 @@
+var process$isBun = undefined
 var process$release$name = undefined
 var navigator$UserAgent = undefined
 var Deno$version$deno = undefined
@@ -5,6 +6,11 @@ var process$env$NEXT_RUNTIME = undefined
 var process$version = undefined
 var process$versions = undefined
 
+try {
+  process$isBun = process.isBun
+} catch (err) {
+  // ignore
+}
 try {
   process$release$name = process.release.name
 } catch (err) {
@@ -73,6 +79,7 @@ module.exports = {
     typeof location !== 'undefined' && 'location',
     typeof navigator !== 'undefined' && 'navigator',
   ].filter(Boolean),
+  'process.isBun': process$isBun,
   'process.release.name': process$release$name,
   'navigator.userAgent': navigator$UserAgent,
   'Deno.version.deno': Deno$version$deno,

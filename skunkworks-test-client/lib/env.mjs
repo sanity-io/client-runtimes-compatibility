@@ -1,3 +1,4 @@
+let process$isBun = undefined
 let process$release$name = undefined
 let navigator$UserAgent = undefined
 let import$meta$url = undefined
@@ -6,6 +7,11 @@ let process$env$NEXT_RUNTIME = undefined
 let process$version = undefined
 let process$versions = undefined
 
+try {
+  process$isBun = process.isBun
+} catch (err) {
+  // ignore
+}
 try {
   process$release$name = process.release.name
 } catch (err) {
@@ -79,6 +85,7 @@ export default {
     typeof location !== 'undefined' && 'location',
     typeof navigator !== 'undefined' && 'navigator',
   ].filter(Boolean),
+  'process.isBun': process$isBun,
   'process.release.name': process$release$name,
   'navigator.userAgent': navigator$UserAgent,
   'import.meta.url': import$meta$url,
