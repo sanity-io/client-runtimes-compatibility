@@ -1,3 +1,4 @@
+let process$release$name = undefined
 let navigator$UserAgent = undefined
 let import$meta$url = undefined
 let Deno$version$deno = undefined
@@ -5,6 +6,11 @@ let process$env$NEXT_RUNTIME = undefined
 let process$version = undefined
 let process$versions = undefined
 
+try {
+  process$release$name = process.release.name
+} catch (err) {
+  // ignore
+}
 try {
   navigator$UserAgent = navigator.userAgent
 } catch (err) {
@@ -73,6 +79,7 @@ export default {
     typeof location !== 'undefined' && 'location',
     typeof navigator !== 'undefined' && 'navigator',
   ].filter(Boolean),
+  'process.release.name': process$release$name,
   'navigator.userAgent': navigator$UserAgent,
   'import.meta.url': import$meta$url,
   'Deno.version.deno': Deno$version$deno,
