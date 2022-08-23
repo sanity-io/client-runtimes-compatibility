@@ -8,6 +8,7 @@ import useSWR, { SWRConfig } from 'swr'
 
 import data from 'public/checks.json'
 
+type Data = typeof data
 type Props = {
   fallback: {
     '/checks.json': Data
