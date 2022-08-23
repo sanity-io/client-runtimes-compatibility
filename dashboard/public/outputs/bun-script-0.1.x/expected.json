@@ -4,6 +4,7 @@
     "document": false,
     "fetch": true,
     "globals": ["globalThis", "self", "global"],
+    "process.isBun": 1,
     "import.meta.url": "file:///home/runner/work/ecosystem-skunkworks-client-runtimes/ecosystem-skunkworks-client-runtimes/runtimes/bun-script/node_modules/skunkworks-test-client/lib/env.mjs",
     "process.version": "v0.1.10",
     "process.versions": {

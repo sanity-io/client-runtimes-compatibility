@@ -4,6 +4,7 @@
     "document": false,
     "fetch": true,
     "globals": ["globalThis", "global"],
+    "process.release.name": "node",
     "process.version": "v18.7.0",
     "process.versions": { "node": "18.7.0", "v8": "10.2.154.13-node.9" }
   },
