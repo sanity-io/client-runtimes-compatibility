@@ -489,7 +489,27 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
         path.resolve(__dirname, `../../public${check.actual}`)
       )
       const actualJson = JSON.parse(actualText.toString())
-      fallback[check.actual] = outputSchema.parse(actualJson)
+      try {
+        fallback[check.actual] = outputSchema.parse(actualJson)
+      } catch (err) {
+        console.error('Failed while parsing', check.actual, actualJson, err)
+      }
+    }
+    if (check.type === 'service') {
+      try {
+        const expectedJson = await fetch(check.expected).then((res) =>
+          res.json()
+        )
+        fallback[check.expected as any] = outputSchema.parse(expectedJson)
+      } catch (err) {
+        console.error('Failed while parsing', check.expected, err)
+      }
+      try {
+        const actualJson = await fetch(check.actual).then((res) => res.json())
+        fallback[check.actual as any] = outputSchema.parse(actualJson)
+      } catch (err) {
+        console.error('Failed while parsing', check.actual, err)
+      }
     }
   }
 
