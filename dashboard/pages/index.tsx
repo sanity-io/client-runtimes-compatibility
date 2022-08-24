@@ -4,7 +4,7 @@ import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/20/solid'
 import {
   CheckCircleIcon,
   XCircleIcon,
-  ExclaimationCircleIcon,
+  ExclamationCircleIcon,
 } from '@heroicons/react/24/solid'
 import { BookIcon } from '@sanity/icons'
 import { Button } from '@sanity/ui'
@@ -142,7 +142,7 @@ const columns: ColumnDef<CheckWithOutputs, any>[] = [
           case expected.status === 'failure' || actual.status === 'failure':
             return <XCircleIcon className="h-5 w-5 text-red-700" />
           case expected.status === 'error' || actual.status === 'error':
-            return <ExclaimationCircleIcon className="h-5 w-5 text-red-700" />
+            return <ExclamationCircleIcon className="h-5 w-5 text-red-700" />
           default:
             return (
               <svg
