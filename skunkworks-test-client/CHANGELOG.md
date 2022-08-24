@@ -5,6 +5,17 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.0](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.3.0...v2.4.0) (2022-08-24)
+
+### Features
+
+- dashboard ([35e4f20](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/35e4f20fb13d9f42af895d87bbae27ad8dca52ec))
+
+### Bug Fixes
+
+- add reporters ([f11680a](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/f11680a979a09e3f286fc40de7e58b9f6be982a8))
+- test new setup ([c144d15](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/c144d156b383bc735a5c53f32d1a97f2e9659f23))
+
 ## [2.3.0](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.2.11...v2.3.0) (2022-08-23)
 
 ### Features
