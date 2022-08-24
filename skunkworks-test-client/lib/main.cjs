@@ -25,5 +25,4 @@ module.exports = function (options) {
     },
   }
 }
-module.exports.target = 'CJS+ES5'
 module.exports.condition = _condition

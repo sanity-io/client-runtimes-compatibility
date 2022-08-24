@@ -2,7 +2,6 @@
 
 import { createClient } from './client.mjs'
 
-export const target = 'ESM+ES2020'
 export const condition = 'deno'
 
 export default createClient

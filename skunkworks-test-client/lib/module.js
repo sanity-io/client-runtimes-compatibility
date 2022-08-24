@@ -31,5 +31,4 @@ export default function (options) {
     },
   }
 }
-export var target = 'ESM+ES5'
 export var condition = _condition

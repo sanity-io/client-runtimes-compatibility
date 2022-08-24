@@ -16,14 +16,11 @@
     ".": {
       "worker": "./lib/index.worker.js",
       "browser": "./lib/index.browser.js",
-      "bun": "./lib/index.bun.js",
-      "deno": "./lib/index.deno.js",
       "node": {
         "module": "./lib/index.node.js",
         "import": "./lib/index.node.wrapper.js",
         "require": "./lib/index.node.cjs"
       },
-      "import": "./lib/index.import.js",
       "require": "./lib/index.require.cjs",
       "default": "./lib/index.default.js"
     },
@@ -43,12 +40,14 @@
     },
     "./report-deno": {
       "deno": {
+        "require": "./lib/report-deno.cjs",
         "default": "./lib/report-deno.js"
       },
       "require": "./lib/report-null.cjs","default": "./lib/report-null.js"
     },
     "./report-electron": {
       "electron": {
+        "require":"./lib/report-electron.cjs",
         "default":"./lib/report-electron.js"
       },
       "require": "./lib/report-null.cjs","default": "./lib/report-null.js"
@@ -56,6 +55,7 @@
     "./report-electron.browser": {
       "electron": {
         "browser": {
+          "require": "./lib/report-electron.browser.cjs",
           "default": "./lib/report-electron.browser.js"
         }
       },
@@ -64,7 +64,7 @@
     "./report-electron.node": {
       "electron": {
         "node": {
-
+          "require":"./lib/report-electron.node.cjs",
           "default":"./lib/report-electron.node.js"
         }
       },

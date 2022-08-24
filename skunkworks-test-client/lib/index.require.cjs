@@ -3,5 +3,4 @@
 const { createClient } = require('./client.cjs')
 
 module.exports = createClient
-module.exports.target = 'CJS+ES2020'
 module.exports.condition = 'require'

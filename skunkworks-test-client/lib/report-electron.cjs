@@ -1,1 +1,1 @@
-export default 'electron'
+module.exports = 'electron'
