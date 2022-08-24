@@ -1,8 +1,6 @@
 // Run with `deno task test`
-import createClientExpected, {
-  target,
-  condition,
-} from 'https://esm.sh/skunkworks-test-client'
+import createClientExpected, {entry} from 'https://esm.sh/skunkworks-test-client'
+import conditions from 'https://esm.sh/skunkworks-test-client/supports-conditions'
 import createClientActual from 'https://esm.sh/@sanity/client'
 
 const projectId = '81pocpw8'
@@ -21,7 +19,7 @@ async function expected() {
 
   await Deno.writeTextFile(
     'artifacts/expected.json',
-    JSON.stringify({ result, env: client.env, target, condition })
+    JSON.stringify({ result, env: client.env, entry, conditions })
   )
 }
 async function actual() {

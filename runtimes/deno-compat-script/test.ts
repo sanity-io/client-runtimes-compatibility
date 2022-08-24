@@ -1,5 +1,6 @@
 // Run with `deno task test`
-import createClientExpected, { target, condition } from 'skunkworks-test-client'
+import createClientExpected, { entry } from 'skunkworks-test-client'
+import conditions from 'skunkworks-test-client/supports-conditions'
 import createClientActual from '@sanity/client'
 
 const projectId = '81pocpw8'
@@ -18,7 +19,7 @@ async function expected() {
 
   await Deno.writeTextFile(
     'artifacts/expected.json',
-    JSON.stringify({ result, env: client.env, target, condition })
+    JSON.stringify({ result, env: client.env, entry, conditions })
   )
 }
 async function actual() {

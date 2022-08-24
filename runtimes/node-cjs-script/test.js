@@ -7,13 +7,14 @@ const query = /* groq */ `count(*[studioVersion == 3])`
 
 async function expected() {
   const createClient = require('skunkworks-test-client')
-  const { target, condition } = createClient
+  const conditions = require('skunkworks-test-client/supports-conditions')
+  const { entry } = createClient
   const client = createClient({ projectId, dataset, apiVersion, useCdn: true })
   const result = await client.fetch(query)
 
   await writeFile(
     'artifacts/expected.json',
-    JSON.stringify({ result, env: client.env, target, condition })
+    JSON.stringify({ result, env: client.env, entry, conditions })
   )
 }
 async function actual() {

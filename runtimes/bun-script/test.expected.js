@@ -1,5 +1,6 @@
 import { write } from 'bun'
-import createClient, { target, condition } from 'skunkworks-test-client'
+import createClient, { entry } from 'skunkworks-test-client'
+import conditions from 'skunkworks-test-client/supports-conditions'
 
 import { projectId, dataset, apiVersion, query } from './config.js'
 
@@ -8,5 +9,5 @@ const result = await client.fetch(query)
 
 await write(
   'artifacts/expected.json',
-  JSON.stringify({ result, env: client.env, target, condition })
+  JSON.stringify({ result, env: client.env, entry, conditions })
 )

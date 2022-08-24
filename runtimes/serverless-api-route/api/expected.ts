@@ -1,4 +1,5 @@
-import createClient, { target, condition } from 'skunkworks-test-client'
+import createClient, { entry } from 'skunkworks-test-client'
+import conditions from 'skunkworks-test-client/supports-conditions'
 import { projectId, dataset, apiVersion, query } from './_config'
 
 export default async function handler(req, res) {
@@ -8,7 +9,7 @@ export default async function handler(req, res) {
   return res.json({
     result,
     env: client.env,
-    target,
-    condition,
+    entry,
+    conditions,
   })
 }
