@@ -101,21 +101,26 @@
     },
     "./report-node.import": {
       "node": {
-        "import": "./lib/report-node.import.js"
+        "import": "./lib/report-node.import.js",
+        "require": "./lib/report-null.cjs",
+        "default": "./lib/report-null.js"
       },
       "require": "./lib/report-null.cjs",
       "default": "./lib/report-null.js"
     },
     "./report-node.module": {
       "node": {
-        "module": "./lib/report-node.module.js"
+        "module": "./lib/report-node.module.js",
+        "require": "./lib/report-null.cjs",
+        "default": "./lib/report-null.js"
       },
       "require": "./lib/report-null.cjs",
       "default": "./lib/report-null.js"
     },
     "./report-node.require": {
       "node": {
-        "require": "./lib/report-node.require.cjs"
+        "require": "./lib/report-node.require.cjs",
+        "default": "./lib/report-null.js"
       },
       "require": "./lib/report-null.cjs",
       "default": "./lib/report-null.js"
