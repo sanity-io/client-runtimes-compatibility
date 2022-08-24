@@ -1,5 +1,19 @@
 [
   {
+    "type": "service",
+    "name": "Cloudflare Worker",
+    "docs": "https://workers.cloudflare.com/",
+    "expected": "https://native-expected.ecosystem-skunkworks.workers.dev",
+    "actual": "https://native-actual.ecosystem-skunkworks.workers.dev"
+  },
+  {
+    "type": "service",
+    "name": "Cloudflare Worker Node compatibility mode",
+    "docs": "https://developers.cloudflare.com/workers/wrangler/configuration/#:~:text=modules%20and%20globals-,node_compat,-%3D%20false",
+    "expected": "https://expected.ecosystem-skunkworks.workers.dev",
+    "actual": "https://actual.ecosystem-skunkworks.workers.dev"
+  },
+  {
     "type": "artifact",
     "name": "Bun v0.1",
     "docs": "https://bun.sh/",
@@ -103,12 +117,5 @@
     "docs": "https://nextjs.org/docs/api-routes/introduction",
     "expected": "https://client-runtimes-dashboard.sanity.build/api/nodejs/expected",
     "actual": "https://client-runtimes-dashboard.sanity.build/api/nodejs/actual"
-  },
-  {
-    "type": "service",
-    "name": "Cloudflare Worker",
-    "docs": "https://workers.cloudflare.com/",
-    "expected": "https://expected.ecosystem-skunkworks.workers.dev",
-    "actual": "https://actual.ecosystem-skunkworks.workers.dev"
   }
 ]

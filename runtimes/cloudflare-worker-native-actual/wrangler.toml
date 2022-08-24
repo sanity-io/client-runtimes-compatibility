@@ -1,7 +1,4 @@
-name = "expected"
+name = "native-actual"
 main = "src/index.ts"
 compatibility_date = "2022-08-22"
 account_id = "9da507e6a4f509bd6524f5facce6915e"
-
-# Add polyfills for node builtin modules and globals
-node_compat = true
