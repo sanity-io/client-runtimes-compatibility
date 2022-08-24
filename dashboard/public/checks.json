@@ -29,6 +29,13 @@
   },
   {
     "type": "artifact",
+    "name": "Node.js CJS v14",
+    "docs": "https://nodejs.org/dist/latest-v14.x/docs/api/packages.html#determining-module-system",
+    "expected": "/outputs/node-cjs-script-v14/expected.json",
+    "actual": "/outputs/node-cjs-script-v14/actual.json"
+  },
+  {
+    "type": "artifact",
     "name": "Node.js CJS v16",
     "docs": "https://nodejs.org/dist/latest-v16.x/docs/api/packages.html#determining-module-system",
     "expected": "/outputs/node-cjs-script-v16/expected.json",
@@ -40,6 +47,13 @@
     "docs": "https://nodejs.org/dist/latest-v18.x/docs/api/packages.html#determining-module-system",
     "expected": "/outputs/node-cjs-script-v18/expected.json",
     "actual": "/outputs/node-cjs-script-v18/actual.json"
+  },
+  {
+    "type": "artifact",
+    "name": "Node.js ESM v14",
+    "docs": "https://nodejs.org/dist/latest-v14.x/docs/api/packages.html#determining-module-system",
+    "expected": "/outputs/node-esm-script-v14/expected.json",
+    "actual": "/outputs/node-esm-script-v14/actual.json"
   },
   {
     "type": "artifact",
