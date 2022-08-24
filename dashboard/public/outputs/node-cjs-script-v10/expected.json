@@ -1,0 +1,13 @@
+{
+  "result": 2,
+  "env": {
+    "document": false,
+    "fetch": false,
+    "globals": ["global"],
+    "process.release.name": "node",
+    "process.version": "v10.24.1",
+    "process.versions": { "node": "10.24.1", "v8": "6.8.275.32-node.59" }
+  },
+  "entry": "main",
+  "conditions": false
+}
