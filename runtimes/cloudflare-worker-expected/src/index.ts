@@ -1,4 +1,5 @@
 import createClient, { entry } from 'skunkworks-test-client'
+// @ts-ignore
 import conditions from 'skunkworks-test-client/supports-conditions'
 
 const projectId = '81pocpw8'

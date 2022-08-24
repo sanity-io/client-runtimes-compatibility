@@ -1,4 +1,5 @@
 import createClient, { entry } from 'skunkworks-test-client'
+// @ts-ignore
 import conditions from 'skunkworks-test-client/supports-conditions'
 import { projectId, dataset, apiVersion, query } from './_config'
 

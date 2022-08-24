@@ -7,6 +7,6 @@
   "dependencies": {
     "@sanity/client": "^3.3.3",
     "bun-types": "^0.1.8",
-    "skunkworks-test-client": "2.4.1"
+    "skunkworks-test-client": "2.4.3"
   }
 }
