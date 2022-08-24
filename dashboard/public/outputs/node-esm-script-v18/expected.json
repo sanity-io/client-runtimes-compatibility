@@ -8,6 +8,6 @@
     "process.version": "v18.7.0",
     "process.versions": { "node": "18.7.0", "v8": "10.2.154.13-node.9" }
   },
-  "entry": "exports.node.import+undefined",
-  "conditions": ["import", "node-addons", "node", "node.import"]
+  "entry": "exports.node.import+exports.node.require",
+  "conditions": ["import", "node", "node.import"]
 }

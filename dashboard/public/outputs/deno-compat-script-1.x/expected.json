@@ -14,6 +14,6 @@
       "typescript": "4.7.4"
     }
   },
-  "entry": "exports.node.import+undefined",
+  "entry": "exports.node.import+exports.node.require",
   "conditions": ["deno", "import", "node", "node.import"]
 }

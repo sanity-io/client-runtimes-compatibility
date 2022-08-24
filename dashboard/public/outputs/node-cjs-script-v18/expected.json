@@ -9,5 +9,5 @@
     "process.versions": { "node": "18.7.0", "v8": "10.2.154.13-node.9" }
   },
   "entry": "exports.node.require",
-  "conditions": ["node-addons", "node", "node.require", "require"]
+  "conditions": ["node", "node.require", "require"]
 }
