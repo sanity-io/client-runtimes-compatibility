@@ -13,6 +13,13 @@
       "webkit": "208963e47abaf762c5c132a596afc36a86eb6192"
     }
   },
-  "target": "ESM+ES2020",
-  "condition": "worker"
+  "entry": "exports.worker",
+  "conditions": [
+    "browser",
+    "bun",
+    "import",
+    "module",
+    "worker",
+    "worker.browser"
+  ]
 }
