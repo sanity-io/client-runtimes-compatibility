@@ -1,5 +1,7 @@
 // Run with `deno task test`
-import createClientExpected, {entry} from 'https://esm.sh/skunkworks-test-client'
+import createClientExpected, {
+  entry,
+} from 'https://esm.sh/skunkworks-test-client'
 import conditions from 'https://esm.sh/skunkworks-test-client/supports-conditions'
 import createClientActual from 'https://esm.sh/@sanity/client'
 
