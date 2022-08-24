@@ -6,7 +6,6 @@ const _electron_browser = require('skunkworks-test-client/report-electron.browse
 const _electron_node = require('skunkworks-test-client/report-electron.node')
 const _import = require('skunkworks-test-client/report-import')
 const _module = require('skunkworks-test-client/report-module')
-const _node_addons = require('skunkworks-test-client/report-node-addons')
 const _node = require('skunkworks-test-client/report-node')
 const _node_import = require('skunkworks-test-client/report-node.import')
 const _node_module = require('skunkworks-test-client/report-node.module')
@@ -30,7 +29,6 @@ module.exports = [
   _electron_node,
   _import,
   _module,
-  _node_addons,
   _node,
   _node_import,
   _node_module,

@@ -6,7 +6,6 @@ import _electron_browser from 'skunkworks-test-client/report-electron.browser'
 import _electron_node from 'skunkworks-test-client/report-electron.node'
 import _import from 'skunkworks-test-client/report-import'
 import _module from 'skunkworks-test-client/report-module'
-import _node_addons from 'skunkworks-test-client/report-node-addons'
 import _node from 'skunkworks-test-client/report-node'
 import _node_import from 'skunkworks-test-client/report-node.import'
 import _node_module from 'skunkworks-test-client/report-node.module'
@@ -30,7 +29,6 @@ export default [
   _electron_node,
   _import,
   _module,
-  _node_addons,
   _node,
   _node_import,
   _node_module,

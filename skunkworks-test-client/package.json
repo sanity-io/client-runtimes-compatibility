@@ -83,14 +83,6 @@
       "require": "./lib/report-null.cjs",
       "default": "./lib/report-null.js"
     },
-    "./report-node-addons": {
-      "node-addons": {
-        "require": "./lib/report-node-addons.cjs",
-        "default": "./lib/report-node-addons.js"
-      },
-      "require": "./lib/report-null.cjs",
-      "default": "./lib/report-null.js"
-    },
     "./report-node": {
       "node": {
         "require": "./lib/report-node.cjs",
