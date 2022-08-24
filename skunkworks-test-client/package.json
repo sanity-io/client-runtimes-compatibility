@@ -6,9 +6,6 @@
     "type": "git",
     "url": "git+https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes.git"
   },
-  "scripts": {
-    "build:reports": "node -C browser -C bun -C deno -C electron -C import -C module -C react-native -C require -C webpack -C worker -C worklet build.js"
-  },
   "license": "MIT",
   "author": "Sanity.io <hello@sanity.io>",
   "type": "module",
@@ -29,28 +26,32 @@
         "require": "./lib/report-browser.cjs",
         "default": "./lib/report-browser.js"
       },
-      "require": "./lib/report-null.cjs","default": "./lib/report-null.js"
+      "require": "./lib/report-null.cjs",
+      "default": "./lib/report-null.js"
     },
     "./report-bun": {
       "bun": {
-        "require":"./lib/report-bun.cjs",
-        "default":"./lib/report-bun.js"
+        "require": "./lib/report-bun.cjs",
+        "default": "./lib/report-bun.js"
       },
-      "require": "./lib/report-null.cjs","default": "./lib/report-null.js"
+      "require": "./lib/report-null.cjs",
+      "default": "./lib/report-null.js"
     },
     "./report-deno": {
       "deno": {
         "require": "./lib/report-deno.cjs",
         "default": "./lib/report-deno.js"
       },
-      "require": "./lib/report-null.cjs","default": "./lib/report-null.js"
+      "require": "./lib/report-null.cjs",
+      "default": "./lib/report-null.js"
     },
     "./report-electron": {
       "electron": {
-        "require":"./lib/report-electron.cjs",
-        "default":"./lib/report-electron.js"
+        "require": "./lib/report-electron.cjs",
+        "default": "./lib/report-electron.js"
       },
-      "require": "./lib/report-null.cjs","default": "./lib/report-null.js"
+      "require": "./lib/report-null.cjs",
+      "default": "./lib/report-null.js"
     },
     "./report-electron.browser": {
       "electron": {
@@ -59,24 +60,28 @@
           "default": "./lib/report-electron.browser.js"
         }
       },
-      "require": "./lib/report-null.cjs","default": "./lib/report-null.js"
+      "require": "./lib/report-null.cjs",
+      "default": "./lib/report-null.js"
     },
     "./report-electron.node": {
       "electron": {
         "node": {
-          "require":"./lib/report-electron.node.cjs",
-          "default":"./lib/report-electron.node.js"
+          "require": "./lib/report-electron.node.cjs",
+          "default": "./lib/report-electron.node.js"
         }
       },
-      "require": "./lib/report-null.cjs","default": "./lib/report-null.js"
+      "require": "./lib/report-null.cjs",
+      "default": "./lib/report-null.js"
     },
     "./report-import": {
       "import": "./lib/report-import.js",
-      "require": "./lib/report-null.cjs","default": "./lib/report-null.js"
+      "require": "./lib/report-null.cjs",
+      "default": "./lib/report-null.js"
     },
     "./report-module": {
       "module": "./lib/report-module.js",
-      "require": "./lib/report-null.cjs","default": "./lib/report-null.js"
+      "require": "./lib/report-null.cjs",
+      "default": "./lib/report-null.js"
     },
     "./report-node-addons": {
       "node-addons": {
@@ -91,16 +96,18 @@
         "require": "./lib/report-node.cjs",
         "default": "./lib/report-node.js"
       },
-      "require": "./lib/report-null.cjs","default": "./lib/report-null.js"
+      "require": "./lib/report-null.cjs",
+      "default": "./lib/report-null.js"
     },
     "./report-node.import": {
       "node": {
         "import": {
-          "require":"./lib/report-node.import.cjs",
-          "default":"./lib/report-node.import.js"
+          "require": "./lib/report-node.import.cjs",
+          "default": "./lib/report-node.import.js"
         }
       },
-      "require": "./lib/report-null.cjs","default": "./lib/report-null.js"
+      "require": "./lib/report-null.cjs",
+      "default": "./lib/report-null.js"
     },
     "./report-node.module": {
       "node": {
@@ -109,7 +116,8 @@
           "default": "./lib/report-node.module.js"
         }
       },
-      "require": "./lib/report-null.cjs","default": "./lib/report-null.js"
+      "require": "./lib/report-null.cjs",
+      "default": "./lib/report-null.js"
     },
     "./report-node.require": {
       "node": {
@@ -120,10 +128,11 @@
     },
     "./report-react-native": {
       "react-native": {
-        "require":"./lib/report-react-native.cjs",
-        "default":"./lib/report-react-native.js"
+        "require": "./lib/report-react-native.cjs",
+        "default": "./lib/report-react-native.js"
       },
-      "require": "./lib/report-null.cjs","default": "./lib/report-null.js"
+      "require": "./lib/report-null.cjs",
+      "default": "./lib/report-null.js"
     },
     "./report-require": {
       "require": "./lib/report-require.cjs",
@@ -131,51 +140,57 @@
     },
     "./report-webpack": {
       "webpack": {
-        "require":"./lib/report-webpack.cjs",
-        "default":"./lib/report-webpack.js"
+        "require": "./lib/report-webpack.cjs",
+        "default": "./lib/report-webpack.js"
       },
-      "require": "./lib/report-null.cjs","default": "./lib/report-null.js"
+      "require": "./lib/report-null.cjs",
+      "default": "./lib/report-null.js"
     },
     "./report-worker": {
       "worker": {
-        "require":"./lib/report-worker.cjs",
-        "default":"./lib/report-worker.js"
+        "require": "./lib/report-worker.cjs",
+        "default": "./lib/report-worker.js"
       },
-      "require": "./lib/report-null.cjs","default": "./lib/report-null.js"
+      "require": "./lib/report-null.cjs",
+      "default": "./lib/report-null.js"
     },
     "./report-worker.browser": {
       "worker": {
         "browser": {
-          "require":"./lib/report-worker.browser.cjs",
-          "default":"./lib/report-worker.browser.js"
+          "require": "./lib/report-worker.browser.cjs",
+          "default": "./lib/report-worker.browser.js"
         }
       },
-      "require": "./lib/report-null.cjs","default": "./lib/report-null.js"
+      "require": "./lib/report-null.cjs",
+      "default": "./lib/report-null.js"
     },
     "./report-worker.node": {
       "worker": {
         "node": {
-          "require":"./lib/report-worker.node.cjs",
-          "default":"./lib/report-worker.node.js"
+          "require": "./lib/report-worker.node.cjs",
+          "default": "./lib/report-worker.node.js"
         }
       },
-      "require": "./lib/report-null.cjs","default": "./lib/report-null.js"
+      "require": "./lib/report-null.cjs",
+      "default": "./lib/report-null.js"
     },
     "./report-worklet": {
       "worklet": {
-        "require":"./lib/report-worklet.cjs",
-        "default":"./lib/report-worklet.js"
+        "require": "./lib/report-worklet.cjs",
+        "default": "./lib/report-worklet.js"
       },
-      "require": "./lib/report-null.cjs","default": "./lib/report-null.js"
+      "require": "./lib/report-null.cjs",
+      "default": "./lib/report-null.js"
     },
     "./report-worklet.browser": {
       "worklet": {
         "browser": {
-          "require":"./lib/report-worklet.browser.cjs",
-          "default":"./lib/report-worklet.browser.js"
+          "require": "./lib/report-worklet.browser.cjs",
+          "default": "./lib/report-worklet.browser.js"
         }
       },
-      "require": "./lib/report-null.cjs","default": "./lib/report-null.js"
+      "require": "./lib/report-null.cjs",
+      "default": "./lib/report-null.js"
     },
     "./report-worklet.node": {
       "worklet": {
@@ -184,16 +199,9 @@
           "default": "./lib/report-worklet.node.js"
         }
       },
-      "require": "./lib/report-null.cjs","default": "./lib/report-null.js"
+      "require": "./lib/report-null.cjs",
+      "default": "./lib/report-null.js"
     },
-    
-    
-    
-    
-   
-    
-
-    
     "./supports-conditions": {
       "require": "./lib/report.cjs",
       "default": "./lib/report.js"
@@ -211,6 +219,9 @@
   "files": [
     "lib"
   ],
+  "scripts": {
+    "build:reports": "node -C browser -C bun -C deno -C electron -C import -C module -C react-native -C require -C webpack -C worker -C worklet build.js"
+  },
   "dependencies": {
     "node-fetch": "2.6.7"
   },
