@@ -2,6 +2,6 @@
 
 import { createClient } from './client.mjs'
 
-export const condition = 'browser'
+export const entry = 'exports.browser'
 
 export default createClient

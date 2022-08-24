@@ -2,6 +2,6 @@
 
 import { createClient } from './client.mjs'
 
-export const condition = 'deno'
+export const entry = 'exports.deno'
 
 export default createClient

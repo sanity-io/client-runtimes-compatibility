@@ -3,4 +3,4 @@
 const { createClient } = require('./client.cjs')
 
 module.exports = createClient
-module.exports.condition = 'node.require'
+module.exports.entry = 'exports.node.require'

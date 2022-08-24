@@ -5,6 +5,6 @@
 
 import { createClient } from './client.mjs'
 
-export const condition = 'node.module'
+export const entry = 'exports.node.module'
 
 export default createClient

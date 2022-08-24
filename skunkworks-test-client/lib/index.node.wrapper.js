@@ -3,6 +3,6 @@
 
 import createClient from './index.node.cjs'
 
-export const condition = `node.import+${createClient.condition}`
+export const entry = `exports.node.import+${createClient.condition}`
 
 export default createClient

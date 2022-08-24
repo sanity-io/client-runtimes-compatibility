@@ -25,4 +25,4 @@ module.exports = function (options) {
     },
   }
 }
-module.exports.condition = _condition
+module.exports.entry = _condition

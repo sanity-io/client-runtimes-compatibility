@@ -15,4 +15,4 @@ export default function createClient({
   fetch(query: string): Promise<any>
 }
 
-export declare const condition: string
+export declare const entry: string

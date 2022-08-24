@@ -31,4 +31,4 @@ export default function (options) {
     },
   }
 }
-export var condition = _condition
+export var entry = _condition
