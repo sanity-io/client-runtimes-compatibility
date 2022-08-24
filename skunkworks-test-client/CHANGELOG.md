@@ -5,6 +5,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.7](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.4.6...v2.4.7) (2022-08-24)
+
+### Bug Fixes
+
+- remove node-addons test ([a719900](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/a719900c86bc22357b175ac896f0918c06f153c3))
+
 ## [2.4.6](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.4.5...v2.4.6) (2022-08-24)
 
 ### Bug Fixes
