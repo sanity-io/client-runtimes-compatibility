@@ -68,8 +68,8 @@ const outputEnv = z
     globals: z.array(envGlobalsEnum),
     'navigator.userAgent': z.string().optional(),
     'import.meta.url': z.string().optional(),
-    'process.version': looseSemver.optional(),
-    'process.versions': z.record(z.union([semver, z.any()])).optional(),
+    'process.version': looseSemver.or(z.string()).optional(),
+    'process.versions': z.record(z.union([semver, z.string()])).optional(),
     'process.env.NEXT_RUNTIME': z.string().optional(),
   })
   .strict()

@@ -1,5 +1,12 @@
 [
   {
+    "type": "artifact",
+    "name": "Bun v0.1",
+    "docs": "https://bun.sh/",
+    "expected": "/outputs/bun-script-0.1.x/expected.json",
+    "actual": "/outputs/bun-script-0.1.x/actual.json"
+  },
+  {
     "type": "service",
     "name": "Cloudflare Worker",
     "docs": "https://workers.cloudflare.com/",
@@ -15,10 +22,10 @@
   },
   {
     "type": "artifact",
-    "name": "Bun v0.1",
-    "docs": "https://bun.sh/",
-    "expected": "/outputs/bun-script-0.1.x/expected.json",
-    "actual": "/outputs/bun-script-0.1.x/actual.json"
+    "name": "Deno v1 Node compatibility mode",
+    "docs": "https://deno.land/manual@v1.24.3/node/compatibility_mode",
+    "expected": "/outputs/deno-compat-script-1.x/expected.json",
+    "actual": "/outputs/deno-compat-script-1.x/actual.json"
   },
   {
     "type": "artifact",
@@ -28,11 +35,18 @@
     "actual": "/outputs/deno-cdn-script-1.x/actual.json"
   },
   {
-    "type": "artifact",
-    "name": "Deno v1 Node compatibility mode",
-    "docs": "https://deno.land/manual@v1.24.3/node/compatibility_mode",
-    "expected": "/outputs/deno-compat-script-1.x/expected.json",
-    "actual": "/outputs/deno-compat-script-1.x/actual.json"
+    "type": "service",
+    "name": "Next.js Edge Function",
+    "docs": "https://nextjs.org/docs/api-routes/edge-api-routes",
+    "expected": "https://client-runtimes-dashboard.sanity.build/api/edge/expected",
+    "actual": "https://client-runtimes-dashboard.sanity.build/api/edge/actual"
+  },
+  {
+    "type": "service",
+    "name": "Next.js Serverless Function",
+    "docs": "https://nextjs.org/docs/api-routes/introduction",
+    "expected": "https://client-runtimes-dashboard.sanity.build/api/nodejs/expected",
+    "actual": "https://client-runtimes-dashboard.sanity.build/api/nodejs/actual"
   },
   {
     "type": "artifact",
@@ -103,19 +117,5 @@
     "docs": "https://vercel.com/docs/concepts/functions/serverless-functions",
     "expected": "https://ecosystem-skunkworks-serverless-api-route.sanity.build/api/expected",
     "actual": "https://ecosystem-skunkworks-serverless-api-route.sanity.build/api/actual"
-  },
-  {
-    "type": "service",
-    "name": "Next.js Edge Function",
-    "docs": "https://nextjs.org/docs/api-routes/edge-api-routes",
-    "expected": "https://client-runtimes-dashboard.sanity.build/api/edge/expected",
-    "actual": "https://client-runtimes-dashboard.sanity.build/api/edge/actual"
-  },
-  {
-    "type": "service",
-    "name": "Next.js Serverless Function",
-    "docs": "https://nextjs.org/docs/api-routes/introduction",
-    "expected": "https://client-runtimes-dashboard.sanity.build/api/nodejs/expected",
-    "actual": "https://client-runtimes-dashboard.sanity.build/api/nodejs/actual"
   }
 ]

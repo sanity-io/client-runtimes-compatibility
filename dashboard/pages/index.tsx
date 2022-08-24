@@ -1,3 +1,4 @@
+import { useImmer } from 'use-immer'
 import cx from 'classnames'
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/20/solid'
 import {
@@ -59,17 +60,19 @@ type Data = {
   checks: CheckWithOutputs[]
 }
 
+type InitialData = {
+  [checksPath]: Checks
+  [
+    key:
+      | `/outputs/${string}/${'expected' | 'actual'}.json`
+      | `https://${string}`
+  ]: Output
+}
+
 type Props = {
   // fallback: Record<checksKey, Checks> | Record<string extends checksKey ? never : string, Output>
   // fallback: Record<checksKey, Checks> | Record<`/outputs/${string}` | `https://${string}`, Output>
-  fallback: {
-    [checksPath]: Checks
-    [
-      key:
-        | `/outputs/${string}/${'expected' | 'actual'}.json`
-        | `https://${string}`
-    ]: Output
-  }
+  fallback: InitialData
 }
 
 declare module '@tanstack/table-core' {
@@ -94,9 +97,9 @@ const useDashboardData = () => {
   return { data, changed }
 }
 
-const columnHelper = createColumnHelper<Check>()
+const columnHelper = createColumnHelper<CheckWithOutputs>()
 
-function getStatus(output: Output): Status {
+function getStatus(output: Output | undefined): Status {
   if (!output) return 'pending'
   switch (true) {
     case 'failure' in output:
@@ -109,122 +112,89 @@ function getStatus(output: Output): Status {
       return 'pending'
   }
 }
+const columns: ColumnDef<CheckWithOutputs, any>[] = [
+  columnHelper.accessor(
+    (row) => {
+      const expectedStatus = row.outputs?.expected?.status
+      const actualStatus = row.outputs?.actual?.status
+
+      switch (true) {
+        case expectedStatus === 'success' && actualStatus === 'success':
+          return 'success'
+        case expectedStatus === 'failure' || actualStatus === 'failure':
+          return 'failure'
+        case expectedStatus === 'error' || actualStatus === 'error':
+          return 'error'
+        default:
+          return 'pending'
+      }
+    },
+    // @ts-expect-error
+    {
+      id: 'status',
+      header: 'Status',
+      cell: ({ row }) => {
+        const { expected, actual } = row.original.outputs
+
+        switch (true) {
+          case expected.status === 'success' && actual.status === 'success':
+            return <CheckCircleIcon className="h-5 w-5 text-green-600" />
+          case expected.status === 'failure' || actual.status === 'failure':
+            return <XCircleIcon className="h-5 w-5 text-red-700" />
+          case expected.status === 'error' || actual.status === 'error':
+            return <ExclaimationCircleIcon className="h-5 w-5 text-red-700" />
+          default:
+            return (
+              <svg
+                className="box-content h-4 w-4 animate-spin p-1 text-slate-500"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
+              </svg>
+            )
+        }
+      },
+    }
+  ),
+  columnHelper.accessor('name', {
+    header: 'Name',
+  }),
+  // @ts-expect-error
+  columnHelper.accessor((row) => row.outputs?.expected?.runtime, {
+    header: 'Runtime',
+  }),
+  // @ts-expect-error
+  columnHelper.accessor((row) => row.outputs?.expected?.entry, {
+    header: 'Entry',
+  }),
+  // @ts-expect-error
+  columnHelper.accessor((row) => row.outputs?.expected?.conditions, {
+    header: 'Conditions',
+    cell: ({ getValue }) => getValue()?.join?.(', '),
+  }),
+]
 
 const Table = memo(function Table({ data }: { data: CheckWithOutputs[] }) {
-  const { cache } = useSWRConfig()
-  const columns = useMemo(() => {
-    const columns: ColumnDef<Check, any>[] = [
-      columnHelper.accessor(
-        (row) => {
-          const expected = cache.get(row.expected)
-          switch (getStatus(expected)) {
-            case 'pending':
-              return 'pending'
-            default:
-              return getStatus(cache.get(row.actual))
-          }
-        },
-        {
-          id: 'status',
-          header: 'Status',
-          cell: ({ row }) => {
-            const { expected, actual } = row.original
-            // eslint-disable-next-line react-hooks/rules-of-hooks
-            const expectedSwr = useSWR(expected)
-            // eslint-disable-next-line react-hooks/rules-of-hooks
-            const actualSwr = useSWR(actual)
-
-            const expectedStatus = getStatus(expectedSwr.data)
-            const actualStatus = getStatus(actualSwr.data)
-
-            switch (true) {
-              case expectedStatus === 'success' && actualStatus === 'success':
-                return <CheckCircleIcon className="h-5 w-5 text-green-600" />
-              case expectedStatus === 'failure' || actualStatus === 'failure':
-                return <XCircleIcon className="h-5 w-5 text-red-700" />
-              case expectedStatus === 'error' || actualStatus === 'error':
-                return (
-                  <ExclaimationCircleIcon className="h-5 w-5 text-red-700" />
-                )
-              default:
-                return (
-                  <svg
-                    className="box-content h-4 w-4 animate-spin p-1 text-slate-500"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle
-                      className="opacity-25"
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke="currentColor"
-                      strokeWidth="4"
-                    ></circle>
-                    <path
-                      className="opacity-75"
-                      fill="currentColor"
-                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                    ></path>
-                  </svg>
-                )
-            }
-          },
-        }
-      ),
-      columnHelper.accessor('name', {
-        header: 'Name',
-      }),
-      columnHelper.accessor((row) => cache.get(row.expected)?.runtime, {
-        header: 'Runtime',
-        cell: ({ row }) => {
-          const { expected } = row.original
-          // eslint-disable-next-line react-hooks/rules-of-hooks
-          const { data } = useSWR(expected)
-          if (data?.runtime) {
-            return data.runtime
-          }
-
-          return null
-        },
-      }),
-      columnHelper.accessor((row) => cache.get(row.expected)?.entry, {
-        header: 'Entry',
-        cell: ({ row }) => {
-          const { expected } = row.original
-          // eslint-disable-next-line react-hooks/rules-of-hooks
-          const { data } = useSWR(expected)
-          if (data?.entry) {
-            return data.entry
-          }
-
-          return null
-        },
-      }),
-      columnHelper.accessor((row) => cache.get(row.expected)?.conditions, {
-        header: 'Conditions',
-        cell: ({ row }) => {
-          const { expected } = row.original
-          // eslint-disable-next-line react-hooks/rules-of-hooks
-          const { data } = useSWR(expected)
-          if (data?.conditions) {
-            return data.conditions?.join?.(', ')
-          }
-
-          return null
-        },
-      }),
-    ]
-    return columns
-  }, [cache])
   const table = useReactTable({
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
     debugTable: true,
-    debugAll: true,
   })
   return (
     <table
@@ -310,25 +280,53 @@ const Table = memo(function Table({ data }: { data: CheckWithOutputs[] }) {
   )
 })
 
-function CheckLoader({ check }: { check: Check }) {
-  useSWR(check.expected)
-  useSWR(check.actual)
+function CheckLoader({
+  check,
+  setCache,
+}: {
+  check: Check
+  setCache: (key: string) => void
+}) {
+  const expected = useSWR(check.expected)
+  const actual = useSWR(check.actual)
+  useEffect(() => {
+    if (expected.data) {
+      // @ts-expect-error
+      setCache((cache) => {
+        cache.set(check.expected, expected.data)
+      })
+    } else if (expected.error) {
+      // @ts-expect-error
+      setCache((cache) => {
+        cache.set(check.expected, {
+          error: expected.error,
+        })
+      })
+    }
+  }, [check.expected, expected.data, expected.error, setCache])
+  useEffect(() => {
+    if (actual.data) {
+      // @ts-expect-error
+      setCache((cache) => {
+        cache.set(check.actual, actual.data)
+      })
+    } else if (actual.error) {
+      // @ts-expect-error
+      setCache((cache) => {
+        cache.set(check.actual, {
+          error: actual.error,
+        })
+      })
+    }
+  }, [check.actual, actual.data, actual.error, setCache])
   return null
 }
 
-function Dashboard() {
+function Dashboard({ initial }: { initial: InitialData }) {
   const { data: checks, changed } = useDashboardData()
-  const { cache, mutate, ...extraConfig } = useSWRConfig()
-  useEffect(() => {
-    console.log({ cache })
-  }, [cache])
-  useEffect(() => {
-    console.log({ mutate })
-  }, [mutate])
-  useEffect(() => {
-    console.log({ extraConfig })
-  }, [extraConfig])
-  // @ts-ignore
+  const [cache, setCache] = useImmer(() => new Map(Object.entries(initial)))
+
+  // @ts-expect-error
   const data = useMemo<CheckWithOutputs[]>(() => {
     console.log('useMemo data', checks)
     return checks?.map((check) => {
@@ -339,21 +337,27 @@ function Dashboard() {
         ...check,
         outputs: {
           expected: {
+            // @ts-expect-error
             status: expectedOutput?.error
               ? 'error'
-              : expectedOutput?.failure
+              : // @ts-expect-error
+              expectedOutput?.failure
               ? 'failure'
-              : expectedOutput?.result
+              : // @ts-expect-error
+              expectedOutput?.result
               ? 'success'
               : 'pending',
             ...expectedOutput,
           },
           actual: {
+            // @ts-expect-error
             status: actualOutput?.error
               ? 'error'
-              : actualOutput?.failure
+              : // @ts-expect-error
+              actualOutput?.failure
               ? 'failure'
-              : actualOutput?.result
+              : // @ts-expect-error
+              actualOutput?.result
               ? 'success'
               : 'pending',
             ...actualOutput,
@@ -366,14 +370,19 @@ function Dashboard() {
   return (
     <>
       {checks?.map((check) => (
-        <CheckLoader key={check.expected} check={check} />
+        <CheckLoader
+          key={check.expected}
+          check={check}
+          // @ts-expect-error
+          setCache={setCache}
+        />
       ))}
       <Head>
         <title>
           Can I use @sanity/client... Support tables for emerging JS runtimes
         </title>
       </Head>
-      <div className=" mx-auto max-w-7xl py-10">
+      <div className="mx-auto max-w-7xl py-10">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="sm:flex sm:items-center">
             <div className="sm:flex-auto">
@@ -454,7 +463,7 @@ const fetcher = async (url: keyof Props['fallback']) => {
 export default function IndexPage({ fallback }: Props) {
   return (
     <SWRConfig value={{ fallback, fetcher }}>
-      <Dashboard />
+      <Dashboard initial={fallback} />
     </SWRConfig>
   )
 }
@@ -482,8 +491,9 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       const expectedJson = JSON.parse(expectedText.toString())
       try {
         fallback[check.expected] = outputSchema.parse(expectedJson)
-      } catch (err) {
+      } catch (err: any) {
         console.error('Failed while parsing', check.expected, expectedJson, err)
+        fallback[check.expected] = { error: err?.stack || err.toString() }
       }
       const actualText = await fs.readFile(
         path.resolve(__dirname, `../../public${check.actual}`)
@@ -491,8 +501,9 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       const actualJson = JSON.parse(actualText.toString())
       try {
         fallback[check.actual] = outputSchema.parse(actualJson)
-      } catch (err) {
+      } catch (err: any) {
         console.error('Failed while parsing', check.actual, actualJson, err)
+        fallback[check.actual] = { error: err?.stack || err.toString() }
       }
     }
     if (check.type === 'service') {
@@ -501,14 +512,18 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
           res.json()
         )
         fallback[check.expected as any] = outputSchema.parse(expectedJson)
-      } catch (err) {
+      } catch (err: any) {
         console.error('Failed while parsing', check.expected, err)
+        fallback[check.expected as any] = {
+          error: err?.stack || err.toString(),
+        }
       }
       try {
         const actualJson = await fetch(check.actual).then((res) => res.json())
         fallback[check.actual as any] = outputSchema.parse(actualJson)
-      } catch (err) {
+      } catch (err: any) {
         console.error('Failed while parsing', check.actual, err)
+        fallback[check.actual as any] = { error: err?.stack || err.toString() }
       }
     }
   }
