@@ -20,7 +20,13 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        test: [cloudflare-worker-expected, cloudflare-worker-actual, cloudflare-worker-native-expected, cloudflare-worker-native-actual]
+        test:
+          [
+            cloudflare-worker-expected,
+            cloudflare-worker-actual,
+            cloudflare-worker-native-expected,
+            cloudflare-worker-native-actual,
+          ]
     defaults:
       run:
         working-directory: runtimes/${{ matrix.test }}
