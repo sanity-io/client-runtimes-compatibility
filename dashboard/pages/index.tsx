@@ -1,5 +1,10 @@
 import cx from 'classnames'
-import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/solid'
+import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/20/solid'
+import {
+  CheckCircleIcon,
+  XCircleIcon,
+  ExclaimationCircleIcon,
+} from '@heroicons/react/24/solid'
 import { BookIcon } from '@sanity/icons'
 import { Button } from '@sanity/ui'
 import {
@@ -8,6 +13,8 @@ import {
   flexRender,
   getCoreRowModel,
   getSortedRowModel,
+  TableMeta,
+  RowData,
   useReactTable,
 } from '@tanstack/react-table'
 import stringify from 'fast-json-stable-stringify'
@@ -21,14 +28,36 @@ import {
 import type { GetStaticProps } from 'next'
 import Head from 'next/head'
 import fs from 'node:fs/promises'
-import path from 'node:path'
+import path from 'path'
 import { fileURLToPath } from 'node:url'
-import { useEffect, useMemo, useState } from 'react'
-import useSWR, { SWRConfig, useSWRConfig } from 'swr'
+import { useEffect, useMemo, useState, memo } from 'react'
+import useSWR, { SWRConfig, useSWRConfig, type Cache } from 'swr'
+import type { Merge } from 'type-fest'
 
 import data from 'public/checks.json'
 
 const checksPath = '/checks.json'
+
+type Status = 'pending' | 'error' | 'failure' | 'success'
+
+type CheckWithOutputs = Merge<
+  Check,
+  {
+    outputs: {
+      expected: Merge<Output, { status: Status }>
+      actual: Merge<Output, { status: Status }>
+    }
+  }
+>
+type Data = {
+  statuses: {
+    error: number
+    failing: number
+    pending: number
+    success: number
+  }
+  checks: CheckWithOutputs[]
+}
 
 type Props = {
   // fallback: Record<checksKey, Checks> | Record<string extends checksKey ? never : string, Output>
@@ -40,6 +69,12 @@ type Props = {
         | `/outputs/${string}/${'expected' | 'actual'}.json`
         | `https://${string}`
     ]: Output
+  }
+}
+
+declare module '@tanstack/table-core' {
+  interface TableMeta<TData extends RowData> {
+    cache: Cache
   }
 }
 
@@ -61,84 +96,141 @@ const useDashboardData = () => {
 
 const columnHelper = createColumnHelper<Check>()
 
-const columns: ColumnDef<Check, any>[] = [
-  columnHelper.display({
-    id: 'status',
-    cell: ({ row }) => {
-      const { expected, actual } = row.original
-      // eslint-disable-next-line react-hooks/rules-of-hooks
-      const expectedSwr = useSWR(expected)
-      // eslint-disable-next-line react-hooks/rules-of-hooks
-      const actualSwr = useSWR(actual)
+function getStatus(output: Output): Status {
+  if (!output) return 'pending'
+  switch (true) {
+    case 'failure' in output:
+      return 'failure'
+    case 'error' in output:
+      return 'error'
+    case 'result' in output:
+      return 'success'
+    default:
+      return 'pending'
+  }
+}
 
-      if (
-        expectedSwr.error ||
-        actualSwr.error ||
-        expectedSwr.data?.error ||
-        actualSwr.data?.error
-      ) {
-        return 'error'
-      }
+const Table = memo(function Table({ data }: { data: CheckWithOutputs[] }) {
+  const { cache } = useSWRConfig()
+  const columns = useMemo(() => {
+    const columns: ColumnDef<Check, any>[] = [
+      columnHelper.accessor(
+        (row) => {
+          const expected = cache.get(row.expected)
+          switch (getStatus(expected)) {
+            case 'pending':
+              return 'pending'
+            default:
+              return getStatus(cache.get(row.actual))
+          }
+        },
+        {
+          id: 'status',
+          header: 'Status',
+          cell: ({ row }) => {
+            const { expected, actual } = row.original
+            // eslint-disable-next-line react-hooks/rules-of-hooks
+            const expectedSwr = useSWR(expected)
+            // eslint-disable-next-line react-hooks/rules-of-hooks
+            const actualSwr = useSWR(actual)
 
-      if (expectedSwr.data?.result && actualSwr.data?.result) {
-        return 'success'
-      }
+            const expectedStatus = getStatus(expectedSwr.data)
+            const actualStatus = getStatus(actualSwr.data)
 
-      if (
-        (expectedSwr.isValidating && !expectedSwr.data) ||
-        (actualSwr.isValidating && !actualSwr.data)
-      ) {
-        return 'pending'
-      }
+            switch (true) {
+              case expectedStatus === 'success' && actualStatus === 'success':
+                return <CheckCircleIcon className="h-5 w-5 text-green-600" />
+              case expectedStatus === 'failure' || actualStatus === 'failure':
+                return <XCircleIcon className="h-5 w-5 text-red-700" />
+              case expectedStatus === 'error' || actualStatus === 'error':
+                return (
+                  <ExclaimationCircleIcon className="h-5 w-5 text-red-700" />
+                )
+              default:
+                return (
+                  <svg
+                    className="box-content h-4 w-4 animate-spin p-1 text-slate-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    ></circle>
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                    ></path>
+                  </svg>
+                )
+            }
+          },
+        }
+      ),
+      columnHelper.accessor('name', {
+        header: 'Name',
+      }),
+      columnHelper.accessor((row) => cache.get(row.expected)?.runtime, {
+        header: 'Runtime',
+        cell: ({ row }) => {
+          const { expected } = row.original
+          // eslint-disable-next-line react-hooks/rules-of-hooks
+          const { data } = useSWR(expected)
+          if (data?.runtime) {
+            return data.runtime
+          }
 
-      console.warn(expectedSwr, actualSwr)
-      return null
-    },
-  }),
-  columnHelper.accessor('name', {
-    header: 'Name',
-  }),
-  columnHelper.display({
-    header: 'Condition',
-    id: 'condition',
-    cell: ({ row }) => {
-      const { expected } = row.original
-      // eslint-disable-next-line react-hooks/rules-of-hooks
-      const { data } = useSWR(expected)
-      if (data?.condition) {
-        return data.condition
-      }
+          return null
+        },
+      }),
+      columnHelper.accessor((row) => cache.get(row.expected)?.entry,{
+        header: 'Entry',
+        cell: ({ row }) => {
+          const { expected } = row.original
+          // eslint-disable-next-line react-hooks/rules-of-hooks
+          const { data } = useSWR(expected)
+          if (data?.entry) {
+            return data.entry
+          }
 
-      return null
-    },
-  }),
-  columnHelper.display({
-    header: 'Target',
-    id: 'target',
-    cell: ({ row }) => {
-      const { expected } = row.original
-      // eslint-disable-next-line react-hooks/rules-of-hooks
-      const { data } = useSWR(expected)
-      if (data?.target) {
-        return data.target
-      }
+          return null
+        },
+      }),
+      columnHelper.accessor((row) => cache.get(row.expected)?.conditions,{
+        header: 'Conditions',
+        cell: ({ row }) => {
+          const { expected } = row.original
+          // eslint-disable-next-line react-hooks/rules-of-hooks
+          const { data } = useSWR(expected)
+          if (data?.conditions) {
+            return data.conditions?.join?.(', ')
+          }
 
-      return null
-    },
-  }),
-]
-
-function Table() {
+          return null
+        },
+      }),
+    ]
+    return columns
+  }, [cache])
   const table = useReactTable({
     data,
-    // @ts-expect-error
     columns,
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
     debugTable: true,
+    debugAll: true,
   })
   return (
-    <table className="min-w-full border-separate" style={{ borderSpacing: 0 }}>
+    <table
+      className="min-w-full max-w-[100vw] border-separate divide-y divide-gray-300 overflow-x-auto shadow ring-1 ring-black ring-opacity-5 md:rounded-lg"
+      style={{ borderSpacing: 0 }}
+    >
       <thead className="bg-gray-50">
         {table.getHeaderGroups().map((headerGroup) => (
           <tr key={headerGroup.id}>
@@ -156,7 +248,7 @@ function Table() {
                     <a
                       {...{
                         className: cx(
-                          'group inline-flex',
+                          'group inline-flex sticky left-4 right-4',
                           header.column.getCanSort() && 'cursor-pointer'
                         ),
                         onClick: header.column.getToggleSortingHandler(),
@@ -216,10 +308,16 @@ function Table() {
       </tbody>
     </table>
   )
+})
+
+function CheckLoader({ check }: { check: Check }) {
+  useSWR(check.expected)
+  useSWR(check.actual)
+  return null
 }
 
 function Dashboard() {
-  const { data, changed } = useDashboardData()
+  const { data: checks, changed } = useDashboardData()
   const { cache, mutate, ...extraConfig } = useSWRConfig()
   useEffect(() => {
     console.log({ cache })
@@ -230,15 +328,52 @@ function Dashboard() {
   useEffect(() => {
     console.log({ extraConfig })
   }, [extraConfig])
-
+  // @ts-ignore
+  const data = useMemo<CheckWithOutputs[]>(() => {
+    console.log('useMemo data', checks)
+    return checks?.map((check) => {
+      const expectedOutput = cache.get(check.expected)
+      const actualOutput = cache.get(check.actual)
+      console.log('useMemo data', check, expectedOutput, actualOutput)
+      return {
+        ...check,
+        outputs: {
+          expected: {
+            status: expectedOutput?.error
+              ? 'error'
+              : expectedOutput?.failure
+              ? 'failure'
+              : expectedOutput?.result
+              ? 'success'
+              : 'pending',
+            ...expectedOutput,
+          },
+          actual: {
+            status: actualOutput?.error
+              ? 'error'
+              : actualOutput?.failure
+              ? 'failure'
+              : actualOutput?.result
+              ? 'success'
+              : 'pending',
+            ...actualOutput,
+          },
+        },
+      }
+    })
+  }, [cache, checks])
+  console.log({ checks })
   return (
     <>
+      {checks?.map((check) => (
+        <CheckLoader key={check.expected} check={check} />
+      ))}
       <Head>
         <title>
           Can I use @sanity/client... Support tables for emerging JS runtimes
         </title>
       </Head>
-      <div className="mx-auto max-w-7xl py-10">
+      <div className=" mx-auto max-w-7xl py-10">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="sm:flex sm:items-center">
             <div className="sm:flex-auto">
@@ -301,7 +436,7 @@ function Dashboard() {
           </div>
         </div>
       </div>
-      <Table />
+      <div className="">{data ? <Table data={data} /> : 'Loading data...'}</div>
     </>
   )
 }
@@ -317,7 +452,6 @@ const fetcher = async (url: keyof Props['fallback']) => {
   }
 }
 export default function IndexPage({ fallback }: Props) {
-  console.log(fallback['/outputs/da/expected.json'])
   return (
     <SWRConfig value={{ fallback, fetcher }}>
       <Dashboard />
@@ -327,7 +461,7 @@ export default function IndexPage({ fallback }: Props) {
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const checksJson = checksSchema.parse(data)
-  const fallback: Props['fallback'] = { '/checks.json': checksJson }
+  const fallback: Props['fallback'] = { '/checks.json': checksJson.sort((a,b) => a.name.localeCompare(b.name)) }
   const __dirname = fileURLToPath(import.meta.url)
   console.log(
     import.meta.url,
@@ -344,7 +478,11 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
         path.resolve(__dirname, `../../public${check.expected}`)
       )
       const expectedJson = JSON.parse(expectedText.toString())
-      fallback[check.expected] = outputSchema.parse(expectedJson)
+      try {
+        fallback[check.expected] = outputSchema.parse(expectedJson)
+      } catch (err) {
+        console.error('Failed while parsing', check.expected, expectedJson, err)
+      }
       const actualText = await fs.readFile(
         path.resolve(__dirname, `../../public${check.actual}`)
       )

@@ -7,26 +7,30 @@ const json: z.ZodType<Json> = z.lazy(() =>
   z.union([literalSchema, z.array(json), z.record(json)])
 )
 
-const artifactCheck = z.object({
-  type: z.literal('artifact'),
-  name: z.string(),
-  docs: z.string().url(),
-  expected: z.custom<`/outputs/${string}/expected.json`>((val) =>
-    /^\/outputs\/.*\/expected\.json$/g.test(val as string)
-  ),
-  actual: z.custom<`/outputs/${string}/actual.json`>((val) =>
-    /^\/outputs\/.*\/actual\.json$/g.test(val as string)
-  ),
-})
+const artifactCheck = z
+  .object({
+    type: z.literal('artifact'),
+    name: z.string(),
+    docs: z.string().url(),
+    expected: z.custom<`/outputs/${string}/expected.json`>((val) =>
+      /^\/outputs\/.*\/expected\.json$/g.test(val as string)
+    ),
+    actual: z.custom<`/outputs/${string}/actual.json`>((val) =>
+      /^\/outputs\/.*\/actual\.json$/g.test(val as string)
+    ),
+  })
+  .strict()
 export type ArtifactCheck = z.infer<typeof artifactCheck>
 
-const serviceCheck = z.object({
-  type: z.literal('service'),
-  name: z.string(),
-  docs: z.string().url(),
-  expected: z.string().url(),
-  actual: z.string().url(),
-})
+const serviceCheck = z
+  .object({
+    type: z.literal('service'),
+    name: z.string(),
+    docs: z.string().url(),
+    expected: z.string().url(),
+    actual: z.string().url(),
+  })
+  .strict()
 export type ServiceCheck = z.infer<typeof serviceCheck>
 
 const check = z.discriminatedUnion('type', [artifactCheck, serviceCheck])
@@ -49,34 +53,92 @@ const semver = z.custom<`${number}.${number}.${number}`>((val) =>
 const looseSemver = z.custom<`v${z.infer<typeof semver>}`>((val) =>
   /^v\d+\.\d+\.\d+$/g.test(val as string)
 )
-const successOutput = z.object({
-  result: json,
-  env: z
-    .object({
-      document: z.boolean(),
-      fetch: z.boolean(),
-      globals: z.array(envGlobalsEnum),
+const successOutputActual = z.object({ result: json }).strict()
+// `/expected` endpoints include debug information
+const debugOutput = successOutputActual.extend({
+  // TODO fill in from conditions, pkg.main shouuld be main, node.require should be exports.node.require
+  entry: z.string(),
+  // TODO fill in valid conditions
+  conditions: z.array(z.string()).or(z.literal(false)),
+})
+const outputEnv = z
+  .object({
+    document: z.boolean(),
+    fetch: z.boolean(),
+    globals: z.array(envGlobalsEnum),
+    'navigator.userAgent': z.string().optional(),
+    'import.meta.url': z.string().optional(),
+    'process.version': looseSemver.optional(),
+    'process.versions': z.record(z.union([semver, z.any()])).optional(),
+    'process.env.NEXT_RUNTIME': z.string().optional(),
+  })
+  .strict()
+
+const outputBun = debugOutput
+  .extend({
+    env: outputEnv.extend({
       // https://github.com/oven-sh/bun-types/blob/7c3e6b1fbce0d12a41a9b960ae661252ae9feb35/globals.d.ts#L220-L221
-      'process.isBun': z.union([z.literal(1), z.literal(true)]).optional(),
-      // https://stackoverflow.com/a/35813135
-      'process.release.name': z.literal('node').optional(),
+      'process.isBun': z.union([z.literal(1), z.literal(true)]),
+    }),
+  })
+  .transform((val) => ({ ...val, runtime: 'bun' }))
+const outputDeno = debugOutput
+  .extend({
+    env: outputEnv.extend({
+      'Deno.version.deno': semver,
+    }),
+  })
+  .transform((val) => ({ ...val, runtime: 'deno' }))
+const outputEdge = debugOutput
+  .extend({
+    env: outputEnv.extend({
+      // https://github.com/vercel/edge-runtime/blob/d570f01a3df237d91990177764a01e229b574f24/packages/ponyfill/src/index.js#L2
+      EdgeRuntime: z.string(),
+    }),
+  })
+  .transform((val) => ({ ...val, runtime: 'vercel-edge' }))
+const outputWorker = debugOutput
+  .extend({
+    env: outputEnv.extend({
       // https://developers.cloudflare.com/workers/runtime-apis/web-standards/#navigatoruseragent
-      'navigator.userAgent': z
-        .union([z.literal('Cloudflare-Workers'), z.string()])
-        .optional(),
-      'import.meta.url': z.string().optional(),
-      'Deno.version.deno': semver.optional(),
-      'process.version': looseSemver.optional(),
-      'process.versions': z.record(z.union([semver, z.any()])).optional(),
-      'process.env.NEXT_RUNTIME': z.string().optional(),
-      EdgeRuntime: z.string().optional(),
-    })
-    .optional(),
-  target: z.string().optional(),
-  condition: z.string().optional(),
-})
-const failureOutput = z.object({
-  error: z.string(),
-})
-export const output = z.union([successOutput, failureOutput])
+      'navigator.userAgent': z.literal('Cloudflare-Workers'),
+    }),
+  })
+  .transform((val) => ({ ...val, runtime: 'cloudflare-worker' }))
+const outputNode = debugOutput
+  .extend({
+    env: outputEnv.extend({
+      // https://stackoverflow.com/a/35813135
+      'process.release.name': z.literal('node'),
+    }),
+  })
+  .transform((val) => ({ ...val, runtime: 'node' }))
+const outputUnknown = debugOutput
+  .extend({
+    // When unknown the only rule is that unknown keys are valid json
+    env: outputEnv.catchall(json),
+  })
+  .transform((val) => ({ ...val, runtime: 'unknown' }))
+const successOutputExpected = z.union([
+  outputBun,
+  outputDeno,
+  outputEdge,
+  outputWorker,
+  outputNode,
+  outputUnknown,
+])
+const successOutput = z.union([successOutputActual, successOutputExpected])
+// Failure output is when the error is expected/supported
+const failureOutput = z
+  .object({
+    failure: z.string(),
+  })
+  .strict()
+// Unexpected errors, such as if Zod parsing failed
+const errorOutput = z
+  .object({
+    error: z.string(),
+  })
+  .strict()
+export const output = z.union([successOutput, failureOutput, errorOutput])
 export type Output = z.infer<typeof output>
