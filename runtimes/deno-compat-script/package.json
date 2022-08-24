@@ -2,6 +2,6 @@
   "type": "module",
   "dependencies": {
     "@sanity/client": "^3.3.3",
-    "skunkworks-test-client": "2.3.0"
+    "skunkworks-test-client": "2.4.1"
   }
 }
