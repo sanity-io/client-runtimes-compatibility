@@ -5,6 +5,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.9](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.4.8...v2.4.9) (2022-08-24)
+
+### Bug Fixes
+
+- add cloudflare native tests ([0f0c1c6](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/0f0c1c6b534b4ee575bf8cad043e2ad788862bec))
+
 ## [2.4.8](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.4.7...v2.4.8) (2022-08-24)
 
 ### Bug Fixes
