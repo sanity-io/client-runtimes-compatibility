@@ -19,6 +19,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         test:
           [
@@ -39,7 +40,6 @@ jobs:
           node-version: lts/*
       - run: npm ci
       - uses: cloudflare/wrangler-action@2.0.0
-        continue-on-error: true
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           command: publish
