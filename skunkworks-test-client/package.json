@@ -14,6 +14,7 @@
       "worker": "./lib/index.worker.js",
       "browser": "./lib/index.browser.js",
       "node": {
+        "deno": "./lib/index.node.deno.js",
         "module": "./lib/index.node.js",
         "import": "./lib/index.node.wrapper.js",
         "require": "./lib/index.node.cjs"
@@ -87,6 +88,15 @@
       "node": {
         "require": "./lib/report-node.cjs",
         "default": "./lib/report-node.js"
+      },
+      "require": "./lib/report-null.cjs",
+      "default": "./lib/report-null.js"
+    },
+    "./report-node.deno": {
+      "node": {
+        "import": "./lib/report-node.deno.js",
+        "require": "./lib/report-null.cjs",
+        "default": "./lib/report-null.js"
       },
       "require": "./lib/report-null.cjs",
       "default": "./lib/report-null.js"

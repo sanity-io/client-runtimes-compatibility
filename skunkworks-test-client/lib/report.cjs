@@ -7,6 +7,7 @@ const _electron_node = require('skunkworks-test-client/report-electron.node')
 const _import = require('skunkworks-test-client/report-import')
 const _module = require('skunkworks-test-client/report-module')
 const _node = require('skunkworks-test-client/report-node')
+const _node_deno = require('skunkworks-test-client/report-node.deno')
 const _node_import = require('skunkworks-test-client/report-node.import')
 const _node_module = require('skunkworks-test-client/report-node.module')
 const _node_require = require('skunkworks-test-client/report-node.require')
@@ -30,6 +31,7 @@ module.exports = [
   _import,
   _module,
   _node,
+  _node_deno,
   _node_import,
   _node_module,
   _node_require,

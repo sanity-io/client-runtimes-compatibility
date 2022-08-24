@@ -7,6 +7,7 @@ import _electron_node from 'skunkworks-test-client/report-electron.node'
 import _import from 'skunkworks-test-client/report-import'
 import _module from 'skunkworks-test-client/report-module'
 import _node from 'skunkworks-test-client/report-node'
+import _node_deno from 'skunkworks-test-client/report-node.deno'
 import _node_import from 'skunkworks-test-client/report-node.import'
 import _node_module from 'skunkworks-test-client/report-node.module'
 import _node_require from 'skunkworks-test-client/report-node.require'
@@ -30,6 +31,7 @@ export default [
   _import,
   _module,
   _node,
+  _node_deno,
   _node_import,
   _node_module,
   _node_require,
