@@ -216,7 +216,8 @@
   },
   "types": "./lib/types.d.ts",
   "files": [
-    "lib"
+    "lib",
+    "supports-conditions.js"
   ],
   "scripts": {
     "build:reports": "node -C browser -C bun -C deno -C electron -C import -C module -C react-native -C require -C webpack -C worker -C worklet build.js"

@@ -29,6 +29,13 @@
   },
   {
     "type": "artifact",
+    "name": "Node.js CJS v12",
+    "docs": "https://nodejs.org/docs/latest-v12.x/api/modules.html#modules_all_together",
+    "expected": "/outputs/node-cjs-script-v12/expected.json",
+    "actual": "/outputs/node-cjs-script-v12/actual.json"
+  },
+  {
+    "type": "artifact",
     "name": "Node.js CJS v14",
     "docs": "https://nodejs.org/dist/latest-v14.x/docs/api/packages.html#determining-module-system",
     "expected": "/outputs/node-cjs-script-v14/expected.json",
