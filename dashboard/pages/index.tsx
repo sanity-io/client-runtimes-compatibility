@@ -189,7 +189,7 @@ const Table = memo(function Table({ data }: { data: CheckWithOutputs[] }) {
           return null
         },
       }),
-      columnHelper.accessor((row) => cache.get(row.expected)?.entry,{
+      columnHelper.accessor((row) => cache.get(row.expected)?.entry, {
         header: 'Entry',
         cell: ({ row }) => {
           const { expected } = row.original
@@ -202,7 +202,7 @@ const Table = memo(function Table({ data }: { data: CheckWithOutputs[] }) {
           return null
         },
       }),
-      columnHelper.accessor((row) => cache.get(row.expected)?.conditions,{
+      columnHelper.accessor((row) => cache.get(row.expected)?.conditions, {
         header: 'Conditions',
         cell: ({ row }) => {
           const { expected } = row.original
@@ -461,7 +461,9 @@ export default function IndexPage({ fallback }: Props) {
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const checksJson = checksSchema.parse(data)
-  const fallback: Props['fallback'] = { '/checks.json': checksJson.sort((a,b) => a.name.localeCompare(b.name)) }
+  const fallback: Props['fallback'] = {
+    '/checks.json': checksJson.sort((a, b) => a.name.localeCompare(b.name)),
+  }
   const __dirname = fileURLToPath(import.meta.url)
   console.log(
     import.meta.url,
