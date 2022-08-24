@@ -5,6 +5,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.3](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.4.2...v2.4.3) (2022-08-24)
+
+### Bug Fixes
+
+- deno compat ([96d9fa0](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/96d9fa0686ed8b700c10a6a98785353f0daeafe7))
+
 ## [2.4.2](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.4.1...v2.4.2) (2022-08-24)
 
 ### Bug Fixes
