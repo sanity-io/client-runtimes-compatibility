@@ -4,14 +4,14 @@
     "document": false,
     "fetch": true,
     "globals": ["globalThis", "self", "global", "navigator"],
-    "navigator.userAgent": "Deno/1.24.3",
+    "navigator.userAgent": "Deno/1.25.0",
     "import.meta.url": "https://esm.sh/v92/skunkworks-test-client@2.4.9/deno/skunkworks-test-client.js",
-    "Deno.version.deno": "1.24.3",
+    "Deno.version.deno": "1.25.0",
     "process.version": "v16.11.1",
     "process.versions": {
       "node": "16.11.1",
-      "deno": "1.24.3",
-      "v8": "10.4.132.20",
+      "deno": "1.25.0",
+      "v8": "10.6.194.5",
       "typescript": "4.7.4"
     }
   },
