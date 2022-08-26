@@ -11,6 +11,7 @@
   "type": "module",
   "exports": {
     ".": {
+      "types": "./lib/types.d.ts",
       "worker": "./lib/index.worker.js",
       "browser": "./lib/index.browser.js",
       "node": {
@@ -204,6 +205,7 @@
       "default": "./lib/report-null.js"
     },
     "./supports-conditions": {
+      "types": "./lib/report.d.ts",
       "require": "./lib/report.cjs",
       "default": "./lib/report.js"
     },
