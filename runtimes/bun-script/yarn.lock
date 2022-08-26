@@ -3,9 +3,9 @@
 # bun ./bun.lockb --hash: 4149B082827A5400-52f86bfdb63a040d-E27ABE76C99EC06E-70048324657555c4
 
 
-"@sanity/client@3.3.3-esm.1":
-  version "3.3.3-esm.1"
-  resolved "https://registry.npmjs.org/@sanity/client/-/client-3.3.3-esm.1.tgz"
+"@sanity/client@3.3.3-esm.3":
+  version "3.3.3-esm.3"
+  resolved "https://registry.npmjs.org/@sanity/client/-/client-3.3.3-esm.3.tgz"
   integrity sha512-80j0Yq59K+I/Y3qiVTCaRe3IS4F3h4iNixIJi/83ql2+ACyg/QPZGbR0sZ3ttKhtVDm1Xs+V3NEYpVe7TEKHzQ==
   dependencies:
     "@sanity/eventsource" "^4.0.0"
