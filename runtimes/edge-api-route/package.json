@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "@sanity/client": "3.3.3-esm.0",
-    "skunkworks-test-client": "2.4.9"
+    "skunkworks-test-client": "2.4.10"
   },
   "devDependencies": {
     "@types/node": "^17.0.42",
