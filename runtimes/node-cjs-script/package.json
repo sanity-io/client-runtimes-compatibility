@@ -4,8 +4,8 @@
     "test": "node test.js"
   },
   "dependencies": {
-    "@sanity/client": "3.3.3-esm.0",
-    "skunkworks-test-client": "2.4.10",
+    "@sanity/client": "3.3.3-esm.1",
+    "skunkworks-test-client": "2.4.11",
     "write-file-atomic": "^4.0.2"
   }
 }
