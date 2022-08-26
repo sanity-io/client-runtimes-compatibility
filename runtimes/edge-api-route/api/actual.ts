@@ -1,4 +1,4 @@
-import createClient from '@sanity/client/dist/sanityClient.browser.mjs'
+import createClient from '@sanity/client'
 import { projectId, dataset, apiVersion, query } from './_config.mjs'
 
 export const config = {
