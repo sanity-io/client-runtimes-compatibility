@@ -1,7 +1,7 @@
 {
   "type": "module",
   "dependencies": {
-    "@sanity/client": "3.3.3-esm.5",
+    "@sanity/client": "3.3.3-esm.6",
     "skunkworks-test-client": "2.4.11"
   }
 }
