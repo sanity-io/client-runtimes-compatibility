@@ -3,7 +3,7 @@
 # bun ./bun.lockb --hash: 0700554EEBBE0499-2f8b8043f02789ea-C7C6D9AC6CF043DA-365bfd2ce924b990
 
 
-"@sanity/client@esm":
+"@sanity/client@3.3.3-esm.0":
   version "3.3.3-esm.0"
   resolved "https://registry.npmjs.org/@sanity/client/-/client-3.3.3-esm.0.tgz"
   integrity sha512-dC5A0xkyajlXTazQRwcZH4HLWZBKm+DsEEVm6KHrRpHJcOk8bERHjM+cbnme1ZeSaQYGD6oQt+A1adabg1q6wQ==
