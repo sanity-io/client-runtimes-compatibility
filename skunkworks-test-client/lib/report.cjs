@@ -1,6 +1,7 @@
 const _browser = require('skunkworks-test-client/report-browser')
 const _bun = require('skunkworks-test-client/report-bun')
 const _deno = require('skunkworks-test-client/report-deno')
+const _edge = require('skunkworks-test-client/report-edge')
 const _electron = require('skunkworks-test-client/report-electron')
 const _electron_browser = require('skunkworks-test-client/report-electron.browser')
 const _electron_node = require('skunkworks-test-client/report-electron.node')
@@ -25,6 +26,7 @@ module.exports = [
   _browser,
   _bun,
   _deno,
+  _edge,
   _electron,
   _electron_browser,
   _electron_node,

@@ -47,6 +47,14 @@
       "require": "./lib/report-null.cjs",
       "default": "./lib/report-null.js"
     },
+    "./report-edge": {
+      "edge": {
+        "require": "./lib/report-edge.cjs",
+        "default": "./lib/report-edge.js"
+      },
+      "require": "./lib/report-null.cjs",
+      "default": "./lib/report-null.js"
+    },
     "./report-electron": {
       "electron": {
         "require": "./lib/report-electron.cjs",

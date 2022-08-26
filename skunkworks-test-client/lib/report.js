@@ -1,6 +1,7 @@
 import _browser from 'skunkworks-test-client/report-browser'
 import _bun from 'skunkworks-test-client/report-bun'
 import _deno from 'skunkworks-test-client/report-deno'
+import _edge from 'skunkworks-test-client/report-edge'
 import _electron from 'skunkworks-test-client/report-electron'
 import _electron_browser from 'skunkworks-test-client/report-electron.browser'
 import _electron_node from 'skunkworks-test-client/report-electron.node'
@@ -25,6 +26,7 @@ export default [
   _browser,
   _bun,
   _deno,
+  _edge,
   _electron,
   _electron_browser,
   _electron_node,
