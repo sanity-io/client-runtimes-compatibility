@@ -39,6 +39,7 @@ jobs:
   bun:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         # Bun can specify "--platform": browser | node | bun
         # https://github.com/oven-sh/bun#buntranspiler
@@ -58,7 +59,6 @@ jobs:
       - run: bun install
       - run: bun run test:expected
       - run: bun run test:actual
-        continue-on-error: true
         timeout-minutes: 1
       - uses: actions/upload-artifact@v3
         with:
