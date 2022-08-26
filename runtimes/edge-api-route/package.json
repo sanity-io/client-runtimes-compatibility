@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@sanity/client": "3.3.3-esm.13",
+    "@sanity/client": "3.3.3-esm.16",
     "skunkworks-test-client": "2.4.11"
   },
   "devDependencies": {
