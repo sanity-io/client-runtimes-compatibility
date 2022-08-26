@@ -91,9 +91,9 @@ from2@^2.1.1:
     readable-stream "^2.0.0"
 
 get-it@esm:
-  version "6.1.1-esm.1"
-  resolved "https://registry.yarnpkg.com/get-it/-/get-it-6.1.1-esm.1.tgz#50af0577caab6479962c5c76d50096f6b074963b"
-  integrity sha512-IXxuDBJqZIs8S5GJlrrL4lQ9z4hJzICYsaU7zPwOatF8k8w55IjIl39y2YLC15IuXZeMnqrXwnb2X7bzusbhVA==
+  version "6.1.1-esm.4"
+  resolved "https://registry.yarnpkg.com/get-it/-/get-it-6.1.1-esm.4.tgz#a9d57496d7d1353721d98b105c450d3b2f6fe033"
+  integrity sha512-cbTIJyJWINtll2DPI5Rff+xKcmER9bqb3C9L1SJTcXR+6D6+JgpUcBaqa0vIoXIJiaQTEgHii34xv7+cNjyDGA==
   dependencies:
     "@sanity/timed-out" "^4.0.2"
     create-error-class "^3.0.2"
