@@ -13,6 +13,11 @@
       "packageNames": ["node-fetch"],
       "followTag": "cjs",
       "rangeStrategy": "pin"
+    },
+    {
+      "packageNames": ["@sanity/client"],
+      "followTag": "esm",
+      "rangeStrategy": "pin"
     }
   ]
 }
