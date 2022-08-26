@@ -5,6 +5,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.10](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.4.9...v2.4.10) (2022-08-26)
+
+### Bug Fixes
+
+- **deps:** update dependencies (non-major) ([#34](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/34)) ([bdf9ab6](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/bdf9ab68cafdd381668e5550593ad52994716991))
+- **deps:** update dependency @heroicons/react to ^2.0.4 ([#33](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/33)) ([35a0381](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/35a0381e9181e44968a755d1b0345663f5512043))
+
 ## [2.4.9](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.4.8...v2.4.9) (2022-08-24)
 
 ### Bug Fixes
