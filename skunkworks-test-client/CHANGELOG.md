@@ -5,6 +5,18 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.12](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.4.11...v2.4.12) (2022-08-26)
+
+### Bug Fixes
+
+- **deps:** update dependency @sanity/client to v3.3.3-esm.10 ([#48](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/48)) ([8f9d20b](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/8f9d20b67454ce6038cb97600af7273abef65703))
+- **deps:** update dependency @sanity/client to v3.3.3-esm.13 ([#49](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/49)) ([f3ac82b](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/f3ac82be1ef47d3df7f30c657ac76948286b64f5))
+- **deps:** update dependency @sanity/client to v3.3.3-esm.5 ([#42](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/42)) ([b4da132](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/b4da132f55a9a446e86d56fea79b87b4284b9f66))
+- **deps:** update dependency @sanity/client to v3.3.3-esm.7 ([#44](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/44)) ([f21bb39](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/f21bb39f1bedb0ad7cd319d7ea2c036b190fb900))
+- **deps:** update dependency @sanity/client to v3.3.3-esm.8 ([#45](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/45)) ([f353488](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/f3534884eb8dc8ff1a1c3844b2e8598d9dada1b6))
+- **deps:** update dependency @sanity/client to v3.3.3-esm.9 ([#46](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/46)) ([b4eb98c](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/b4eb98cb5b404a42e3e68bc72bf8ad48cc5e20f4))
+- test edge condition ([d856c4d](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/d856c4df312c2b62582a089eb9cad8a34f5cfe99))
+
 ## [2.4.11](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.4.10...v2.4.11) (2022-08-26)
 
 ### Bug Fixes
