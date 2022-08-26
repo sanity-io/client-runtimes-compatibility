@@ -5,7 +5,7 @@
     "fetch": true,
     "globals": ["globalThis", "self", "global", "navigator"],
     "navigator.userAgent": "Deno/1.25.0",
-    "import.meta.url": "https://esm.sh/v92/skunkworks-test-client@2.4.9/deno/skunkworks-test-client.js",
+    "import.meta.url": "https://esm.sh/v92/skunkworks-test-client@2.4.11/deno/skunkworks-test-client.js",
     "Deno.version.deno": "1.25.0",
     "process.version": "v16.11.1",
     "process.versions": {
