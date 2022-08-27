@@ -1,7 +1,7 @@
 // This import is used by legacy tooling that don't support pkg.exports, and don't understand pkg.module, or is bundling for ESM and is ignoring pkg.module
 
 var env = require('./env.cjs')
-var _condition = require('./main.node.condition.cjs')
+var _entry = require('./main.entry.cjs')
 
 module.exports = function (options) {
   var projectId = options.projectId
@@ -25,4 +25,4 @@ module.exports = function (options) {
     },
   }
 }
-module.exports.entry = _condition
+module.exports.entry = 'main.cjs + ' + _entry

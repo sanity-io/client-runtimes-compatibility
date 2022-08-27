@@ -223,8 +223,8 @@
   "module": "./lib/module.js",
   "browser": {
     "node-fetch": "./lib/browser.fetch.cjs",
-    "./lib/main.node.condition.cjs": "./lib/main.browser.condition.js",
-    "./lib/module.node.condition.cjs": "./lib/module.browser.condition.js"
+    "./lib/main.entry.cjs": "./lib/main.entry.mjs",
+    "./lib/module.entry.cjs": "./lib/module.entry.mjs"
   },
   "types": "./lib/types.d.ts",
   "files": [

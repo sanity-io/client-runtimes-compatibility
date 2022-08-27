@@ -1,6 +1,6 @@
 // This import is only used by tooling that doesn't support pkg.exports, and is using ESM formats for tree-shaking and expects ES5, and expects node as the environment
 
-import _condition from './module.node.condition.js'
+import _entry from './module.entry.cjs'
 import env from './env.mjs'
 
 export default function (options) {
@@ -31,4 +31,4 @@ export default function (options) {
     },
   }
 }
-export var entry = _condition
+export var entry = 'module.js + ' + _entry
