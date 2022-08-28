@@ -1,6 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["github>sanity-io/renovate-presets//ecosystem/auto"],
+  "ignorePaths":[
+      "runtimes/bun-script/yarn.lock"
+  ],
   "packageRules": [
     {
       "packageNames": ["skunkworks-test-client"],
