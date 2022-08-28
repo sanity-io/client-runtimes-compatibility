@@ -52,15 +52,15 @@ jobs:
         working-directory: runtimes/${{ matrix.test }}
     name: Bun ${{ matrix.bun-version }} ${{ matrix.test }}
     steps:
-      - uses: actions/checkout@v3
-      - uses: antongolub/action-setup-bun@v1
+      - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3
+      - uses: antongolub/action-setup-bun@bc198f5cb868ce282f0a72bdd7da3a06a5387f83 # tag=v1
         with:
           bun-version: ${{ matrix.bun-version }}
       - run: bun install
       - run: bun run test:expected
       - run: bun run test:actual
         timeout-minutes: 1
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@3cea5372237819ed00197afe530f5a7ea3e805c8 # tag=v3
         with:
           name: ${{ matrix.test }}-${{ matrix.bun-version }}
           path: runtimes/${{ matrix.test }}/artifacts/*.json
@@ -79,8 +79,8 @@ jobs:
         working-directory: runtimes/${{ matrix.test }}
     name: Deno ${{ matrix.deno-version }} ${{ matrix.test }}
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3
+      - uses: actions/setup-node@2fddd8803e2f5c9604345a0b591c3020ee971a93 # tag=v3
         if: matrix.test == 'deno-compat-script'
         with:
           cache: npm
@@ -91,7 +91,7 @@ jobs:
         with:
           deno-version: ${{ matrix.deno-version }}
       - run: deno task test
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@3cea5372237819ed00197afe530f5a7ea3e805c8 # tag=v3
         with:
           name: ${{ matrix.test }}-${{ matrix.deno-version }}
           path: runtimes/${{ matrix.test }}/artifacts/*.json
@@ -115,8 +115,8 @@ jobs:
         working-directory: runtimes/${{ matrix.test }}
     name: Node.js ${{ matrix.node-version }} ${{ matrix.test }}
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3
+      - uses: actions/setup-node@2fddd8803e2f5c9604345a0b591c3020ee971a93 # tag=v3
         with:
           cache: npm
           check-latest: true
@@ -124,11 +124,11 @@ jobs:
       - run: npm install
       - run: npm test
       - name: Get Node.js major version
-        uses: mathiasvr/command-output@v1
+        uses: mathiasvr/command-output@8dbf451add3db114df0114aa5e21a1efef8c5015 # tag=v1
         id: version
         with:
           run: node -e "console.log(process.version.split('.')[0])"
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@3cea5372237819ed00197afe530f5a7ea3e805c8 # tag=v3
         with:
           name: ${{ matrix.test }}-${{ steps.version.outputs.stdout }}
           path: runtimes/${{ matrix.test }}/artifacts/*.json
@@ -144,8 +144,8 @@ jobs:
     name: Commit artifacts to dashboard/public
     # if: github.ref_name == 'main'
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/download-artifact@v3
+      - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3
+      - uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741 # tag=v3
         id: download
         with:
           path: dashboard/public/outputs
@@ -155,7 +155,7 @@ jobs:
       - run: git status
       - run: npx prettier --ignore-path .gitignore --write dashboard/public/outputs
       - run: git status
-      - uses: EndBug/add-and-commit@v9
+      - uses: EndBug/add-and-commit@d4d066316a2a85974a05efb42be78f897793c6d9 # tag=v9
         if: always()
         with:
           commit: --no-verify
