@@ -5,6 +5,15 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.14](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.4.13...v2.4.14) (2022-09-14)
+
+### Bug Fixes
+
+- **deps:** update dependencies (non-major) ([#50](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/50)) ([c6d47cc](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/c6d47cc1b0e0d34b7301f740d7d5654c68fc0a2b))
+- **deps:** update dependencies (non-major) ([#55](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/55)) ([cddbba7](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/cddbba74ab97adb958375ca7838bd5a9bc638c2b))
+- **deps:** update dependency bun-types to ^0.1.10 ([#54](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/54)) ([4bfc4dc](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/4bfc4dc24ef75ef1fd01fa69cacd71c191263caa))
+- test turning off branding ([858da32](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/858da326986244b54813dac49751bd7afa41b0dd))
+
 ## [2.4.13](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.4.12...v2.4.13) (2022-08-27)
 
 ### Bug Fixes
