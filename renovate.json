@@ -11,8 +11,7 @@
     },
     {
       "packageNames": ["@sanity/client"],
-      "followTag": "esm",
-      "rangeStrategy": "pin"
+      "schedule": ["at any time"]
     }
   ]
 }
