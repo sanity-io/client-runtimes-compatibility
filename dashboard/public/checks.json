@@ -24,15 +24,15 @@
     "type": "artifact",
     "name": "Deno v1 Node compatibility mode",
     "docs": "https://deno.land/manual@v1.24.3/node/compatibility_mode",
-    "expected": "/outputs/deno-compat-script-1.x/expected.json",
-    "actual": "/outputs/deno-compat-script-1.x/actual.json"
+    "expected": "/outputs/deno-compat-script-v1.24.x/expected.json",
+    "actual": "/outputs/deno-compat-script-v1.24.x/actual.json"
   },
   {
     "type": "artifact",
     "name": "Deno v1 Packages from CDN",
     "docs": "https://deno.land/manual@v1.24.3/node/cdns#packages-from-cdns",
-    "expected": "/outputs/deno-cdn-script-1.x/expected.json",
-    "actual": "/outputs/deno-cdn-script-1.x/actual.json"
+    "expected": "/outputs/deno-cdn-script-v1.24.x/expected.json",
+    "actual": "/outputs/deno-cdn-script-v1.24.x/actual.json"
   },
   {
     "type": "service",
