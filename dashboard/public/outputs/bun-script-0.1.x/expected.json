@@ -1,0 +1,25 @@
+{
+  "result": 2,
+  "env": {
+    "document": false,
+    "fetch": true,
+    "globals": ["globalThis", "self", "global"],
+    "process.isBun": 1,
+    "import.meta.url": "file:///home/runner/work/ecosystem-skunkworks-client-runtimes/ecosystem-skunkworks-client-runtimes/runtimes/bun-script/node_modules/skunkworks-test-client/lib/env.mjs",
+    "process.version": "v0.1.11",
+    "process.versions": {
+      "node": "16.14.0",
+      "bun": "0.1.11",
+      "webkit": "c1ba87b24e59723afe32853863c3e649e3fdc8e0"
+    }
+  },
+  "entry": "exports.worker",
+  "conditions": [
+    "browser",
+    "bun",
+    "import",
+    "module",
+    "worker",
+    "worker.browser"
+  ]
+}
