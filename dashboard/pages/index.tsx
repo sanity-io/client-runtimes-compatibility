@@ -137,15 +137,15 @@ const columns: ColumnDef<CheckWithOutputs, any>[] = [
 
         switch (true) {
           case expected.status === 'success' && actual.status === 'success':
-            return <CheckCircleIcon className="w-5 h-5 text-green-600" />
+            return <CheckCircleIcon className="h-5 w-5 text-green-600" />
           case expected.status === 'failure' || actual.status === 'failure':
-            return <XCircleIcon className="w-5 h-5 text-red-700" />
+            return <XCircleIcon className="h-5 w-5 text-red-700" />
           case expected.status === 'error' || actual.status === 'error':
-            return <ExclamationCircleIcon className="w-5 h-5 text-red-700" />
+            return <ExclamationCircleIcon className="h-5 w-5 text-red-700" />
           default:
             return (
               <svg
-                className="box-content w-4 h-4 p-1 animate-spin text-slate-500"
+                className="box-content h-4 w-4 animate-spin p-1 text-slate-500"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -265,7 +265,7 @@ const Table = memo(function Table({ data }: { data: CheckWithOutputs[] }) {
                 return (
                   <td
                     key={cell.id}
-                    className="py-4 pl-4 pr-3 text-sm font-medium text-gray-900 border-b border-gray-200 whitespace-nowrap sm:pl-6 lg:pl-8"
+                    className="whitespace-nowrap border-b border-gray-200 py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6 lg:pl-8"
                   >
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </td>
@@ -381,19 +381,19 @@ function Dashboard({ initial }: { initial: InitialData }) {
           Can I use @sanity/client... Support tables for emerging JS runtimes
         </title>
       </Head>
-      <div className="py-10 mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl py-10">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="sm:flex sm:items-center">
             <div className="sm:flex-auto">
               <h1 className="text-xl font-semibold text-slate-900">
-                <code className="px-1 text-lg rounded py-1/2 bg-slate-300">
+                <code className="py-1/2 rounded bg-slate-300 px-1 text-lg">
                   @sanity/client
                 </code>{' '}
                 compatibility with JS runtimes
               </h1>
               <p className="mt-2 text-sm text-slate-700">
                 You should be able to use{' '}
-                <code className="px-1 text-sm rounded py-1/2 bg-slate-300">
+                <code className="py-1/2 rounded bg-slate-300 px-1 text-sm">
                   @sanity/client
                 </code>{' '}
                 from any runtime, including{' '}
@@ -449,7 +449,7 @@ function Dashboard({ initial }: { initial: InitialData }) {
   )
 }
 
-const fetcher = async (url: keyof Props['fallback']) => {  
+const fetcher = async (url: keyof Props['fallback']) => {
   const res = await fetch(url)
   const json = await res.json()
   switch (url) {
