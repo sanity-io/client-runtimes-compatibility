@@ -5,7 +5,7 @@
   },
   "dependencies": {
     "@sanity/client": "^3.4.1",
-    "skunkworks-test-client": "2.4.13",
+    "skunkworks-test-client": "2.4.14",
     "write-file-atomic": "^4.0.2"
   }
 }
