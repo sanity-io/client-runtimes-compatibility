@@ -73,7 +73,10 @@ jobs:
     strategy:
       matrix:
         test: [deno-cdn-script, deno-compat-script]
-        deno-version: [1.x]
+        # deno-version: [1.x]
+        # @todo: stop overriding the version after migrating from `--compat` (https://github.com/sanity-io/get-it/issues/33)
+        deno-version: [v1.24.x]
+        
     defaults:
       run:
         working-directory: runtimes/${{ matrix.test }}
