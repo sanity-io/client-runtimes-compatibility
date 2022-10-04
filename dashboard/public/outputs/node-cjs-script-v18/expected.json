@@ -1,0 +1,13 @@
+{
+  "result": 2,
+  "env": {
+    "document": false,
+    "fetch": true,
+    "globals": ["globalThis", "global"],
+    "process.release.name": "node",
+    "process.version": "v18.10.0",
+    "process.versions": { "node": "18.10.0", "v8": "10.2.154.15-node.12" }
+  },
+  "entry": "exports.node.require",
+  "conditions": ["node", "node.require", "require"]
+}
