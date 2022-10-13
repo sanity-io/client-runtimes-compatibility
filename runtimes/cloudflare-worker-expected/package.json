@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "skunkworks-test-client": "2.4.14"
+    "skunkworks-test-client": "2.4.15"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.16.0",

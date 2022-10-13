@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "@sanity/client": "^3.4.1",
-    "skunkworks-test-client": "2.4.14"
+    "skunkworks-test-client": "2.4.15"
   },
   "devDependencies": {
     "@types/node": "^17.0.42",
