@@ -6,6 +6,6 @@
   "dependencies": {
     "@sanity/client": "^3.4.1",
     "skunkworks-test-client": "2.4.15",
-    "write-file-atomic": "^4.0.2"
+    "write-file-atomic": "^5.0.0"
   }
 }
