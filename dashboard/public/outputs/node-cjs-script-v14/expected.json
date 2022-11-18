@@ -5,8 +5,8 @@
     "fetch": false,
     "globals": ["globalThis", "global"],
     "process.release.name": "node",
-    "process.version": "v14.20.1",
-    "process.versions": { "node": "14.20.1", "v8": "8.4.371.23-node.87" }
+    "process.version": "v14.21.1",
+    "process.versions": { "node": "14.21.1", "v8": "8.4.371.23-node.87" }
   },
   "entry": "exports.node.require",
   "conditions": ["node", "node.require", "require"]
