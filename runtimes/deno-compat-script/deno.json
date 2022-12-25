@@ -1,5 +1,0 @@
-{
-  "tasks": {
-    "test": "deno run --unstable --compat --allow-write --allow-env --allow-read --allow-net test.ts"
-  }
-}

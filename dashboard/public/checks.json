@@ -22,17 +22,17 @@
   },
   {
     "type": "artifact",
-    "name": "Deno v1 Node compatibility mode",
-    "docs": "https://deno.land/manual@v1.24.3/node/compatibility_mode",
-    "expected": "/outputs/deno-compat-script-v1.24.x/expected.json",
-    "actual": "/outputs/deno-compat-script-v1.24.x/actual.json"
+    "name": "Deno v1 npm specifier",
+    "docs": "https://deno.land/manual@v1.29.1/node/npm_specifiers",
+    "expected": "/outputs/deno-npm-script-v1.x/expected.json",
+    "actual": "/outputs/deno-npm-script-v1.x/actual.json"
   },
   {
     "type": "artifact",
     "name": "Deno v1 Packages from CDN",
     "docs": "https://deno.land/manual@v1.24.3/node/cdns#packages-from-cdns",
-    "expected": "/outputs/deno-cdn-script-v1.24.x/expected.json",
-    "actual": "/outputs/deno-cdn-script-v1.24.x/actual.json"
+    "expected": "/outputs/deno-cdn-script-v1.x/expected.json",
+    "actual": "/outputs/deno-cdn-script-v1.x/actual.json"
   },
   {
     "type": "service",
@@ -85,6 +85,13 @@
   },
   {
     "type": "artifact",
+    "name": "Node.js CJS v19",
+    "docs": "https://nodejs.org/dist/latest-v19.x/docs/api/packages.html#determining-module-system",
+    "expected": "/outputs/node-cjs-script-v19/expected.json",
+    "actual": "/outputs/node-cjs-script-v19/actual.json"
+  },
+  {
+    "type": "artifact",
     "name": "Node.js ESM v14",
     "docs": "https://nodejs.org/dist/latest-v14.x/docs/api/packages.html#determining-module-system",
     "expected": "/outputs/node-esm-script-v14/expected.json",
@@ -103,6 +110,13 @@
     "docs": "https://nodejs.org/dist/latest-v18.x/docs/api/packages.html#determining-module-system",
     "expected": "/outputs/node-esm-script-v18/expected.json",
     "actual": "/outputs/node-esm-script-v18/actual.json"
+  },
+  {
+    "type": "artifact",
+    "name": "Node.js ESM v19",
+    "docs": "https://nodejs.org/dist/latest-v19.x/docs/api/packages.html#determining-module-system",
+    "expected": "/outputs/node-esm-script-v19/expected.json",
+    "actual": "/outputs/node-esm-script-v19/actual.json"
   },
   {
     "type": "service",

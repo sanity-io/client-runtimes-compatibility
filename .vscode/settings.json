@@ -2,6 +2,6 @@
   "deno.enable": true,
   "deno.enablePaths": [
     "runtimes/deno-cdn-script",
-    "runtimes/deno-compat-script"
+    "runtimes/deno-cdn-script"
   ]
 }

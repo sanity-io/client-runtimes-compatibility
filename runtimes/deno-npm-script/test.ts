@@ -1,7 +1,7 @@
 // Run with `deno task test`
-import createClientExpected, { entry } from 'skunkworks-test-client'
-import conditions from 'skunkworks-test-client/supports-conditions'
-import createClientActual from '@sanity/client'
+import createClientExpected, { entry } from 'npm:skunkworks-test-client'
+import conditions from 'npm:skunkworks-test-client/supports-conditions'
+import createClientActual from 'npm:@sanity/client'
 
 const projectId = '81pocpw8'
 const dataset = 'production'
