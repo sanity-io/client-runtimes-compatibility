@@ -1,1 +1,3 @@
-{ "result": 40 }
+{
+  "error": "TypeError: t.open is not a function\n    at G.exports (https://esm.sh/v99/get-it@6.1.1/deno/get-it.js:3:1174)\n    at https://esm.sh/v99/get-it@6.1.1/deno/get-it.js:3:3406\n    at Object.s [as publish] (https://esm.sh/v99/nano-pubsub@1.0.2/deno/nano-pubsub.js:2:725)\n    at e._subscribe (https://esm.sh/v99/get-it@6.1.1/deno/lib/middleware/observable.js:2:1473)\n    at e._trySubscribe (https://esm.sh/v99/rxjs@6.6.7/deno/internal/Observable.js:2:2088)\n    at e.subscribe (https://esm.sh/v99/rxjs@6.6.7/deno/internal/Observable.js:2:1869)\n    at e._subscribe (https://esm.sh/v99/@sanity/client@3.4.1/deno/client.js:6:11194)\n    at e._trySubscribe (https://esm.sh/v99/rxjs@6.6.7/deno/internal/Observable.js:2:2088)\n    at e.subscribe (https://esm.sh/v99/rxjs@6.6.7/deno/internal/Observable.js:2:1869)\n    at r.call (https://esm.sh/v99/rxjs@6.6.7/deno/internal/operators/filter.js:2:1506)"
+}
