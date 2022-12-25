@@ -1,7 +1,4 @@
 {
   "deno.enable": true,
-  "deno.enablePaths": [
-    "runtimes/deno-cdn-script",
-    "runtimes/deno-cdn-script"
-  ]
+  "deno.enablePaths": ["runtimes/deno-cdn-script", "runtimes/deno-cdn-script"]
 }
