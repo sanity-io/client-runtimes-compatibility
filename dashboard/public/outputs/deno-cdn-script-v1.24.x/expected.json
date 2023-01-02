@@ -22,7 +22,6 @@
     "import",
     "module",
     "worker",
-    "worker.browser",
-    null
+    "worker.browser"
   ]
 }
