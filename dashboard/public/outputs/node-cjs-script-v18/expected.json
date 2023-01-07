@@ -1,12 +1,16 @@
 {
-  "result": 46,
+  "result": 47,
   "env": {
     "document": false,
     "fetch": true,
     "globals": ["globalThis", "global"],
     "process.release.name": "node",
-    "process.version": "v18.12.1",
-    "process.versions": { "node": "18.12.1", "v8": "10.2.154.15-node.12" }
+    "process.version": "v18.13.0",
+    "process.versions": {
+      "node": "18.13.0",
+      "v8": "10.2.154.23-node.21",
+      "uvwasi": "0.0.13"
+    }
   },
   "entry": "exports.node.require",
   "conditions": ["node", "node.require", "require"]
