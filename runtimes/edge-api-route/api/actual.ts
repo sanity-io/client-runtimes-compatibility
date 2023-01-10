@@ -2,7 +2,7 @@ import { createClient } from '@sanity/client'
 import { projectId, dataset, apiVersion, query } from './_config.mjs'
 
 export const config = {
-  runtime: 'experimental-edge',
+  runtime: 'edge',
 }
 
 export default async function handler() {
