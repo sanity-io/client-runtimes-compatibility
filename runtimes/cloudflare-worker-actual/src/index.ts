@@ -1,4 +1,4 @@
-import createClient from '@sanity/client'
+import { createClient } from '@sanity/client'
 
 const projectId = '81pocpw8'
 const dataset = 'production'

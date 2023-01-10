@@ -1,5 +1,5 @@
 import { write } from 'bun'
-import createClient from '@sanity/client'
+import { createClient } from '@sanity/client'
 
 import { projectId, dataset, apiVersion, query } from './config.js'
 

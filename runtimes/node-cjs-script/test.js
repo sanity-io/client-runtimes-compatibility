@@ -20,7 +20,7 @@ async function expected() {
 async function actual() {
   let json
   try {
-    const createClient = require('@sanity/client')
+    const { createClient } = require('@sanity/client')
     const client = createClient({
       projectId,
       dataset,
