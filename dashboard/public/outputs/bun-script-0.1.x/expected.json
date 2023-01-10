@@ -13,7 +13,7 @@
       "webkit": "fa33b8cff43f5445be9df0040f1773611bd8c8f2"
     }
   },
-  "entry": "exports.worker",
+  "entry": "exports.browser",
   "conditions": [
     "browser",
     "bun",
