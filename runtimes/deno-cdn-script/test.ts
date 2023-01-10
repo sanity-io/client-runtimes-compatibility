@@ -1,4 +1,3 @@
-// Run with `deno task test`
 import createClientExpected, {
   entry,
 } from 'https://esm.sh/skunkworks-test-client'

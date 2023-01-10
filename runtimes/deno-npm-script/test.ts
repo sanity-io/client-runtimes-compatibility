@@ -1,4 +1,3 @@
-// Run with `deno task test`
 import createClientExpected, { entry } from 'npm:skunkworks-test-client'
 import conditions from 'npm:skunkworks-test-client/supports-conditions'
 import createClientActual from 'npm:@sanity/client'
