@@ -4,7 +4,7 @@ import conditions from 'skunkworks-test-client/supports-conditions'
 import { projectId, dataset, apiVersion, query } from 'config'
 
 export const config = {
-  runtime: 'experimental-edge',
+  runtime: 'edge',
 }
 
 export default async function handler() {

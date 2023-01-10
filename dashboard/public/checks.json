@@ -117,19 +117,5 @@
     "docs": "https://nodejs.org/dist/latest-v19.x/docs/api/packages.html#determining-module-system",
     "expected": "/outputs/node-esm-script-v19/expected.json",
     "actual": "/outputs/node-esm-script-v19/actual.json"
-  },
-  {
-    "type": "service",
-    "name": "Vercel Edge Function",
-    "docs": "https://vercel.com/docs/concepts/functions/edge-functions",
-    "expected": "https://ecosystem-skunkworks-edge-api-route.sanity.build/api/expected",
-    "actual": "https://ecosystem-skunkworks-edge-api-route.sanity.build/api/actual"
-  },
-  {
-    "type": "service",
-    "name": "Vercel Serverless Function",
-    "docs": "https://vercel.com/docs/concepts/functions/serverless-functions",
-    "expected": "https://ecosystem-skunkworks-serverless-api-route.sanity.build/api/expected",
-    "actual": "https://ecosystem-skunkworks-serverless-api-route.sanity.build/api/actual"
   }
 ]

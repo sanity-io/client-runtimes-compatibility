@@ -7,6 +7,4 @@ A sandbox to try out @sanity/client in tons of different runtimes, workers and e
 Related projects:
 
 - https://vercel.com/sanity-io/client-runtimes-dashboard
-- https://vercel.com/sanity-io/ecosystem-skunkworks-edge-api-route
-- https://vercel.com/sanity-io/ecosystem-skunkworks-serverless-api-route
 - https://dash.cloudflare.com/9da507e6a4f509bd6524f5facce6915e/workers/overview (login with 1Password -> Dev Secrets -> Cloudflare Workers Sandbox)
