@@ -1,4 +1,8 @@
 {
+  "browser": {
+    "@sanity/client": "@sanity/client/dist/index.browser.js",
+    "get-it/middleware": "@get-it/dist/middleware.browser.js"
+  },
   "dependencies": {
     "@sanity/client": "5.0.0-esm.4",
     "skunkworks-test-client": "2.4.15"
