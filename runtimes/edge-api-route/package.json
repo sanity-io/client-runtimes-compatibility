@@ -1,13 +1,13 @@
 {
+  "scripts": {
+    "prebuild": "npx rimraf .out",
+    "build": "esbuild api/* --bundle --outdir=.out/api --sourcemap --format=esm"
+  },
   "dependencies": {
     "@sanity/client": "5.0.0-esm.4",
     "esbuild": "^0.16.16",
     "rimraf": "^3.0.2",
     "skunkworks-test-client": "2.4.15"
-  },
-  "scripts": {
-    "prebuild": "npx rimraf .out",
-    "build": "esbuild api/* --bundle --outdir=.out/api --sourcemap --format=esm"
   },
   "devDependencies": {
     "@types/node": "^18.11.7",
