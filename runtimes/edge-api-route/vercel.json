@@ -3,5 +3,6 @@
   "github": {
     "silent": true,
     "autoJobCancelation": true
-  }
+  },
+  "outputDirectory": ".out"
 }
