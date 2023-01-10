@@ -9,7 +9,7 @@
     "@sanity/client": "5.0.0-esm.4",
     "@sanity/icons": "^2.2.2",
     "@sanity/ui": "^1.0.12",
-    "@tanstack/react-table": "^8.5.22",
+    "@tanstack/react-table": "^8.7.6",
     "@types/classnames": "^2.3.1",
     "@types/styled-components": "^5.1.26",
     "classnames": "^2.3.2",
