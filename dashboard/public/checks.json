@@ -24,15 +24,15 @@
     "type": "artifact",
     "name": "Deno v1 npm specifier",
     "docs": "https://deno.land/manual@v1.29.1/node/npm_specifiers",
-    "expected": "/outputs/deno-npm-script-v1.24.x/expected.json",
-    "actual": "/outputs/deno-npm-script-v1.24.x/actual.json"
+    "expected": "/outputs/deno-npm-script/expected.json",
+    "actual": "/outputs/deno-npm-script/actual.json"
   },
   {
     "type": "artifact",
     "name": "Deno v1 Packages from CDN",
     "docs": "https://deno.land/manual@v1.24.3/node/cdns#packages-from-cdns",
-    "expected": "/outputs/deno-cdn-script-v1.24.x/expected.json",
-    "actual": "/outputs/deno-cdn-script-v1.24.x/actual.json"
+    "expected": "/outputs/deno-cdn-script/expected.json",
+    "actual": "/outputs/deno-cdn-script/actual.json"
   },
   {
     "type": "service",
