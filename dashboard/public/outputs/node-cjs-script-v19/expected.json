@@ -14,6 +14,6 @@
       "undici": "5.14.0"
     }
   },
-  "entry": "exports.node.require",
+  "entry": "exports.require",
   "conditions": ["node", "node.require", "require"]
 }

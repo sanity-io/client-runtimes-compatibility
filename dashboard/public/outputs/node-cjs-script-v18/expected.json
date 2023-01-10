@@ -12,6 +12,6 @@
       "uvwasi": "0.0.13"
     }
   },
-  "entry": "exports.node.require",
+  "entry": "exports.require",
   "conditions": ["node", "node.require", "require"]
 }

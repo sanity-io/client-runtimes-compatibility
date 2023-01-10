@@ -8,6 +8,6 @@
     "process.version": "v14.21.2",
     "process.versions": { "node": "14.21.2", "v8": "8.4.371.23-node.88" }
   },
-  "entry": "exports.node.require",
+  "entry": "exports.require",
   "conditions": ["node", "node.require", "require"]
 }

@@ -5,7 +5,7 @@
     "fetch": true,
     "globals": ["globalThis", "self", "window", "global", "navigator"],
     "navigator.userAgent": "Deno/1.29.2",
-    "import.meta.url": "file:///home/runner/.cache/deno/npm/registry.npmjs.org/skunkworks-test-client/2.4.16/lib/env.mjs",
+    "import.meta.url": "file:///home/runner/.cache/deno/npm/registry.npmjs.org/skunkworks-test-client/2.4.19/lib/env.mjs",
     "Deno.version.deno": "1.29.2",
     "process.version": "v18.12.1",
     "process.versions": {
@@ -15,6 +15,6 @@
       "typescript": "4.9.4"
     }
   },
-  "entry": "exports.node.deno",
+  "entry": "exports.deno",
   "conditions": ["deno", "import", "node", "node.deno", "node.import"]
 }
