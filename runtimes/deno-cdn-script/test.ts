@@ -24,7 +24,9 @@ async function expected() {
       result,
       env: client.env,
       entry,
-      conditions: conditions.filter(Boolean),
+      conditions: conditions.filter(
+        (condition: any) => typeof condition === 'string'
+      ),
     })
   )
 }
