@@ -50,13 +50,6 @@
   },
   {
     "type": "artifact",
-    "name": "Node.js CJS v10",
-    "docs": "https://nodejs.org/docs/latest-v10.x/api/modules.html#modules_all_together",
-    "expected": "/outputs/node-cjs-script-v10/expected.json",
-    "actual": "/outputs/node-cjs-script-v10/actual.json"
-  },
-  {
-    "type": "artifact",
     "name": "Node.js CJS v12",
     "docs": "https://nodejs.org/docs/latest-v12.x/api/modules.html#modules_all_together",
     "expected": "/outputs/node-cjs-script-v12/expected.json",

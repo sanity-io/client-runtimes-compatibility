@@ -97,10 +97,8 @@ jobs:
     strategy:
       matrix:
         test: [node-cjs-script, node-esm-script]
-        node-version: [lts/-4, lts/-3, lts/-2, lts/-1, lts/*, current]
+        node-version: [lts/-3, lts/-2, lts/-1, lts/*, current]
         exclude:
-          - test: node-esm-script
-            node-version: lts/-4
           - test: node-esm-script
             node-version: lts/-3
     defaults:
