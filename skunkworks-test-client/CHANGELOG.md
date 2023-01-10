@@ -5,6 +5,14 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.19](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.4.18...v2.4.19) (2023-01-10)
+
+### Bug Fixes
+
+- **deps:** update dependencies (non-major) ([#80](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/80)) ([89f8fec](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/89f8fecf16e0a84ba32cc314c95d867510ee7d1f))
+- **deps:** update dependency @sanity/icons to v2 ([#82](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/82)) ([3dd5072](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/3dd5072b335998833870646ba7810d9f4d099242))
+- **deps:** update dependency @tanstack/react-table to ^8.7.6 ([#94](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/94)) ([9327819](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/9327819fbec55e42eb04748ee506ba4d710c05d2))
+
 ## [2.4.18](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.4.17...v2.4.18) (2023-01-10)
 
 ### Bug Fixes
