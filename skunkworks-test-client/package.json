@@ -12,15 +12,15 @@
   "exports": {
     ".": {
       "types": "./lib/types.d.ts",
-      "worker": "./lib/index.worker.js",
       "browser": "./lib/index.browser.js",
+      "deno": "./lib/index.deno.js",
+      "worker": "./lib/index.worker.js",
+      "require": "./lib/index.require.cjs",
       "node": {
-        "deno": "./lib/index.node.deno.js",
-        "module": "./lib/index.node.js",
         "import": "./lib/index.node.wrapper.js",
         "require": "./lib/index.node.cjs"
       },
-      "require": "./lib/index.require.cjs",
+      "import": "./lib/index.import.js",
       "default": "./lib/index.default.js"
     },
     "./report-browser": {
