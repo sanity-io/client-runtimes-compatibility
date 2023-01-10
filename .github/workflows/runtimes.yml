@@ -73,14 +73,11 @@ jobs:
     strategy:
       matrix:
         test: [deno-cdn-script, deno-npm-script]
-        # deno-version: [1.x]
-        # @todo: stop overriding the version after migrating from `--compat` (https://github.com/sanity-io/get-it/issues/33)
-        deno-version: [v1.24.x]
 
     defaults:
       run:
         working-directory: runtimes/${{ matrix.test }}
-    name: Deno ${{ matrix.deno-version }} ${{ matrix.test }}
+
     steps:
       - uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # tag=v3
       - uses: actions/setup-node@8c91899e586c5b171469028077307d293428b516 # tag=v3
@@ -92,11 +89,11 @@ jobs:
         if: matrix.test == 'deno-npm-script'
       - uses: denoland/setup-deno@v1
         with:
-          deno-version: ${{ matrix.deno-version }}
+          deno-version: vx.x.x
       - run: deno task test
       - uses: actions/upload-artifact@83fd05a356d7e2593de66fc9913b3002723633cb # tag=v3
         with:
-          name: ${{ matrix.test }}-${{ matrix.deno-version }}
+          name: ${{ matrix.test }}
           path: runtimes/${{ matrix.test }}/artifacts/*.json
           if-no-files-found: error
           retention-days: 1
