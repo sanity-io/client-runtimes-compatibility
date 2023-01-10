@@ -1,3 +1,1 @@
-{
-  "error": "TypeError: createClient is not a function\n    at actual (/home/runner/work/ecosystem-skunkworks-client-runtimes/ecosystem-skunkworks-client-runtimes/runtimes/node-cjs-script/test.js:24:20)\n    at main (/home/runner/work/ecosystem-skunkworks-client-runtimes/ecosystem-skunkworks-client-runtimes/runtimes/node-cjs-script/test.js:41:34)\n    at Object.<anonymous> (/home/runner/work/ecosystem-skunkworks-client-runtimes/ecosystem-skunkworks-client-runtimes/runtimes/node-cjs-script/test.js:46:1)\n    at Module._compile (node:internal/modules/cjs/loader:1165:14)\n    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1219:10)\n    at Module.load (node:internal/modules/cjs/loader:1043:32)\n    at Function.Module._load (node:internal/modules/cjs/loader:878:12)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)\n    at node:internal/main/run_main_module:22:47"
-}
+{ "result": 47 }
