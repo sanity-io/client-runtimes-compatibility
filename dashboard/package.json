@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.13",
-    "@sanity/client": "5.0.0-esm.4",
+    "@sanity/client": "5.0.0-esm.6",
     "@sanity/icons": "^2.2.2",
     "@sanity/ui": "^1.0.12",
     "@tanstack/react-table": "^8.7.6",
