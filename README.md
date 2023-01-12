@@ -1,8 +1,8 @@
-# ecosystem-skunkworks-client-runtimes
+# client-runtimes-compatibility
 
-> [View dashboard](https://client-runtimes-dashboard.sanity.build/)
+> [View report](https://client-runtimes-dashboard.sanity.build/)
 
-A sandbox to try out @sanity/client in tons of different runtimes, workers and environments
+Can I use `@sanity/client`?
 
 Related projects:
 
