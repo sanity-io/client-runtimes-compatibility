@@ -238,6 +238,6 @@
     "node-fetch": "2.6.7"
   },
   "devDependencies": {
-    "@sanity/semantic-release-preset": "^3.0.2"
+    "@sanity/semantic-release-preset": "^4.0.0"
   }
 }
