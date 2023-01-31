@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@sanity/client@5.0.0-esm.14":
-  version "5.0.0-esm.14"
-  resolved "https://registry.yarnpkg.com/@sanity/client/-/client-5.0.0-esm.14.tgz#fae7fbc7eeab172ad8818ee75c498484e746041d"
-  integrity sha512-VpXGN7i4Sz6kb91RIrVOGFEERw7UoUoA0OGomKkxIgCevqAlKRuUJO0nNojE2aAP/NbgOI9sP0hY5LWmDgFwng==
+"@sanity/client@5.0.0-esm.17":
+  version "5.0.0-esm.17"
+  resolved "https://registry.yarnpkg.com/@sanity/client/-/client-5.0.0-esm.17.tgz#5ea70a481fdcc3b047db93ee1fbbe70b7e3a6e98"
+  integrity sha512-DapKWuH6fKabvYAIYDfAsijboROmxLdRbd1eWxztDtnCRPVwEk+2SR6bmNpM2EEkRxW0s+tT1wz0rF+M2ZGfNw==
   dependencies:
     "@sanity/eventsource" "^4"
     "@types/node" "^18.11.18"
@@ -25,10 +25,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.18.tgz#8dfb97f0da23c2293e554c5a50d61ef134d7697f"
   integrity sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==
 
-bun-types@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/bun-types/-/bun-types-0.4.0.tgz#ad930e006530727cf641eef5546237386d99101a"
-  integrity sha512-KaXuDgaIHmvpCxpZCVUHTbsfKYRnSKBdzlYMBNjHnav7VCvT6KqEvykd007xP86iCxytO/7C9yLvR2+7JRtMrA==
+bun-types@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/bun-types/-/bun-types-0.5.0.tgz#1f2e98ac0cf91d9c7b556d221cc736fc8bd04277"
+  integrity sha512-W74XkTKdOP2HV1PbzL7k6+8TZlcJyj1IuD7y9wX2SiHIaVjlqVwM9fXgsCvTlQQqkkkyZxSPSDFF10J6qml2eA==
 
 core-util-is@~1.0.0:
   version "1.0.3"

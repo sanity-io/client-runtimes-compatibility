@@ -5,8 +5,8 @@
     "test:expected": "bun test.expected.js"
   },
   "dependencies": {
-    "@sanity/client": "5.0.0-esm.14",
-    "bun-types": "^0.4.0",
+    "@sanity/client": "5.0.0-esm.17",
+    "bun-types": "^0.5.0",
     "skunkworks-test-client": "2.4.19"
   }
 }
