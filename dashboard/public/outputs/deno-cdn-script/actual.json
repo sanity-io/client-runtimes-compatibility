@@ -1,3 +1,1 @@
-{
-  "error": "TypeError: The default export of @sanity/client has been deprecated. Use the named export `createClient` instead\n    at An (https://esm.sh/v106/@sanity/client@5.1.0/deno/client.js:5:22385)\n    at actual (file:///home/runner/work/client-runtimes-compatibility/client-runtimes-compatibility/runtimes/deno-cdn-script/test.ts:36:20)\n    at file:///home/runner/work/client-runtimes-compatibility/client-runtimes-compatibility/runtimes/deno-cdn-script/test.ts:52:32"
-}
+{ "result": 63 }
