@@ -2,7 +2,7 @@ import createClientExpected, {
   entry,
 } from 'https://esm.sh/skunkworks-test-client'
 import conditions from 'https://esm.sh/skunkworks-test-client/supports-conditions'
-import {createClient as createClientActual} from 'https://esm.sh/@sanity/client'
+import { createClient as createClientActual } from 'https://esm.sh/@sanity/client'
 
 const projectId = '81pocpw8'
 const dataset = 'production'
