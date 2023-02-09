@@ -5,10 +5,10 @@
     "start": "next start"
   },
   "dependencies": {
-    "@heroicons/react": "^2.0.14",
-    "@sanity/client": "5.1.0",
+    "@heroicons/react": "^2.0.15",
+    "@sanity/client": "5.2.0",
     "@sanity/icons": "^2.2.2",
-    "@sanity/ui": "^1.2.1",
+    "@sanity/ui": "^1.2.2",
     "@tanstack/react-table": "^8.7.9",
     "@types/classnames": "^2.3.1",
     "@types/styled-components": "^5.1.26",
@@ -21,9 +21,9 @@
     "skunkworks-test-client": "2.4.19",
     "styled-components": "^5.3.6",
     "swr": "^2.0.3",
-    "type-fest": "^3.5.4",
+    "type-fest": "^3.5.7",
     "use-immer": "^0.8.1",
-    "zod": "^3.20.2"
+    "zod": "^3.20.6"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
