@@ -5,6 +5,16 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.21](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.4.20...v2.4.21) (2023-02-14)
+
+### Bug Fixes
+
+- **deps:** update dependencies (non-major) ([#104](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/104)) ([f99e975](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/f99e9759a604a26bb365f0dc80cdd089f53d86a9))
+- **deps:** update dependencies (non-major) ([#108](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/108)) ([2d5d053](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/2d5d05326d9e2696615918ebb8401a320d036c9f))
+- **deps:** update dependencies (non-major) ([#113](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/113)) ([d68e12d](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/d68e12d1e99ac4d275bbdebc02b41f562f55a5d7))
+- **deps:** update dependencies (non-major) ([#117](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/117)) ([c0448a8](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/c0448a8d48cce3ad6ca1dab0dcf520f0912c9dea))
+- **deps:** update dependency @sanity/client to v5.0.0-esm.14 ([#105](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/105)) ([1c76dc3](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/1c76dc36f312a5404dc14f5593aa393e464852c5))
+
 ## [2.4.20](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.4.19...v2.4.20) (2023-01-14)
 
 ### Bug Fixes
