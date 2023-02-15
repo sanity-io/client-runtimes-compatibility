@@ -6,9 +6,9 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.15",
-    "@sanity/client": "5.2.0",
+    "@sanity/client": "5.2.1",
     "@sanity/icons": "^2.2.2",
-    "@sanity/ui": "^1.2.2",
+    "@sanity/ui": "^1.2.4",
     "@tanstack/react-table": "^8.7.9",
     "@types/classnames": "^2.3.1",
     "@types/styled-components": "^5.1.26",

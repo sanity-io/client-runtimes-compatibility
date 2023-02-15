@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@sanity/client@5.2.0":
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/@sanity/client/-/client-5.2.0.tgz#5f37b170ae1581628e3c573c2b20655cd0ad974f"
-  integrity sha512-Fi7Rw4y/CxqDGqb0zg14mrFpHmY83IVtC0adsVzVw7V7YBNAxfagpz7uOm+sgC4HnYSL8zlsqMpXPG7/LXy0Ew==
+"@sanity/client@5.2.1":
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/@sanity/client/-/client-5.2.1.tgz#35a0832f8af9a3ae6eecd133bfdacd441a87d35a"
+  integrity sha512-fkpVdywu23gPWjNGC+Z2uAM+CFlQuEoDQMc9aVWJQqQwPthD6jCkmTgbwZDscFjTjn6eu6+6s5PHdNM6fPPoDA==
   dependencies:
     "@sanity/eventsource" "^4"
     get-it "^8"
