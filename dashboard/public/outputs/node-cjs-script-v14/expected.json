@@ -1,12 +1,12 @@
 {
-  "result": 71,
+  "result": 74,
   "env": {
     "document": false,
     "fetch": false,
     "globals": ["globalThis", "global"],
     "process.release.name": "node",
-    "process.version": "v14.21.2",
-    "process.versions": { "node": "14.21.2", "v8": "8.4.371.23-node.88" }
+    "process.version": "v14.21.3",
+    "process.versions": { "node": "14.21.3", "v8": "8.4.371.23-node.88" }
   },
   "entry": "exports.require",
   "conditions": ["node", "node.require", "require"]
