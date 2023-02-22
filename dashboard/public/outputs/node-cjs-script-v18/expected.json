@@ -5,14 +5,14 @@
     "fetch": true,
     "globals": ["globalThis", "global"],
     "process.release.name": "node",
-    "process.version": "v18.14.1",
+    "process.version": "v18.14.2",
     "process.versions": {
-      "node": "18.14.1",
-      "v8": "10.2.154.23-node.22",
+      "node": "18.14.2",
+      "v8": "10.2.154.26-node.22",
       "uvwasi": "0.0.14",
       "acorn": "8.8.1",
       "simdutf": "3.1.0",
-      "undici": "5.19.1"
+      "undici": "5.20.0"
     }
   },
   "entry": "exports.require",
