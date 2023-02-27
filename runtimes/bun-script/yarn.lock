@@ -19,10 +19,10 @@
     event-source-polyfill "1.0.25"
     eventsource "^2.0.2"
 
-bun-types@^0.5.6:
-  version "0.5.6"
-  resolved "https://registry.npmjs.org/bun-types/-/bun-types-0.5.6.tgz"
-  integrity sha512-c4XXSAo4gA03XE3EIOB1bcLxUvWMzhiE9AQdoZi+3fplNLpyeOw7UJM3o1UCtk00NYZQIbgC/eJ88QrlSdxhxg==
+bun-types@^0.5.7:
+  version "0.5.7"
+  resolved "https://registry.yarnpkg.com/bun-types/-/bun-types-0.5.7.tgz#331d5b8b495540bf7eac1c4727c5fe8dd1f1f5dd"
+  integrity sha512-79ualR6PIZYTbALgsUxZXlAhkz0M7h7QMsXWn/eX+VOOCX3bPA9y0Pywu4MUEWOK8cK/JhnAODMqZfhCb911nw==
 
 core-util-is@~1.0.0:
   version "1.0.3"
