@@ -1,16 +1,16 @@
 {
-  "result": 78,
+  "result": 79,
   "env": {
     "document": false,
     "fetch": true,
     "globals": ["globalThis", "global"],
     "process.release.name": "node",
-    "process.version": "v18.14.2",
+    "process.version": "v18.15.0",
     "process.versions": {
-      "node": "18.14.2",
-      "v8": "10.2.154.26-node.22",
-      "uvwasi": "0.0.14",
-      "acorn": "8.8.1",
+      "node": "18.15.0",
+      "v8": "10.2.154.26-node.25",
+      "uvwasi": "0.0.15",
+      "acorn": "8.8.2",
       "simdutf": "3.1.0",
       "undici": "5.20.0"
     }
