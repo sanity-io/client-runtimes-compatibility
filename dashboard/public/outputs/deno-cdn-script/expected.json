@@ -1,17 +1,17 @@
 {
-  "result": 79,
+  "result": 80,
   "env": {
     "document": false,
     "fetch": true,
     "globals": ["globalThis", "self", "global", "navigator"],
-    "navigator.userAgent": "Deno/1.31.1",
+    "navigator.userAgent": "Deno/1.31.2",
     "import.meta.url": "https://esm.sh/v111/skunkworks-test-client@2.4.19/deno/skunkworks-test-client.js",
-    "Deno.version.deno": "1.31.1",
+    "Deno.version.deno": "1.31.2",
     "process.version": "v18.12.1",
     "process.versions": {
       "node": "18.12.1",
-      "deno": "1.31.1",
-      "v8": "11.0.226.13",
+      "deno": "1.31.2",
+      "v8": "11.0.226.19",
       "typescript": "4.9.4"
     }
   },
