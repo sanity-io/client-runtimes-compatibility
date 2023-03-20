@@ -19,10 +19,10 @@
     event-source-polyfill "1.0.25"
     eventsource "^2.0.2"
 
-bun-types@^0.5.7:
-  version "0.5.7"
-  resolved "https://registry.yarnpkg.com/bun-types/-/bun-types-0.5.7.tgz#331d5b8b495540bf7eac1c4727c5fe8dd1f1f5dd"
-  integrity sha512-79ualR6PIZYTbALgsUxZXlAhkz0M7h7QMsXWn/eX+VOOCX3bPA9y0Pywu4MUEWOK8cK/JhnAODMqZfhCb911nw==
+bun-types@^0.5.8:
+  version "0.5.8"
+  resolved "https://registry.yarnpkg.com/bun-types/-/bun-types-0.5.8.tgz#953722062116e0b87ce00e4e4cc807673926b834"
+  integrity sha512-VHwD0MAHo3wraYAeqTWH2NDmXOdGfC3wWWOnZvK93ytI6yq/LkgsCjDudWNmN7MlfPvJb2zoLMnkzhjxNwLsLw==
 
 core-util-is@~1.0.0:
   version "1.0.3"
