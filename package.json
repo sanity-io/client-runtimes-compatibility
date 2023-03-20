@@ -8,7 +8,7 @@
     "tailwindConfig": "./dashboard/tailwind.config.js"
   },
   "devDependencies": {
-    "prettier": "^2.8.4",
+    "prettier": "^2.8.5",
     "prettier-plugin-packagejson": "^2.4.3",
     "prettier-plugin-tailwindcss": "^0.2.5"
   }
