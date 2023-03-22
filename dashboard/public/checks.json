@@ -1,10 +1,17 @@
 [
   {
     "type": "artifact",
-    "name": "Bun v0.1",
+    "name": "Bun Latest",
     "docs": "https://bun.sh/",
-    "expected": "/outputs/bun-script-0.1.x/expected.json",
-    "actual": "/outputs/bun-script-0.1.x/actual.json"
+    "expected": "/outputs/bun-script-latest/expected.json",
+    "actual": "/outputs/bun-script-latest/actual.json"
+  },
+  {
+    "type": "artifact",
+    "name": "Bun Canary",
+    "docs": "https://bun.sh/",
+    "expected": "/outputs/bun-script-canary/expected.json",
+    "actual": "/outputs/bun-script-canary/actual.json"
   },
   {
     "type": "service",
