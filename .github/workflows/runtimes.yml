@@ -19,23 +19,6 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # dump_contexts_to_log:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Dump GitHub context
-  #       id: github_context_step
-  #       run: echo '${{ toJSON(github) }}'
-  #     - name: Dump job context
-  #       run: echo '${{ toJSON(job) }}'
-  #     - name: Dump steps context
-  #       run: echo '${{ toJSON(steps) }}'
-  #     - name: Dump runner context
-  #       run: echo '${{ toJSON(runner) }}'
-  #     - name: Dump strategy context
-  #       run: echo '${{ toJSON(strategy) }}'
-  #     - name: Dump matrix context
-  #       run: echo '${{ toJSON(matrix) }}'
-
   bun:
     runs-on: ubuntu-latest
     strategy:
@@ -46,16 +29,16 @@ jobs:
         # platform: [browser, node, bun]
         test: [bun-script]
         #bun-version: [0.1.x, '*']
-        bun-version: [0.1.x]
+        bun-version: [latest, canary]
     defaults:
       run:
         working-directory: runtimes/${{ matrix.test }}
     name: Bun ${{ matrix.bun-version }} ${{ matrix.test }}
     steps:
       - uses: actions/checkout@v3
-      - uses: antongolub/action-setup-bun@cae75ff7a1b635e9cc79bf0bc5c6302b43b29989 # v1
+      - uses: oven-sh/setup-bun@v1
         with:
-          bun-version: ${{ matrix.bun-version }}
+          bun-version: ${{ matrix.node-version }}
       - run: bun install
       - run: bun run test:expected
       - run: bun run test:actual
