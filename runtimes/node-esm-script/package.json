@@ -5,8 +5,8 @@
   },
   "dependencies": {
     "@sanity/client": "5.3.0",
-    "skunkworks-test-client": "2.4.19",
     "@tsconfig/node-lts-strictest-esm": "^18.12.1",
+    "skunkworks-test-client": "2.4.19",
     "typescript": "^5.0.2"
   }
 }
