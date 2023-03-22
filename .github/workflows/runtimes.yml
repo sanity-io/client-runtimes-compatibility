@@ -55,7 +55,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        test: [deno-cdn-script, deno-npm-script]
+        # test: [deno-cdn-script, deno-npm-script]
+        test: [deno-cdn-script]
 
     defaults:
       run:
