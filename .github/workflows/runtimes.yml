@@ -114,7 +114,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm install
       - run: npx tsc
-        if:  matrix.node-version == "lts/*"
+        if:  matrix.node-version == 'lts/*'
       - run: npm test
       - name: Get Node.js major version
         uses: mathiasvr/command-output@8dbf451add3db114df0114aa5e21a1efef8c5015 # tag=v1
