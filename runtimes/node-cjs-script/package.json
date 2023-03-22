@@ -6,6 +6,8 @@
   "dependencies": {
     "@sanity/client": "5.3.0",
     "skunkworks-test-client": "2.4.19",
-    "write-file-atomic": "^5.0.0"
+    "write-file-atomic": "^5.0.0",
+    "@tsconfig/node-lts-strictest": "^18.12.1",
+    "typescript": "^5.0.2"
   }
 }

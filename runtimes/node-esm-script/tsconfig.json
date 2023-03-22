@@ -1,0 +1,9 @@
+{
+  "extends": "@tsconfig/node-lts-strictest-esm/tsconfig.json",
+  "include": ["test.ts"],
+  "compilerOptions": {
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "ignoreDeprecations": "5.0"
+  }
+}
