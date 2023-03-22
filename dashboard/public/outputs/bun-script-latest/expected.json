@@ -1,0 +1,37 @@
+{
+  "result": 84,
+  "env": {
+    "document": false,
+    "fetch": true,
+    "globals": ["globalThis", "self", "global", "navigator"],
+    "process.isBun": 1,
+    "process.release.name": "bun",
+    "navigator.userAgent": "Bun/0.5.8",
+    "import.meta.url": "file:///home/runner/work/client-runtimes-compatibility/client-runtimes-compatibility/runtimes/bun-script/node_modules/skunkworks-test-client/lib/env.mjs",
+    "process.version": "v18.13.0",
+    "process.versions": {
+      "node": "18.13.0",
+      "bun": "0.5.8",
+      "webkit": "60d11703a533fd694cd1d6ddda04813eecb5d69f",
+      "uwebsockets": "70b1b9fc1341e8b791b42c5447f90505c2abe156",
+      "tinycc": "2d3ad9e0d32194ad7fd867b66ebe218dcc8cb5cd",
+      "lolhtml": "2eed349dcdfa4ff5c19fe7c6e501cfd687601033",
+      "usockets": "fafc241e8664243fc0c51d69684d5d02b9805134",
+      "v8": "10.8.168.20-node.8"
+    }
+  },
+  "entry": "exports.browser",
+  "conditions": [
+    "browser",
+    "bun",
+    "import",
+    "module",
+    "node",
+    "node.deno",
+    "node.import",
+    "node.module",
+    "worker",
+    "worker.browser",
+    "worker.node"
+  ]
+}
