@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "eventsource": "https://esm.sh/eventsource"
+  },
+  "tasks": {
+    "test": "deno run --allow-env --allow-net --allow-write test.ts"
+  }
+}
