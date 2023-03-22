@@ -5,6 +5,19 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.22](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.4.21...v2.4.22) (2023-03-22)
+
+### Bug Fixes
+
+- **deps:** update dependencies (non-major) ([#122](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/122)) ([cdb698d](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/cdb698d4ed9196f874ecce814cabe41f94099340))
+- **deps:** update dependencies (non-major) ([#123](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/123)) ([b515a66](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/b515a661a982d4cba29f32554ab410d9b402493f))
+- **deps:** update dependencies (non-major) ([#128](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/128)) ([7e84043](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/7e8404316347ea800ff5e00719cc01d0f6fb85e3))
+- **deps:** update dependencies (non-major) ([#131](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/131)) ([3343831](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/33438311fbfdfd825ca399130ed54481bf9f5be0))
+- **deps:** update dependencies (non-major) ([#133](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/133)) ([d3f3047](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/d3f3047a297d42d4b98c72f2c7f9a876caa49505))
+- **deps:** update dependency @sanity/client to v5.2.2 ([#124](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/124)) ([fa0fe29](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/fa0fe29f11fca6e2e0f5590487f57558e051f75d))
+- **deps:** update dependency bun-types to ^0.5.8 ([#139](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/139)) ([2a14f1c](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/2a14f1ccdb5052dad2ae840bb10946d3c4156961))
+- **deps:** update dependency next to ^13.2.4 ([#130](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/130)) ([dc404e9](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/dc404e92aa6736a5c40b0b6d480b6220a4157013))
+
 ## [2.4.21](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.4.20...v2.4.21) (2023-02-14)
 
 ### Bug Fixes
