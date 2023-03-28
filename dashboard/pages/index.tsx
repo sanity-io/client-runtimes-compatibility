@@ -185,6 +185,14 @@ const columns: ColumnDef<CheckWithOutputs, any>[] = [
     header: 'Conditions',
     cell: ({ getValue }) => getValue()?.join?.(', '),
   }),
+  // @ts-expect-error
+  columnHelper.accessor((row) => row.outputs?.actual?.unstable__adapter, {
+    header: 'Adapter',
+  }),
+  // @ts-expect-error
+  columnHelper.accessor((row) => row.outputs?.actual?.unstable__environment, {
+    header: 'Environment',
+  }),
 ]
 
 const Table = memo(function Table({ data }: { data: CheckWithOutputs[] }) {
