@@ -5,6 +5,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.25](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.4.24...v2.4.25) (2023-03-28)
+
+### Bug Fixes
+
+- set publishconfig to public ([2ff3bb8](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/2ff3bb8d20b0c4334528b20f9cccd761514ff5b1))
+
 ## [2.4.24](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.4.23...v2.4.24) (2023-03-28)
 
 ### Bug Fixes
