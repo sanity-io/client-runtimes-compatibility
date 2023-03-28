@@ -1,10 +1,5 @@
 'use strict'
 const writeFile = require('write-file-atomic')
-const {
-  createClient,
-  unstable__adapter,
-  unstable__environment,
-} = require('@sanity/client')
 const projectId = '81pocpw8'
 const dataset = 'production'
 const apiVersion = 'v2021-03-25'
@@ -23,6 +18,11 @@ async function expected() {
 async function actual() {
   let json
   try {
+    const {
+      createClient,
+      unstable__adapter,
+      unstable__environment,
+    } = require('@sanity/client')
     const client = createClient({
       projectId,
       dataset,
