@@ -5,9 +5,9 @@
   },
   "dependencies": {
     "@sanity/client": "5.4.0",
+    "@sanity/runtimes-test-client": "2.4.19",
     "@tsconfig/node-lts-strictest-esm": "^18.12.1",
     "@types/node": "^18.15.5",
-    "@sanity/runtimes-test-client": "2.4.19",
     "typescript": "^5.0.2"
   }
 }
