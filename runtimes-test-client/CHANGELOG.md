@@ -5,6 +5,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.24](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.4.23...v2.4.24) (2023-03-28)
+
+### Bug Fixes
+
+- **edge:** report "edge-light" ([ba364d1](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/ba364d1b4a0588ca5ffdb458fc2c00296e217ce2))
+
 ## [2.4.23](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.4.22...v2.4.23) (2023-03-28)
 
 ### Bug Fixes
