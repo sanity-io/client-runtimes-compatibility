@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "@sanity/client": "5.4.0",
-    "@sanity/runtimes-test-client": "2.4.19",
+    "@sanity/runtimes-test-client": "latest",
     "bun-types": "^0.5.8"
   }
 }

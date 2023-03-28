@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@sanity/runtimes-test-client": "2.4.19"
+    "@sanity/runtimes-test-client": "latest"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20230307.0",
