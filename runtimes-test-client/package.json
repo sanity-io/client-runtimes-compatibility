@@ -239,5 +239,8 @@
   },
   "devDependencies": {
     "@sanity/semantic-release-preset": "^4.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

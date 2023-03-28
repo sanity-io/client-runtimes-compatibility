@@ -78,7 +78,8 @@ const outputBun = debugOutput
   .extend({
     env: outputEnv.extend({
       // https://github.com/oven-sh/bun-types/blob/7c3e6b1fbce0d12a41a9b960ae661252ae9feb35/globals.d.ts#L220-L221
-      'process.isBun': z.union([z.literal(1), z.literal(true)]),
+      'process.isBun': z.literal(1).or(z.literal(true)),
+      'process.release.name': z.literal('bun'),
     }),
   })
   .transform((val) => ({ ...val, runtime: 'bun' }))
