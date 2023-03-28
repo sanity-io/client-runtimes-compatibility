@@ -1,6 +1,5 @@
 import createClientExpected, { entry } from 'npm:skunkworks-test-client'
 import conditions from 'npm:skunkworks-test-client/supports-conditions'
-import createClientActual from 'npm:@sanity/client'
 
 const projectId = '81pocpw8'
 const dataset = 'production'
@@ -29,6 +28,7 @@ async function expected() {
 async function actual() {
   let json
   try {
+    const { default: createClientActual } = await import('npm:@sanity/client')
     const client = createClientActual({
       projectId,
       dataset,
