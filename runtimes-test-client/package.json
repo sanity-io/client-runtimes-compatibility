@@ -47,10 +47,10 @@
       "require": "./lib/report-null.cjs",
       "default": "./lib/report-null.js"
     },
-    "./report-edge": {
-      "edge": {
-        "require": "./lib/report-edge.cjs",
-        "default": "./lib/report-edge.js"
+    "./report-edge-light": {
+      "edge-light": {
+        "require": "./lib/report-edge-light.cjs",
+        "default": "./lib/report-edge-light.js"
       },
       "require": "./lib/report-null.cjs",
       "default": "./lib/report-null.js"
