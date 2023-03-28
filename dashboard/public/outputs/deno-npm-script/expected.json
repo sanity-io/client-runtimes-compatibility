@@ -1,18 +1,18 @@
 {
-  "result": 71,
+  "result": 88,
   "env": {
     "document": false,
     "fetch": true,
     "globals": ["globalThis", "self", "window", "global", "navigator"],
-    "navigator.userAgent": "Deno/1.30.3",
+    "navigator.userAgent": "Deno/1.32.1",
     "import.meta.url": "file:///home/runner/.cache/deno/npm/registry.npmjs.org/skunkworks-test-client/2.4.19/lib/env.mjs",
-    "Deno.version.deno": "1.30.3",
+    "Deno.version.deno": "1.32.1",
     "process.version": "v18.12.1",
     "process.versions": {
       "node": "18.12.1",
-      "deno": "1.30.3",
-      "v8": "10.9.194.5",
-      "typescript": "4.9.4"
+      "deno": "1.32.1",
+      "v8": "11.2.214.9",
+      "typescript": "5.0.2"
     }
   },
   "entry": "exports.deno",
