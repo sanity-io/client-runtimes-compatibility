@@ -1,7 +1,11 @@
 import { writeFile } from 'node:fs/promises'
 import createClientExpected, { entry } from '@sanity/runtimes-test-client'
 import conditions from '@sanity/runtimes-test-client/supports-conditions'
-import { createClient as createClientActual } from '@sanity/client'
+import {
+  createClient as createClientActual,
+  unstable__adapter,
+  unstable__environment,
+} from '@sanity/client'
 
 const projectId = '81pocpw8'
 const dataset = 'production'
@@ -32,7 +36,7 @@ async function actual() {
       useCdn: true,
     })
     const result = await client.fetch(query)
-    json = { result }
+    json = { result, unstable__adapter, unstable__environment }
   } catch (err) {
     console.error(err)
     json = { error: err instanceof Error ? err.stack : err }

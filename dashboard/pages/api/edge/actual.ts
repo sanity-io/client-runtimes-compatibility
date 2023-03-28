@@ -1,4 +1,8 @@
-import { createClient } from '@sanity/client'
+import {
+  createClient,
+  unstable__adapter,
+  unstable__environment,
+} from '@sanity/client'
 import { projectId, dataset, apiVersion, query } from 'config'
 
 export const config = {
@@ -17,6 +21,8 @@ export default async function handler() {
     return new Response(
       JSON.stringify({
         result,
+        unstable__adapter,
+        unstable__environment,
       }),
       {
         status: 200,

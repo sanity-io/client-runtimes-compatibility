@@ -1,6 +1,10 @@
 'use strict'
 const writeFile = require('write-file-atomic')
-const { createClient } = require('@sanity/client')
+const {
+  createClient,
+  unstable__adapter,
+  unstable__environment,
+} = require('@sanity/client')
 const projectId = '81pocpw8'
 const dataset = 'production'
 const apiVersion = 'v2021-03-25'
@@ -26,7 +30,7 @@ async function actual() {
       useCdn: true,
     })
     const result = await client.fetch(query)
-    json = { result }
+    json = { result, unstable__adapter, unstable__environment }
   } catch (err) {
     console.error(err)
     json = { error: err instanceof Error ? err.stack : err }

@@ -28,7 +28,11 @@ async function expected() {
 async function actual() {
   let json
   try {
-    const { default: createClientActual } = await import('npm:@sanity/client')
+    const {
+      default: createClientActual,
+      unstable__adapter,
+      unstable__environment,
+    } = await import('npm:@sanity/client')
     const client = createClientActual({
       projectId,
       dataset,
@@ -36,7 +40,7 @@ async function actual() {
       useCdn: true,
     })
     const result = await client.fetch(query)
-    json = { result }
+    json = { result, unstable__adapter, unstable__environment }
   } catch (err) {
     console.error(err)
     json = { error: err.stack || err.toString() }

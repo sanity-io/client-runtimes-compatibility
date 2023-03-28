@@ -2,7 +2,11 @@ import createClientExpected, {
   entry,
 } from 'https://esm.sh/@sanity/runtimes-test-client'
 import conditions from 'https://esm.sh/@sanity/runtimes-test-client/supports-conditions'
-import { createClient as createClientActual } from 'https://esm.sh/@sanity/client'
+import {
+  createClient as createClientActual,
+  unstable__adapter,
+  unstable__environment,
+} from 'https://esm.sh/@sanity/client'
 
 const projectId = '81pocpw8'
 const dataset = 'production'
@@ -40,7 +44,7 @@ async function actual() {
       useCdn: true,
     })
     const result = await client.fetch(query)
-    json = { result }
+    json = { result, unstable__adapter, unstable__environment }
   } catch (err) {
     console.error(err)
     json = { error: err.stack || err.toString() }

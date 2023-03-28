@@ -1,4 +1,8 @@
-import { createClient } from '@sanity/client'
+import {
+  createClient,
+  unstable__adapter,
+  unstable__environment,
+} from '@sanity/client'
 
 const projectId = '81pocpw8'
 const dataset = 'production'
@@ -17,6 +21,8 @@ export default {
     return new Response(
       JSON.stringify({
         result,
+        unstable__adapter,
+        unstable__environment,
       }),
       {
         status: 200,

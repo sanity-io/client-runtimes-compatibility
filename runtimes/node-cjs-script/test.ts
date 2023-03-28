@@ -20,7 +20,11 @@ async function expected() {
 async function actual() {
   let json
   try {
-    const { createClient } = require('@sanity/client')
+    const {
+      createClient,
+      unstable__adapter,
+      unstable__environment,
+    } = require('@sanity/client')
     const client = createClient({
       projectId,
       dataset,
@@ -28,7 +32,7 @@ async function actual() {
       useCdn: true,
     })
     const result = await client.fetch(query)
-    json = { result }
+    json = { result, unstable__adapter, unstable__environment }
   } catch (err) {
     console.error(err)
     json = { error: err instanceof Error ? err.stack : err }
