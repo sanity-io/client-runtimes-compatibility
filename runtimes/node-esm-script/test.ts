@@ -1,6 +1,6 @@
 import { writeFile } from 'node:fs/promises'
-import createClientExpected, { entry } from 'skunkworks-test-client'
-import conditions from 'skunkworks-test-client/supports-conditions'
+import createClientExpected, { entry } from '@sanity/runtimes-test-client'
+import conditions from '@sanity/runtimes-test-client/supports-conditions'
 import { createClient as createClientActual } from '@sanity/client'
 
 const projectId = '81pocpw8'

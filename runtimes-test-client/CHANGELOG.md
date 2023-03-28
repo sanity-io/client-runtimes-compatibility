@@ -343,7 +343,7 @@ All notable changes to this project will be documented in this file. See
 
 ### Bug Fixes
 
-- **deps:** update dependency skunkworks-test-client to v1.1.3 ([#5](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/5)) ([bf0cf4a](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/bf0cf4af389919c0d328408ca4dbaa6b2613243b))
+- **deps:** update dependency @sanity/runtimes-test-client to v1.1.3 ([#5](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/5)) ([bf0cf4a](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/bf0cf4af389919c0d328408ca4dbaa6b2613243b))
 - typo ([f181200](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/f18120099be12f493671108e102b3e417239890f))
 
 ## [1.1.3](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v1.1.2...v1.1.3) (2022-08-20)

@@ -1,6 +1,6 @@
-import createClient, { entry } from 'skunkworks-test-client'
+import createClient, { entry } from '@sanity/runtimes-test-client'
 // @ts-ignore
-import conditions from 'skunkworks-test-client/supports-conditions'
+import conditions from '@sanity/runtimes-test-client/supports-conditions'
 
 const projectId = '81pocpw8'
 const dataset = 'production'

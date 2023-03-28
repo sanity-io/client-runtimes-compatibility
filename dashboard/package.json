@@ -18,7 +18,7 @@
     "next": "^13.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "skunkworks-test-client": "2.4.19",
+    "@sanity/runtimes-test-client": "2.4.19",
     "styled-components": "^5.3.9",
     "swr": "^2.1.0",
     "type-fest": "^3.6.1",

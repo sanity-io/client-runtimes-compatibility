@@ -6,7 +6,7 @@
   ],
   "packageRules": [
     {
-      "packageNames": ["skunkworks-test-client"],
+      "packageNames": ["@sanity/runtimes-test-client"],
       "rangeStrategy": "pin",
       "automerge": true,
       "semanticCommitType": "chore",

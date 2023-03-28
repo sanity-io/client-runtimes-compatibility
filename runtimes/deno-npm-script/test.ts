@@ -1,5 +1,5 @@
-import createClientExpected, { entry } from 'npm:skunkworks-test-client'
-import conditions from 'npm:skunkworks-test-client/supports-conditions'
+import createClientExpected, { entry } from 'npm:@sanity/runtimes-test-client'
+import conditions from 'npm:@sanity/runtimes-test-client/supports-conditions'
 
 const projectId = '81pocpw8'
 const dataset = 'production'

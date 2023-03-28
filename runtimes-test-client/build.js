@@ -1,5 +1,5 @@
 import path from 'node:path'
-import pkg from 'skunkworks-test-client/package.json' assert { type: 'json' }
+import pkg from '@sanity/runtimes-test-client/package.json' assert { type: 'json' }
 
 const requires = []
 const imports = []
@@ -7,7 +7,7 @@ const identifiers = []
 for (const key of Object.keys(pkg.exports)) {
   if (key.startsWith('./report-')) {
     console.group(key)
-    const entry = path.join('skunkworks-test-client', key)
+    const entry = path.join('@sanity/runtimes-test-client', key)
     console.log(entry)
     const { default: result } = await import(entry)
     console.log(result)

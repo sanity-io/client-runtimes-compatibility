@@ -7,7 +7,7 @@
     "@sanity/client": "5.4.0",
     "@tsconfig/node-lts-strictest": "^18.12.1",
     "@types/node": "^18.15.5",
-    "skunkworks-test-client": "2.4.19",
+    "@sanity/runtimes-test-client": "2.4.19",
     "typescript": "^5.0.2",
     "write-file-atomic": "^5.0.0"
   }

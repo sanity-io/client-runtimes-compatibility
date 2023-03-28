@@ -7,7 +7,7 @@
     "process.isBun": 1,
     "process.release.name": "bun",
     "navigator.userAgent": "Bun/0.5.8",
-    "import.meta.url": "file:///home/runner/work/client-runtimes-compatibility/client-runtimes-compatibility/runtimes/bun-script/node_modules/skunkworks-test-client/lib/env.mjs",
+    "import.meta.url": "file:///home/runner/work/client-runtimes-compatibility/client-runtimes-compatibility/runtimes/bun-script/node_modules/@sanity/runtimes-test-client/lib/env.mjs",
     "process.version": "v18.13.0",
     "process.versions": {
       "node": "18.13.0",

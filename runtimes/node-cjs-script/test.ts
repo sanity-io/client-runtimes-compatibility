@@ -7,8 +7,8 @@ const apiVersion = 'v2021-03-25'
 const query = /* groq */ `count(*[studioVersion == 3])`
 
 async function expected() {
-  const createClient = require('skunkworks-test-client')
-  const conditions = require('skunkworks-test-client/supports-conditions')
+  const createClient = require('@sanity/runtimes-test-client')
+  const conditions = require('@sanity/runtimes-test-client/supports-conditions')
   const { entry } = createClient
   const client = createClient({ projectId, dataset, apiVersion, useCdn: true })
   const result = await client.fetch(query)
