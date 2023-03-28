@@ -1,5 +1,4 @@
 const writeFile = require('write-file-atomic')
-const { createClient } = require('@sanity/client')
 
 const projectId = '81pocpw8'
 const dataset = 'production'
@@ -21,6 +20,7 @@ async function expected() {
 async function actual() {
   let json
   try {
+    const { createClient } = require('@sanity/client')
     const client = createClient({
       projectId,
       dataset,

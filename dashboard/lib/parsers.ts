@@ -53,7 +53,13 @@ const semver = z.custom<`${number}.${number}.${number}`>((val) =>
 const looseSemver = z.custom<`v${z.infer<typeof semver>}`>((val) =>
   /^v\d+\.\d+\.\d+$/g.test(val as string)
 )
-const successOutputActual = z.object({ result: json }).strict()
+const successOutputActual = z
+  .object({
+    result: json,
+    unstable__adapter: z.enum(['node', 'xhr', 'fetch']).optional(),
+    unstable__environment: z.enum(['node', 'browser']).optional(),
+  })
+  .strict()
 // `/expected` endpoints include debug information
 const debugOutput = successOutputActual.extend({
   // TODO fill in from conditions, pkg.main shouuld be main, node.require should be exports.node.require
