@@ -1,3 +1,5 @@
 {
-  "error": "TypeError: Could not find 'eventsource' (file:///home/runner/.cache/deno/npm/registry.npmjs.org/eventsource/2.0.2/lib/eventsource) referenced from file:///home/runner/.cache/deno/npm/registry.npmjs.org/@sanity/eventsource/5.0.0/node.js\n    at async actual (file:///home/runner/work/client-runtimes-compatibility/client-runtimes-compatibility/runtimes/deno-npm-script/test.ts:35:9)\n    at async Promise.all (index 1)\n    at async file:///home/runner/work/client-runtimes-compatibility/client-runtimes-compatibility/runtimes/deno-npm-script/test.ts:52:1"
+  "result": 90,
+  "unstable__adapter": "fetch",
+  "unstable__environment": "browser"
 }

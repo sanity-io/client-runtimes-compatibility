@@ -1,12 +1,12 @@
 {
-  "result": 89,
+  "result": 90,
   "env": {
     "document": false,
     "fetch": false,
     "globals": ["globalThis", "global"],
     "process.release.name": "node",
-    "process.version": "v16.19.1",
-    "process.versions": { "node": "16.19.1", "v8": "9.4.146.26-node.24" }
+    "process.version": "v16.20.0",
+    "process.versions": { "node": "16.20.0", "v8": "9.4.146.26-node.26" }
   },
   "entry": "exports.node.import+exports.node.require",
   "conditions": ["import", "node", "node.deno", "node.import"]
