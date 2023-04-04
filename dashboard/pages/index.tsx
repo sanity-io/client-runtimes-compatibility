@@ -439,7 +439,7 @@ function Dashboard({ initial }: { initial: InitialData }) {
                 .
               </p>
             </div>
-            <div className="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
+            <div className="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
               <Button
                 mode="ghost"
                 fontSize={1}
