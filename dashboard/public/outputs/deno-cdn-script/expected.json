@@ -4,13 +4,13 @@
     "document": false,
     "fetch": true,
     "globals": ["globalThis", "self", "global", "navigator"],
-    "navigator.userAgent": "Deno/1.32.3",
-    "import.meta.url": "https://esm.sh/v114/@sanity/runtimes-test-client@2.4.25/deno/runtimes-test-client.mjs",
-    "Deno.version.deno": "1.32.3",
+    "navigator.userAgent": "Deno/1.32.4",
+    "import.meta.url": "https://esm.sh/v115/@sanity/runtimes-test-client@2.4.25/deno/runtimes-test-client.mjs",
+    "Deno.version.deno": "1.32.4",
     "process.version": "v18.12.1",
     "process.versions": {
       "node": "18.12.1",
-      "deno": "1.32.3",
+      "deno": "1.32.4",
       "v8": "11.2.214.9",
       "typescript": "5.0.3"
     }
