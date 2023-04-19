@@ -4,13 +4,13 @@
     "document": false,
     "fetch": true,
     "globals": ["globalThis", "self", "window", "global", "navigator"],
-    "navigator.userAgent": "Deno/1.32.4",
+    "navigator.userAgent": "Deno/1.32.5",
     "import.meta.url": "file:///home/runner/.cache/deno/npm/registry.npmjs.org/@sanity/runtimes-test-client/2.4.25/lib/env.mjs",
-    "Deno.version.deno": "1.32.4",
+    "Deno.version.deno": "1.32.5",
     "process.version": "v18.12.1",
     "process.versions": {
       "node": "18.12.1",
-      "deno": "1.32.4",
+      "deno": "1.32.5",
       "v8": "11.2.214.9",
       "typescript": "5.0.3"
     }

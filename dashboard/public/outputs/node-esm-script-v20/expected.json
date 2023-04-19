@@ -1,0 +1,21 @@
+{
+  "result": 91,
+  "env": {
+    "document": false,
+    "fetch": true,
+    "globals": ["globalThis", "global"],
+    "process.release.name": "node",
+    "process.version": "v20.0.0",
+    "process.versions": {
+      "node": "20.0.0",
+      "acorn": "8.8.2",
+      "ada": "2.0.0",
+      "simdutf": "3.2.7",
+      "undici": "5.21.0",
+      "uvwasi": "0.0.16",
+      "v8": "11.3.244.4-node.3"
+    }
+  },
+  "entry": "exports.node.import+exports.node.require",
+  "conditions": ["import", "node", "node.deno", "node.import"]
+}
