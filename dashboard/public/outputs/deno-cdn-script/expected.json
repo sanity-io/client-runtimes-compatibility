@@ -1,11 +1,11 @@
 {
-  "result": 96,
+  "result": 103,
   "env": {
     "document": false,
     "fetch": true,
     "globals": ["globalThis", "self", "global", "navigator"],
     "navigator.userAgent": "Deno/1.32.5",
-    "import.meta.url": "https://esm.sh/v116/@sanity/runtimes-test-client@2.4.25/deno/runtimes-test-client.mjs",
+    "import.meta.url": "https://esm.sh/v117/@sanity/runtimes-test-client@2.4.25/deno/runtimes-test-client.mjs",
     "Deno.version.deno": "1.32.5",
     "process.version": "v18.12.1",
     "process.versions": {
