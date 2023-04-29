@@ -1,17 +1,17 @@
 {
-  "result": 104,
+  "result": 105,
   "env": {
     "document": false,
     "fetch": true,
     "globals": ["globalThis", "self", "global", "navigator"],
-    "navigator.userAgent": "Deno/1.32.5",
+    "navigator.userAgent": "Deno/1.33.1",
     "import.meta.url": "https://esm.sh/v117/@sanity/runtimes-test-client@2.4.25/deno/runtimes-test-client.mjs",
-    "Deno.version.deno": "1.32.5",
+    "Deno.version.deno": "1.33.1",
     "process.version": "v18.12.1",
     "process.versions": {
       "node": "18.12.1",
-      "deno": "1.32.5",
-      "v8": "11.2.214.9",
+      "deno": "1.33.1",
+      "v8": "11.4.183.1",
       "typescript": "5.0.3"
     }
   },
