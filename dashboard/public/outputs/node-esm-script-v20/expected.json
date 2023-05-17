@@ -1,19 +1,21 @@
 {
-  "result": 110,
+  "result": 111,
   "env": {
     "document": false,
     "fetch": true,
     "globals": ["globalThis", "global"],
     "process.release.name": "node",
-    "process.version": "v20.1.0",
+    "process.version": "v20.2.0",
     "process.versions": {
-      "node": "20.1.0",
+      "node": "20.2.0",
       "acorn": "8.8.2",
-      "ada": "2.3.0",
-      "simdutf": "3.2.8",
+      "ada": "2.4.0",
+      "base64": "0.5.0",
+      "cjs_module_lexer": "1.2.2",
+      "simdutf": "3.2.9",
       "undici": "5.22.0",
       "uvwasi": "0.0.16",
-      "v8": "11.3.244.8-node.6"
+      "v8": "11.3.244.8-node.9"
     }
   },
   "entry": "exports.node.import+exports.node.require",
