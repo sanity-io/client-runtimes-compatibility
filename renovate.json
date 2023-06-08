@@ -6,14 +6,14 @@
   ],
   "packageRules": [
     {
-      "packageNames": ["@sanity/runtimes-test-client"],
+      "matchPackageNames": ["@sanity/runtimes-test-client"],
       "rangeStrategy": "pin",
       "automerge": true,
       "semanticCommitType": "chore",
       "schedule": ["at any time"]
     },
     {
-      "packageNames": ["@sanity/client"],
+      "matchPackageNames": ["@sanity/client"],
       "schedule": ["at any time"]
     }
   ]
