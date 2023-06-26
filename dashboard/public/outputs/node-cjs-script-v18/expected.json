@@ -1,13 +1,13 @@
 {
-  "result": 121,
+  "result": 116,
   "env": {
     "document": false,
     "fetch": true,
     "globals": ["globalThis", "global"],
     "process.release.name": "node",
-    "process.version": "v18.16.0",
+    "process.version": "v18.16.1",
     "process.versions": {
-      "node": "18.16.0",
+      "node": "18.16.1",
       "acorn": "8.8.2",
       "ada": "1.0.4",
       "simdutf": "3.2.2",
