@@ -1,14 +1,14 @@
 {
-  "result": 123,
+  "result": 125,
   "env": {
     "document": false,
     "fetch": true,
     "globals": ["globalThis", "global"],
     "process.release.name": "node",
-    "process.version": "v20.4.0",
+    "process.version": "v20.5.0",
     "process.versions": {
-      "node": "20.4.0",
-      "acorn": "8.9.0",
+      "node": "20.5.0",
+      "acorn": "8.10.0",
       "ada": "2.5.1",
       "base64": "0.5.0",
       "cjs_module_lexer": "1.2.2",
