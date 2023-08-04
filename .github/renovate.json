@@ -1,9 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "github>sanity-io/renovate-config",
-    ":reviewer(team:ecosystem)"
-  ],
+  "extends": ["github>sanity-io/renovate-config", ":reviewer(team:ecosystem)"],
   "packageRules": [
     {
       "matchPackageNames": ["@sanity/runtimes-test-client"],
