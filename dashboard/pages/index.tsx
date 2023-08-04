@@ -114,7 +114,7 @@ function getStatus(output: Output | undefined): Status {
 }
 const columns: ColumnDef<CheckWithOutputs, any>[] = [
   columnHelper.accessor(
-    (row) => {
+    (row: any) => {
       const expectedStatus = row.outputs?.expected?.status
       const actualStatus = row.outputs?.actual?.status
 
