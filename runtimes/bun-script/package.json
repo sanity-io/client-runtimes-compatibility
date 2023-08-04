@@ -7,6 +7,6 @@
   "dependencies": {
     "@sanity/client": "5.4.2",
     "@sanity/runtimes-test-client": "latest",
-    "bun-types": "^0.6.0"
+    "bun-types": "^0.7.0"
   }
 }
