@@ -14,7 +14,7 @@ module.exports = function (options) {
         'https://'
           .concat(projectId, '.apicdn.sanity.io/v2021-10-21/data/query/')
           .concat(dataset, '?query=')
-          .concat(encodeURIComponent(query))
+          .concat(encodeURIComponent(query)),
       )
         .then(function (res) {
           return res.json()

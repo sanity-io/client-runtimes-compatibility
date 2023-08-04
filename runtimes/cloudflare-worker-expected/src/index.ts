@@ -29,7 +29,7 @@ export default {
           'Access-Control-Allow-Origin': '*',
           'content-type': 'application/json',
         },
-      }
+      },
     )
   },
 }

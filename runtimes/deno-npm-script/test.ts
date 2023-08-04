@@ -22,7 +22,7 @@ async function expected() {
       env: client.env,
       entry,
       conditions: conditions.filter(Boolean),
-    })
+    }),
   )
 }
 async function actual() {

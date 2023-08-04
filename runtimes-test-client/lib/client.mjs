@@ -7,8 +7,8 @@ export const createClient = ({ projectId, dataset }) => ({
       typeof fetch === 'function' ? fetch : await import('node-fetch')
     const res = await _fetch(
       `https://${projectId}.apicdn.sanity.io/v2021-10-21/data/query/${dataset}?query=${encodeURIComponent(
-        query
-      )}`
+        query,
+      )}`,
     )
     const { result } = await res.json()
     return result

@@ -29,9 +29,9 @@ async function expected() {
       env: client.env,
       entry,
       conditions: conditions.filter(
-        (condition: any) => typeof condition === 'string'
+        (condition: any) => typeof condition === 'string',
       ),
-    })
+    }),
   )
 }
 async function actual() {

@@ -23,7 +23,7 @@ async function expected() {
 
   await writeFile(
     'artifacts/expected.json',
-    JSON.stringify({ result, env: client.env, entry, conditions })
+    JSON.stringify({ result, env: client.env, entry, conditions }),
   )
 }
 async function actual() {

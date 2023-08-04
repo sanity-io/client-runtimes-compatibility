@@ -30,7 +30,7 @@ export default async function handler() {
           'Access-Control-Allow-Origin': '*',
           'Content-Type': 'application/json',
         },
-      }
+      },
     )
   } catch (err: any) {
     return new Response(
@@ -43,7 +43,7 @@ export default async function handler() {
           'Access-Control-Allow-Origin': '*',
           'Content-Type': 'application/json',
         },
-      }
+      },
     )
   }
 }

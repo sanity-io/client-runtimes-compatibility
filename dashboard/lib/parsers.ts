@@ -4,7 +4,7 @@ const literalSchema = z.union([z.string(), z.number(), z.boolean(), z.null()])
 type Literal = z.infer<typeof literalSchema>
 type Json = Literal | { [key: string]: Json } | Json[]
 const json: z.ZodType<Json> = z.lazy(() =>
-  z.union([literalSchema, z.array(json), z.record(json)])
+  z.union([literalSchema, z.array(json), z.record(json)]),
 )
 
 const artifactCheck = z
@@ -13,10 +13,10 @@ const artifactCheck = z
     name: z.string(),
     docs: z.string().url(),
     expected: z.custom<`/outputs/${string}/expected.json`>((val) =>
-      /^\/outputs\/.*\/expected\.json$/g.test(val as string)
+      /^\/outputs\/.*\/expected\.json$/g.test(val as string),
     ),
     actual: z.custom<`/outputs/${string}/actual.json`>((val) =>
-      /^\/outputs\/.*\/actual\.json$/g.test(val as string)
+      /^\/outputs\/.*\/actual\.json$/g.test(val as string),
     ),
   })
   .strict()
@@ -48,10 +48,10 @@ const envGlobalsEnum = z.enum([
   'navigator',
 ])
 const semver = z.custom<`${number}.${number}.${number}`>((val) =>
-  /^\d+\.\d+\.\d+$/g.test(val as string)
+  /^\d+\.\d+\.\d+$/g.test(val as string),
 )
 const looseSemver = z.custom<`v${z.infer<typeof semver>}`>((val) =>
-  /^v\d+\.\d+\.\d+$/g.test(val as string)
+  /^v\d+\.\d+\.\d+$/g.test(val as string),
 )
 const successOutputActual = z
   .object({

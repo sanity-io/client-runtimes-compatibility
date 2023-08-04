@@ -6,8 +6,8 @@ module.exports.createClient = ({ projectId, dataset }) => ({
     const _fetch = typeof fetch === 'function' ? fetch : require('node-fetch')
     const res = await _fetch(
       `https://${projectId}.apicdn.sanity.io/v2021-10-21/data/query/${dataset}?query=${encodeURIComponent(
-        query
-      )}`
+        query,
+      )}`,
     )
     const { result } = await res.json()
     return result
