@@ -2,13 +2,13 @@
 # yarn lockfile v1
 
 
-"@sanity/client@6.4.0":
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/@sanity/client/-/client-6.4.0.tgz#35a7c9324f01454cd2c909a4a1a9cbea0289cba0"
-  integrity sha512-nmu9/gtKPruR6CROvKAqvK/vYfEMMi/La8k/w/leQpRtKySivOIsWX+BT7S5xvK+9wBn0Q8dj9L64no3SEa5vg==
+"@sanity/client@6.4.9":
+  version "6.4.9"
+  resolved "https://registry.yarnpkg.com/@sanity/client/-/client-6.4.9.tgz#453fc7127cc959cbb929b91d3990cf3943362973"
+  integrity sha512-9y/exbu9kBgIuXouUWlHLGfPm3/jxRP8bSaysteILTQknLQZHExSyjFsYD/CxH3Xk43NzELqktvEXlP1/kZ6LA==
   dependencies:
     "@sanity/eventsource" "^5.0.0"
-    get-it "^8.3.0"
+    get-it "^8.4.3"
     rxjs "^7.0.0"
 
 "@sanity/eventsource@^5.0.0":
@@ -85,10 +85,10 @@ from2@^2.3.0:
     inherits "^2.0.1"
     readable-stream "^2.0.0"
 
-get-it@^8.3.0:
-  version "8.3.1"
-  resolved "https://registry.yarnpkg.com/get-it/-/get-it-8.3.1.tgz#bb92c6740a1260275ad13b31a543755b38a8b5c9"
-  integrity sha512-fi5wQakZVHWRy3zP0env52PHXP9Zl/p8Q2Ow8z9SmwpYgfCaA90hCSW2twC5/cpV5M1wB6tSmLqldVMP1tS1qw==
+get-it@^8.4.3:
+  version "8.4.3"
+  resolved "https://registry.yarnpkg.com/get-it/-/get-it-8.4.3.tgz#f5d05fb95644c5414afa6f5dfd3a927820472f7f"
+  integrity sha512-H9YbPCN3QCbxtojv42fvmrkIYe434qKg1nKpMMtBqwL8U3XprnHMgDbQwMJIxSIFOPpajQPf0BxhjsHoFI0cEQ==
   dependencies:
     debug "^4.3.4"
     decompress-response "^7.0.0"
