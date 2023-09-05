@@ -6,7 +6,7 @@
     "globals": ["globalThis", "self", "window", "global", "navigator"],
     "process.release.name": "node",
     "navigator.userAgent": "Deno/1.36.4",
-    "import.meta.url": "https://esm.sh/v131/@sanity/runtimes-test-client@2.4.26/denonext/runtimes-test-client.mjs",
+    "import.meta.url": "https://esm.sh/v132/@sanity/runtimes-test-client@2.4.26/denonext/runtimes-test-client.mjs",
     "Deno.version.deno": "1.36.4",
     "process.version": "v18.12.1",
     "process.versions": {
@@ -18,7 +18,6 @@
   },
   "entry": "exports.deno",
   "conditions": [
-    "browser",
     "deno",
     "import",
     "module",
