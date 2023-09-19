@@ -1,13 +1,13 @@
 {
-  "result": 153,
+  "result": 154,
   "env": {
     "document": false,
     "fetch": true,
     "globals": ["globalThis", "global"],
     "process.release.name": "node",
-    "process.version": "v20.6.1",
+    "process.version": "v20.7.0",
     "process.versions": {
-      "node": "20.6.1",
+      "node": "20.7.0",
       "acorn": "8.10.0",
       "ada": "2.6.0",
       "base64": "0.5.0",
@@ -15,7 +15,7 @@
       "simdutf": "3.2.17",
       "undici": "5.23.0",
       "uvwasi": "0.0.18",
-      "v8": "11.3.244.8-node.14"
+      "v8": "11.3.244.8-node.15"
     }
   },
   "entry": "exports.require",
