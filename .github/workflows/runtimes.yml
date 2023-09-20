@@ -35,7 +35,7 @@ jobs:
         working-directory: runtimes/${{ matrix.test }}
     name: Bun ${{ matrix.bun-version }} ${{ matrix.test }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4
       - uses: oven-sh/setup-bun@4573031972107e0af692492ee967d9022deafd7b # v1
         with:
           bun-version: ${{ matrix.node-version }}
@@ -62,7 +62,7 @@ jobs:
         working-directory: runtimes/${{ matrix.test }}
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4
       - uses: actions/setup-node@v3
       - uses: denoland/setup-deno@v1
         with:
@@ -86,7 +86,7 @@ jobs:
         working-directory: runtimes/${{ matrix.test }}
     name: Node.js ${{ matrix.node-version }} ${{ matrix.test }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4
       - uses: actions/setup-node@v3
         with:
           cache: npm
@@ -118,7 +118,7 @@ jobs:
     if: always()
     # if: github.ref_name == 'main'
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4
       - uses: actions/download-artifact@v3
         id: download
         with:
