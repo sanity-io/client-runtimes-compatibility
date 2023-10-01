@@ -5,17 +5,17 @@
     "fetch": true,
     "globals": ["globalThis", "global"],
     "process.release.name": "node",
-    "process.version": "v20.7.0",
+    "process.version": "v20.8.0",
     "process.versions": {
-      "node": "20.7.0",
+      "node": "20.8.0",
       "acorn": "8.10.0",
       "ada": "2.6.0",
       "base64": "0.5.0",
       "cjs_module_lexer": "1.2.2",
       "simdutf": "3.2.17",
-      "undici": "5.23.0",
+      "undici": "5.25.2",
       "uvwasi": "0.0.18",
-      "v8": "11.3.244.8-node.15"
+      "v8": "11.3.244.8-node.16"
     }
   },
   "entry": "exports.require",
