@@ -39,7 +39,7 @@ jobs:
           cache: npm
           node-version: lts/*
       - run: npm ci
-      - uses: cloudflare/wrangler-action@089567dec464f48755aa4c82f1e8bdcee9b07f1d # 3.0.0
+      - uses: cloudflare/wrangler-action@20ea5060497220b70723b2c5fdf847822eaaa7fa # 3.0.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           command: publish
