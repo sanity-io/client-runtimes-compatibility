@@ -5,9 +5,9 @@
     "fetch": true,
     "globals": ["globalThis", "global"],
     "process.release.name": "node",
-    "process.version": "v18.18.0",
+    "process.version": "v18.18.1",
     "process.versions": {
-      "node": "18.18.0",
+      "node": "18.18.1",
       "acorn": "8.10.0",
       "ada": "2.6.0",
       "simdutf": "3.2.14",
