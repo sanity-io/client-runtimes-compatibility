@@ -36,7 +36,7 @@ jobs:
     name: Bun ${{ matrix.bun-version }} ${{ matrix.test }}
     steps:
       - uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@4573031972107e0af692492ee967d9022deafd7b # v1
+      - uses: oven-sh/setup-bun@a1800f471a0bc25cddac36bb13e6f436ddf341d7 # v1
         with:
           bun-version: ${{ matrix.node-version }}
       - run: bun install
