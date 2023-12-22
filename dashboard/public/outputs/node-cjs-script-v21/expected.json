@@ -1,22 +1,23 @@
 {
-  "result": 192,
+  "result": 193,
   "env": {
     "document": false,
     "fetch": true,
     "globals": ["globalThis", "global", "navigator"],
     "process.release.name": "node",
     "navigator.userAgent": "Node.js/21",
-    "process.version": "v21.4.0",
+    "process.version": "v21.5.0",
     "process.versions": {
-      "node": "21.4.0",
+      "node": "21.5.0",
       "acorn": "8.11.2",
       "ada": "2.7.4",
       "base64": "0.5.1",
       "cjs_module_lexer": "1.2.2",
+      "simdjson": "3.6.2",
       "simdutf": "4.0.4",
-      "undici": "5.28.1",
+      "undici": "5.28.2",
       "uvwasi": "0.0.19",
-      "v8": "11.8.172.17-node.17"
+      "v8": "11.8.172.17-node.18"
     }
   },
   "entry": "exports.require",
