@@ -5,13 +5,13 @@
     "fetch": true,
     "globals": ["globalThis", "self", "window", "global", "navigator"],
     "process.release.name": "node",
-    "navigator.userAgent": "Deno/1.39.2",
+    "navigator.userAgent": "Deno/1.39.3",
     "import.meta.url": "https://esm.sh/v135/@sanity/runtimes-test-client@2.4.26/denonext/runtimes-test-client.mjs",
-    "Deno.version.deno": "1.39.2",
+    "Deno.version.deno": "1.39.3",
     "process.version": "v18.18.0",
     "process.versions": {
       "node": "18.17.1",
-      "deno": "1.39.2",
+      "deno": "1.39.3",
       "v8": "12.0.267.8",
       "typescript": "5.3.3"
     }
