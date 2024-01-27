@@ -1,14 +1,14 @@
 {
-  "result": 196,
+  "result": 200,
   "env": {
     "document": false,
     "fetch": true,
     "globals": ["globalThis", "global", "navigator"],
     "process.release.name": "node",
     "navigator.userAgent": "Node.js/21",
-    "process.version": "v21.6.0",
+    "process.version": "v21.6.1",
     "process.versions": {
-      "node": "21.6.0",
+      "node": "21.6.1",
       "acorn": "8.11.3",
       "ada": "2.7.4",
       "base64": "0.5.1",
