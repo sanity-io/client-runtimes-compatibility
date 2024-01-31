@@ -1,5 +1,5 @@
 {
-  "result": 200,
+  "result": 204,
   "unstable__adapter": "fetch",
   "unstable__environment": "browser"
 }

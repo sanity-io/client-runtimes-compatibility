@@ -1,5 +1,5 @@
 {
-  "result": 200,
+  "result": 204,
   "env": {
     "document": false,
     "fetch": false,
