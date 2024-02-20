@@ -6,17 +6,17 @@
     "globals": ["globalThis", "self", "global", "navigator"],
     "process.isBun": true,
     "process.release.name": "node",
-    "navigator.userAgent": "Bun/1.0.27",
+    "navigator.userAgent": "Bun/1.0.28",
     "import.meta.url": "file:///home/runner/work/client-runtimes-compatibility/client-runtimes-compatibility/runtimes/bun-script/node_modules/@sanity/runtimes-test-client/lib/env.mjs",
     "process.version": "v21.6.0",
     "process.versions": {
       "node": "21.6.0",
-      "bun": "1.0.27",
+      "bun": "1.0.28",
       "webkit": "a780bdf0255ae1a7ed15e4b3f31c14af705facae",
-      "uwebsockets": "c34bbb2e3fcaaadd8dfb5e75d545acee1c3cfd1b",
+      "uwebsockets": "7056384702231f634e4e5d0f7c65965041314fc6",
       "tinycc": "2d3ad9e0d32194ad7fd867b66ebe218dcc8cb5cd",
       "lolhtml": "8d4c273ded322193d017042d1f48df2766b0f88b",
-      "usockets": "c34bbb2e3fcaaadd8dfb5e75d545acee1c3cfd1b",
+      "usockets": "7056384702231f634e4e5d0f7c65965041314fc6",
       "v8": "11.3.244.8-node.15"
     }
   },
