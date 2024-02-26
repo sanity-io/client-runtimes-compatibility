@@ -57,13 +57,6 @@
   },
   {
     "type": "artifact",
-    "name": "Node.js CJS v12",
-    "docs": "https://nodejs.org/docs/latest-v12.x/api/modules.html#modules_all_together",
-    "expected": "/outputs/node-cjs-script-v12/expected.json",
-    "actual": "/outputs/node-cjs-script-v12/actual.json"
-  },
-  {
-    "type": "artifact",
     "name": "Node.js CJS v14",
     "docs": "https://nodejs.org/dist/latest-v14.x/docs/api/packages.html#determining-module-system",
     "expected": "/outputs/node-cjs-script-v14/expected.json",
@@ -85,10 +78,17 @@
   },
   {
     "type": "artifact",
-    "name": "Node.js CJS v19",
-    "docs": "https://nodejs.org/dist/latest-v19.x/docs/api/packages.html#determining-module-system",
-    "expected": "/outputs/node-cjs-script-v19/expected.json",
-    "actual": "/outputs/node-cjs-script-v19/actual.json"
+    "name": "Node.js CJS v20",
+    "docs": "https://nodejs.org/dist/latest-v20.x/docs/api/packages.html#determining-module-system",
+    "expected": "/outputs/node-cjs-script-v20/expected.json",
+    "actual": "/outputs/node-cjs-script-v20/actual.json"
+  },
+  {
+    "type": "artifact",
+    "name": "Node.js CJS v21",
+    "docs": "https://nodejs.org/dist/latest-v21.x/docs/api/packages.html#determining-module-system",
+    "expected": "/outputs/node-cjs-script-v21/expected.json",
+    "actual": "/outputs/node-cjs-script-v21/actual.json"
   },
   {
     "type": "artifact",
@@ -113,9 +113,16 @@
   },
   {
     "type": "artifact",
-    "name": "Node.js ESM v19",
-    "docs": "https://nodejs.org/dist/latest-v19.x/docs/api/packages.html#determining-module-system",
-    "expected": "/outputs/node-esm-script-v19/expected.json",
-    "actual": "/outputs/node-esm-script-v19/actual.json"
+    "name": "Node.js ESM v20",
+    "docs": "https://nodejs.org/dist/latest-v20.x/docs/api/packages.html#determining-module-system",
+    "expected": "/outputs/node-esm-script-v20/expected.json",
+    "actual": "/outputs/node-esm-script-v20/actual.json"
+  },
+  {
+    "type": "artifact",
+    "name": "Node.js ESM v21",
+    "docs": "https://nodejs.org/dist/latest-v21.x/docs/api/packages.html#determining-module-system",
+    "expected": "/outputs/node-esm-script-v21/expected.json",
+    "actual": "/outputs/node-esm-script-v21/actual.json"
   }
 ]
