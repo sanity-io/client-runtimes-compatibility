@@ -5,7 +5,7 @@
     "test:expected": "bun test.expected.js"
   },
   "dependencies": {
-    "@sanity/client": "6.14.3",
+    "@sanity/client": "6.14.4",
     "@sanity/runtimes-test-client": "latest",
     "bun-types": "^1.0.29"
   }
