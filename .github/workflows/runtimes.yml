@@ -43,7 +43,7 @@ jobs:
       - run: bun run test:expected
       - run: bun run test:actual
         timeout-minutes: 1
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.test }}-${{ matrix.bun-version }}
           path: runtimes/${{ matrix.test }}/artifacts/*.json
@@ -68,7 +68,7 @@ jobs:
         with:
           deno-version: vx.x.x
       - run: deno task test
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.test }}
           path: runtimes/${{ matrix.test }}/artifacts/*.json
@@ -101,7 +101,7 @@ jobs:
         id: version
         with:
           run: node -e "console.log(process.version.split('.')[0])"
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.test }}-${{ steps.version.outputs.stdout }}
           path: runtimes/${{ matrix.test }}/artifacts/*.json
@@ -119,7 +119,7 @@ jobs:
     # if: github.ref_name == 'main'
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         id: download
         with:
           path: dashboard/public/outputs
