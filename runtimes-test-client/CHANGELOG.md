@@ -5,6 +5,16 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.27](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.4.26...v2.4.27) (2024-02-26)
+
+### Bug Fixes
+
+- **deps:** Update dependency @sanity/client to v6.4.12 ([#220](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/220)) ([88f532e](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/88f532e043739318d571ab103d49fb29ffb79dd3))
+- **deps:** update dependency @sanity/client to v6.4.9 ([#208](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/208)) ([09ee474](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/09ee4742c1b12d837e487777c9a683f2b57bf52f))
+- **deps:** Update dependency @sanity/client to v6.7.0 ([#240](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/240)) ([8a106e2](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/8a106e246c918a904800c258a7c70e8ed89dfb05))
+- **deps:** Update dependency bun-types to ^0.8.0 ([#248](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/248)) ([3ceb7af](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/3ceb7af303224692f5b0e4a2320c74a6b362351e))
+- **deps:** Update dependency bun-types to v1 ([#250](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/250)) ([50a2731](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/50a2731a4bfd4e440d4556dbee624b01e4645947))
+
 ## [2.4.26](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.4.25...v2.4.26) (2023-08-04)
 
 ### Bug Fixes
