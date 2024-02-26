@@ -114,8 +114,7 @@ function getStatus(output: Output | undefined): Status {
 }
 const columns: ColumnDef<CheckWithOutputs, any>[] = [
   columnHelper.accessor(
-    // @ts-expect-error
-    (row: any) => {
+    (row) => {
       const expectedStatus = row.outputs?.expected?.status
       const actualStatus = row.outputs?.actual?.status
 
@@ -168,7 +167,7 @@ const columns: ColumnDef<CheckWithOutputs, any>[] = [
             )
         }
       },
-    },
+    }
   ),
   columnHelper.accessor('name', {
     header: 'Name',
@@ -219,7 +218,7 @@ const Table = memo(function Table({ data }: { data: CheckWithOutputs[] }) {
                   scope="col"
                   colSpan={header.colSpan}
                   className={cx(
-                    'sticky top-0 z-10 items-center border-b border-gray-300 bg-gray-50 bg-opacity-75 py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter sm:pl-6 lg:pl-8',
+                    'sticky top-0 z-10 items-center border-b border-gray-300 bg-gray-50 bg-opacity-75 py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter sm:pl-6 lg:pl-8'
                   )}
                 >
                   {header.isPlaceholder ? null : (
@@ -227,20 +226,20 @@ const Table = memo(function Table({ data }: { data: CheckWithOutputs[] }) {
                       {...{
                         className: cx(
                           'group inline-flex sticky left-4 right-4',
-                          header.column.getCanSort() && 'cursor-pointer',
+                          header.column.getCanSort() && 'cursor-pointer'
                         ),
                         onClick: header.column.getToggleSortingHandler(),
                       }}
                     >
                       {flexRender(
                         header.column.columnDef.header,
-                        header.getContext(),
+                        header.getContext()
                       )}
                       <span
                         className={cx(
                           header.column.getIsSorted()
                             ? 'ml-2 flex-none rounded bg-gray-200 text-gray-900 group-hover:bg-gray-300'
-                            : 'invisible ml-2 flex-none rounded text-gray-400 group-hover:visible group-focus:visible',
+                            : 'invisible ml-2 flex-none rounded text-gray-400 group-hover:visible group-focus:visible'
                         )}
                       >
                         {{
@@ -349,12 +348,12 @@ function Dashboard({ initial }: { initial: InitialData }) {
             status: expectedOutput?.error
               ? 'error'
               : // @ts-expect-error
-                expectedOutput?.failure
-                ? 'failure'
-                : // @ts-expect-error
-                  expectedOutput?.result
-                  ? 'success'
-                  : 'pending',
+              expectedOutput?.failure
+              ? 'failure'
+              : // @ts-expect-error
+              expectedOutput?.result
+              ? 'success'
+              : 'pending',
             ...expectedOutput,
           },
           actual: {
@@ -362,12 +361,12 @@ function Dashboard({ initial }: { initial: InitialData }) {
             status: actualOutput?.error
               ? 'error'
               : // @ts-expect-error
-                actualOutput?.failure
-                ? 'failure'
-                : // @ts-expect-error
-                  actualOutput?.result
-                  ? 'success'
-                  : 'pending',
+              actualOutput?.failure
+              ? 'failure'
+              : // @ts-expect-error
+              actualOutput?.result
+              ? 'success'
+              : 'pending',
             ...actualOutput,
           },
         },
@@ -487,14 +486,14 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     __dirname,
     path.resolve(
       __dirname,
-      '../../public/outputs/node-cjs-script-v16/actual.json',
-    ),
+      '../../public/outputs/node-cjs-script-v16/actual.json'
+    )
   )
 
   for (const check of checksJson) {
     if (check.type === 'artifact') {
       const expectedText = await fs.readFile(
-        path.resolve(__dirname, `../../public${check.expected}`),
+        path.resolve(__dirname, `../../public${check.expected}`)
       )
       const expectedJson = JSON.parse(expectedText.toString())
       try {
@@ -504,7 +503,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
         fallback[check.expected] = { error: err?.stack || err.toString() }
       }
       const actualText = await fs.readFile(
-        path.resolve(__dirname, `../../public${check.actual}`),
+        path.resolve(__dirname, `../../public${check.actual}`)
       )
       const actualJson = JSON.parse(actualText.toString())
       try {
@@ -517,7 +516,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     if (check.type === 'service') {
       try {
         const expectedJson = await fetch(check.expected).then((res) =>
-          res.json(),
+          res.json()
         )
         fallback[check.expected as any] = outputSchema.parse(expectedJson)
       } catch (err: any) {
