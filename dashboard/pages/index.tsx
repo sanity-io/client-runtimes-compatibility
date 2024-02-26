@@ -349,12 +349,12 @@ function Dashboard({ initial }: { initial: InitialData }) {
             status: expectedOutput?.error
               ? 'error'
               : // @ts-expect-error
-              expectedOutput?.failure
-              ? 'failure'
-              : // @ts-expect-error
-              expectedOutput?.result
-              ? 'success'
-              : 'pending',
+                expectedOutput?.failure
+                ? 'failure'
+                : // @ts-expect-error
+                  expectedOutput?.result
+                  ? 'success'
+                  : 'pending',
             ...expectedOutput,
           },
           actual: {
@@ -362,12 +362,12 @@ function Dashboard({ initial }: { initial: InitialData }) {
             status: actualOutput?.error
               ? 'error'
               : // @ts-expect-error
-              actualOutput?.failure
-              ? 'failure'
-              : // @ts-expect-error
-              actualOutput?.result
-              ? 'success'
-              : 'pending',
+                actualOutput?.failure
+                ? 'failure'
+                : // @ts-expect-error
+                  actualOutput?.result
+                  ? 'success'
+                  : 'pending',
             ...actualOutput,
           },
         },
