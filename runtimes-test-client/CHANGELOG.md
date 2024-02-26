@@ -5,6 +5,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.28](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.4.27...v2.4.28) (2024-02-26)
+
+### Bug Fixes
+
+- **deps:** Update dependency @sanity/client to v6.14.3 ([#263](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/issues/263)) ([1057d89](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/commit/1057d894a8947b42ccace3edfc894e1a53e1e08f))
+
 ## [2.4.27](https://github.com/sanity-io/ecosystem-skunkworks-client-runtimes/compare/v2.4.26...v2.4.27) (2024-02-26)
 
 ### Bug Fixes
