@@ -2,8 +2,8 @@
   "extends": "@tsconfig/node-lts-strictest/tsconfig.json",
   "include": ["test.ts"],
   "compilerOptions": {
-    "module": "commonjs",
-    "moduleResolution": "node16",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "ignoreDeprecations": "5.0"
   }
 }
