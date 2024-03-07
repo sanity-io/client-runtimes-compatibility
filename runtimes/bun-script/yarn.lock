@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@sanity/client@6.15.3-canary.2":
-  version "6.15.3-canary.2"
-  resolved "https://registry.npmjs.org/@sanity/client/-/client-6.15.3-canary.2.tgz"
-  integrity sha512-KyxYdYmOPwD/wpeiIMwJrf42FkfsNCTL/4jMd5xjpnqxonpbKJ9WuSYMI719xoVPzQUGV2i0Y9mWub0auAyb1Q==
+"@sanity/client@6.15.3":
+  version "6.15.3"
+  resolved "https://registry.npmjs.org/@sanity/client/-/client-6.15.3.tgz"
+  integrity sha512-7P6OMUeXr87aDzWHlXhP4QXYm02f9jc8f5xr736Er3RybuhSg+ZnetoxBFWhzlV6QA1F0fiC/8yGJKVJmrO+sg==
   dependencies:
     "@sanity/eventsource" "^5.0.0"
     "@vercel/stega" "0.1.0"
@@ -40,15 +40,15 @@
   integrity sha512-KlVguyxdoO8VkAhOMwOemK+NhFAg0gOwJHgimrWJUgM6LrdVW2nLa+d47WVWQcs8feRn0eeP+5yUDmDfzLBjRA==
 
 "@types/node@*", "@types/node@~20.11.3":
-  version "20.11.25"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.11.25.tgz#0f50d62f274e54dd7a49f7704cc16bfbcccaf49f"
-  integrity sha512-TBHyJxk2b7HceLVGFcpAUjsa5zIdsPWlR6XHfyGzd0SFu+/NFgQgMAl96MSDZgQDvJAvV6BKsFOrt6zIL09JDw==
+  version "20.11.20"
+  resolved "https://registry.npmjs.org/@types/node/-/node-20.11.20.tgz"
+  integrity sha512-7/rR21OS+fq8IyHTgtLkDK949uzsa6n8BkziAKtPVpugIkO6D+/ooXMvzXxDnZrmtXVfjb1bKQafYpb8s89LOg==
   dependencies:
     undici-types "~5.26.4"
 
 "@types/ws@~8.5.10":
   version "8.5.10"
-  resolved "https://registry.yarnpkg.com/@types/ws/-/ws-8.5.10.tgz#4acfb517970853fa6574a3a6886791d04a396787"
+  resolved "https://registry.npmjs.org/@types/ws/-/ws-8.5.10.tgz"
   integrity sha512-vmQSUcfalpIq0R9q7uTo2lXs6eGIpt9wtnLdMv9LVpIjCA/+ufZRozlVoVelIYixx1ugCBKDhn89vnsEGOCx9A==
   dependencies:
     "@types/node" "*"
@@ -59,9 +59,9 @@
   integrity sha512-5b0PkOJsFBX5alChuIO3qpkt5vIZBevzLPhUQ1UP8UzVjL3F1VllnZxp/thfD8R5ol7D7WHkgZHIjdUBX4tDpQ==
 
 bun-types@^1.0.29:
-  version "1.0.30"
-  resolved "https://registry.yarnpkg.com/bun-types/-/bun-types-1.0.30.tgz#46388a1551dd166c390060c006b84a6443df160e"
-  integrity sha512-z3366LC0kdSpBCNFvc38+NOSiwQaokKfi66fBr+jw+yd9lrYtaoLs4ERCuq3iW/g9h6xKielQRgvE01PN/uUog==
+  version "1.0.29"
+  resolved "https://registry.npmjs.org/bun-types/-/bun-types-1.0.29.tgz"
+  integrity sha512-Z+U1ORr/2UCwxelIZxE83pyPLclviYL9UewQCNEUmGeLObY8ao+3WF3D8N1+NMv2+S+hUWsdBJam+4GoPEz35g==
   dependencies:
     "@types/node" "~20.11.3"
     "@types/ws" "~8.5.10"
@@ -266,7 +266,7 @@ tunnel-agent@^0.6.0:
 
 undici-types@~5.26.4:
   version "5.26.5"
-  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-5.26.5.tgz#bcd539893d00b56e964fd2657a4866b221a65617"
+  resolved "https://registry.npmjs.org/undici-types/-/undici-types-5.26.5.tgz"
   integrity sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==
 
 util-deprecate@~1.0.1:
