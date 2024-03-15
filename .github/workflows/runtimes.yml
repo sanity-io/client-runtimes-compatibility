@@ -80,7 +80,7 @@ jobs:
     strategy:
       matrix:
         test: [node-cjs-script, node-esm-script]
-        node-version: [lts/-2, lts/-1, lts/*, current]
+        node-version: [lts/-3, lts/-2, lts/-1, lts/*, current]
     defaults:
       run:
         working-directory: runtimes/${{ matrix.test }}

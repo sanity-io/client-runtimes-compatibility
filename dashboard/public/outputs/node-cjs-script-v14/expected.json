@@ -1,4 +1,5 @@
 {
+  "runtime": "node",
   "result": 171,
   "env": {
     "document": false,
