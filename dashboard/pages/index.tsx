@@ -32,73 +32,103 @@ import {
 } from 'lib/parsers'
 import checksJson from 'public/checks.json'
 
-
-type Data = (Check & ({expectedResult: z.infer<typeof successOutputExpected>; actualResult: z.infer<typeof successOutputActual>} & {status: 'success'}) | ({expectedResult: z.infer<typeof successOutputExpected> | z.infer<typeof errorOutput>; actualResult: z.infer<typeof successOutputActual> | z.infer<typeof errorOutput>} & {status: 'error' | 'failure'}))[]
+type Data = (
+  | (Check &
+      ({
+        expectedResult: z.infer<typeof successOutputExpected>
+        actualResult: z.infer<typeof successOutputActual>
+      } & { status: 'success' }))
+  | ({
+      expectedResult:
+        | z.infer<typeof successOutputExpected>
+        | z.infer<typeof errorOutput>
+      actualResult:
+        | z.infer<typeof successOutputActual>
+        | z.infer<typeof errorOutput>
+    } & { status: 'error' | 'failure' })
+)[]
 
 const columnHelper = createColumnHelper<Data[number]>()
 
 const columns: ColumnDef<Data[number], any>[] = [
-  columnHelper.accessor(
-    'status',
-    {
-      id: 'status',
-      header: 'Status',
-      cell: ({ row }) => {
-        const { status } = row.original
+  columnHelper.accessor('status', {
+    id: 'status',
+    header: 'Status',
+    cell: ({ row }) => {
+      const { status } = row.original
 
-        switch (true) {
-          case status === 'success':
-            return <CheckCircleIcon className="h-5 w-5 text-green-600" />
-          case status === 'failure':
-            return <XCircleIcon className="h-5 w-5 text-red-700" />
-          case status === 'error':
-            return <ExclamationCircleIcon className="h-5 w-5 text-red-700" />
-          default:
-            return (
-              <svg
-                className="box-content h-4 w-4 animate-spin p-1 text-slate-500"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <circle
-                  className="opacity-25"
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke="currentColor"
-                  strokeWidth="4"
-                ></circle>
-                <path
-                  className="opacity-75"
-                  fill="currentColor"
-                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                ></path>
-              </svg>
-            )
-        }
-      },
+      switch (true) {
+        case status === 'success':
+          return <CheckCircleIcon className="h-5 w-5 text-green-600" />
+        case status === 'failure':
+          return <XCircleIcon className="h-5 w-5 text-red-700" />
+        case status === 'error':
+          return <ExclamationCircleIcon className="h-5 w-5 text-red-700" />
+        default:
+          return (
+            <svg
+              className="box-content h-4 w-4 animate-spin p-1 text-slate-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                className="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                strokeWidth="4"
+              ></circle>
+              <path
+                className="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+              ></path>
+            </svg>
+          )
+      }
     },
-  ),
+  }),
   columnHelper.accessor('name', {
     header: 'Name',
   }),
-  columnHelper.accessor((row) => row.status === 'success' ? row.expectedResult.runtime : 'Unknown', {
-    header: 'Runtime',
-  }),
-  columnHelper.accessor((row) => row.status === 'success' ? row.expectedResult.entry : 'Unknown', {
-    header: 'Entry',
-  }),
-  columnHelper.accessor((row) => row.status === 'success' ?  row.expectedResult.conditions : [], {
-    header: 'Conditions',
-    cell: ({ getValue }) => getValue()?.join?.(', '),
-  }),
-  columnHelper.accessor((row) => row.status === 'success' ? row.actualResult.unstable__adapter : 'unknown', {
-    header: 'Adapter',
-  }),
-  columnHelper.accessor((row) => row.status === 'success' ? row.actualResult.unstable__environment : 'unknown', {
-    header: 'Environment',
-  }),
+  columnHelper.accessor(
+    (row) =>
+      row.status === 'success' ? row.expectedResult.runtime : 'Unknown',
+    {
+      header: 'Runtime',
+    },
+  ),
+  columnHelper.accessor(
+    (row) => (row.status === 'success' ? row.expectedResult.entry : 'Unknown'),
+    {
+      header: 'Entry',
+    },
+  ),
+  columnHelper.accessor(
+    (row) => (row.status === 'success' ? row.expectedResult.conditions : []),
+    {
+      header: 'Conditions',
+      cell: ({ getValue }) => getValue()?.join?.(', '),
+    },
+  ),
+  columnHelper.accessor(
+    (row) =>
+      row.status === 'success' ? row.actualResult.unstable__adapter : 'unknown',
+    {
+      header: 'Adapter',
+    },
+  ),
+  columnHelper.accessor(
+    (row) =>
+      row.status === 'success'
+        ? row.actualResult.unstable__environment
+        : 'unknown',
+    {
+      header: 'Environment',
+    },
+  ),
 ]
 
 const Table = memo(function Table({ data }: { data: Data }) {
@@ -194,12 +224,14 @@ const Table = memo(function Table({ data }: { data: Data }) {
 })
 
 export const getStaticProps = (async () => {
-  const checks = checksSchema.parse(checksJson).sort((a, b) => a.name.localeCompare(b.name))
+  const checks = checksSchema
+    .parse(checksJson)
+    .sort((a, b) => a.name.localeCompare(b.name))
   const __dirname = fileURLToPath(import.meta.url)
   const data = [] as Data
 
   for (const check of checks) {
-    const entry = {...check} as (typeof data)[number]
+    const entry = { ...check } as (typeof data)[number]
     if (check.type === 'artifact') {
       const expectedText = await fs.readFile(
         path.resolve(__dirname, `../../public${check.expected}`),
@@ -207,7 +239,7 @@ export const getStaticProps = (async () => {
       const expectedJson = JSON.parse(expectedText.toString())
       entry.status = 'success'
       try {
-        if(errorOutput.safeParse(expectedJson).success) {
+        if (errorOutput.safeParse(expectedJson).success) {
           entry.expectedResult = errorOutput.parse(expectedJson)
           entry.status = 'error'
         } else {
@@ -215,7 +247,9 @@ export const getStaticProps = (async () => {
         }
       } catch (err: any) {
         console.error('Failed while parsing', check.expected, expectedJson, err)
-        entry.expectedResult = errorOutput.parse({ error: err?.stack || err.toString() })
+        entry.expectedResult = errorOutput.parse({
+          error: err?.stack || err.toString(),
+        })
         entry.status = 'error'
       }
       const actualText = await fs.readFile(
@@ -223,7 +257,7 @@ export const getStaticProps = (async () => {
       )
       const actualJson = JSON.parse(actualText.toString())
       try {
-        if(errorOutput.safeParse(actualJson).success) {
+        if (errorOutput.safeParse(actualJson).success) {
           entry.actualResult = errorOutput.parse(actualJson)
           entry.status = 'error'
         } else {
@@ -231,7 +265,9 @@ export const getStaticProps = (async () => {
         }
       } catch (err: any) {
         console.error('Failed while parsing', check.actual, actualJson, err)
-        entry.actualResult = errorOutput.parse({ error: err?.stack || err.toString() })
+        entry.actualResult = errorOutput.parse({
+          error: err?.stack || err.toString(),
+        })
         entry.status = 'error'
       }
     }
@@ -239,9 +275,9 @@ export const getStaticProps = (async () => {
       entry.status = 'success'
       try {
         const expectedJson = await fetch(check.expected).then((res) =>
-        res.json(),
+          res.json(),
         )
-        if(errorOutput.safeParse(expectedJson).success) {
+        if (errorOutput.safeParse(expectedJson).success) {
           entry.expectedResult = errorOutput.parse(expectedJson)
           entry.status = 'error'
         } else {
@@ -249,12 +285,14 @@ export const getStaticProps = (async () => {
         }
       } catch (err: any) {
         console.error('Failed while parsing', check.expected, err)
-        entry.expectedResult = errorOutput.parse({ error: err?.stack || err.toString() })
+        entry.expectedResult = errorOutput.parse({
+          error: err?.stack || err.toString(),
+        })
         entry.status = 'error'
       }
       try {
         const actualJson = await fetch(check.actual).then((res) => res.json())
-        if(errorOutput.safeParse(actualJson).success) {
+        if (errorOutput.safeParse(actualJson).success) {
           entry.actualResult = errorOutput.parse(actualJson)
           entry.status = 'error'
         } else {
@@ -262,7 +300,9 @@ export const getStaticProps = (async () => {
         }
       } catch (err: any) {
         console.error('Failed while parsing', check.actual, err)
-        entry.actualResult = errorOutput.parse({ error: err?.stack || err.toString() })
+        entry.actualResult = errorOutput.parse({
+          error: err?.stack || err.toString(),
+        })
         entry.status = 'error'
       }
     }
@@ -272,9 +312,10 @@ export const getStaticProps = (async () => {
   return { props: { data }, revalidate: 1 }
 }) satisfies GetStaticProps
 
-
-export default function Dashboard({ data }: InferGetStaticPropsType<typeof getStaticProps>) {
-  console.log({data})
+export default function Dashboard({
+  data,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
+  console.log({ data })
 
   return (
     <>
@@ -346,8 +387,9 @@ export default function Dashboard({ data }: InferGetStaticPropsType<typeof getSt
           </div>
         </div>
       </div>
-      <div className=""><Table data={data} /></div>
+      <div className="">
+        <Table data={data} />
+      </div>
     </>
   )
 }
-
