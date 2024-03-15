@@ -13,6 +13,13 @@
     {
       "matchPackageNames": ["@sanity/client"],
       "schedule": ["at any time"]
-    }
+    },
+    {
+      "group": { "semanticCommitType": "chore" },
+      "matchManagers": ["npm", "github-actions", "bun"],
+      "semanticCommitType": "chore",
+      "automerge": true,
+      "groupName": "everything"
+    },
   ]
 }
