@@ -18,6 +18,7 @@ async function expected() {
   await Deno.writeTextFile(
     'artifacts/expected.json',
     JSON.stringify({
+      runtime: 'deno',
       result,
       env: client.env,
       entry,

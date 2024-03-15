@@ -12,6 +12,7 @@ export default async function handler(req: any, res: any) {
   const result = await client.fetch(query)
   res.setHeader('Access-Control-Allow-Origin', '*')
   return res.json({
+    runtime: 'node',
     result,
     env: client.env,
     entry,

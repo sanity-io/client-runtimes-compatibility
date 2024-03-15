@@ -18,6 +18,7 @@ export default {
     const result = await client.fetch(query)
     return new Response(
       JSON.stringify({
+        runtime: 'cloudflare-worker',
         result,
         env: client.env,
         entry,

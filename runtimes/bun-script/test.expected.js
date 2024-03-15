@@ -9,5 +9,5 @@ const result = await client.fetch(query)
 
 await write(
   'artifacts/expected.json',
-  JSON.stringify({ result, env: client.env, entry, conditions }),
+  JSON.stringify({  runtime: 'bun', result, env: client.env, entry, conditions }),
 )

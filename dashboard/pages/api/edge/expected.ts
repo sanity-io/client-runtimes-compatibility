@@ -12,6 +12,7 @@ export default async function handler() {
   const result = await client.fetch(query)
   return new Response(
     JSON.stringify({
+      runtime: 'vercel-edge',
       result,
       env: client.env,
       entry,
