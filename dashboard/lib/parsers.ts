@@ -80,46 +80,41 @@ const outputEnv = z
   })
   .strict()
 
-const outputBun = debugOutput
-  .extend({
-    runtime: z.literal('bun'),
-    env: outputEnv.extend({
-      // https://github.com/oven-sh/bun-types/blob/7c3e6b1fbce0d12a41a9b960ae661252ae9feb35/globals.d.ts#L220-L221
-      'process.isBun': z.literal(1).or(z.literal(true)),
-    }),
-  })
-const outputDeno = debugOutput
-  .extend({
-    runtime: z.literal('deno'),
-    env: outputEnv.extend({
-      'Deno.version.deno': z.string(),
-    }),
-  })
-const outputEdge = debugOutput
-  .extend({
-    runtime: z.literal('vercel-edge'),
-    env: outputEnv.extend({
-      // https://github.com/vercel/edge-runtime/blob/d570f01a3df237d91990177764a01e229b574f24/packages/ponyfill/src/index.js#L2
-      EdgeRuntime: z.string(),
-    }),
-  })
-const outputWorker = debugOutput
-  .extend({
-    runtime: z.literal('cloudflare-worker'),
-    env: outputEnv.extend({
-      // https://developers.cloudflare.com/workers/runtime-apis/web-standards/#navigatoruseragent
-      'navigator.userAgent': z.literal('Cloudflare-Workers'),
-    }),
-  })
-const outputNode = debugOutput
-  .extend({
-    runtime: z.literal('node'),
-    env: outputEnv.extend({
-      // https://stackoverflow.com/a/35813135
-      'process.release.name': z.literal('node'),
-    }),
-  })
-const successOutputExpected = z.discriminatedUnion('runtime',[
+const outputBun = debugOutput.extend({
+  runtime: z.literal('bun'),
+  env: outputEnv.extend({
+    // https://github.com/oven-sh/bun-types/blob/7c3e6b1fbce0d12a41a9b960ae661252ae9feb35/globals.d.ts#L220-L221
+    'process.isBun': z.literal(1).or(z.literal(true)),
+  }),
+})
+const outputDeno = debugOutput.extend({
+  runtime: z.literal('deno'),
+  env: outputEnv.extend({
+    'Deno.version.deno': z.string(),
+  }),
+})
+const outputEdge = debugOutput.extend({
+  runtime: z.literal('vercel-edge'),
+  env: outputEnv.extend({
+    // https://github.com/vercel/edge-runtime/blob/d570f01a3df237d91990177764a01e229b574f24/packages/ponyfill/src/index.js#L2
+    EdgeRuntime: z.string(),
+  }),
+})
+const outputWorker = debugOutput.extend({
+  runtime: z.literal('cloudflare-worker'),
+  env: outputEnv.extend({
+    // https://developers.cloudflare.com/workers/runtime-apis/web-standards/#navigatoruseragent
+    'navigator.userAgent': z.literal('Cloudflare-Workers'),
+  }),
+})
+const outputNode = debugOutput.extend({
+  runtime: z.literal('node'),
+  env: outputEnv.extend({
+    // https://stackoverflow.com/a/35813135
+    'process.release.name': z.literal('node'),
+  }),
+})
+const successOutputExpected = z.discriminatedUnion('runtime', [
   outputBun,
   outputDeno,
   outputEdge,
