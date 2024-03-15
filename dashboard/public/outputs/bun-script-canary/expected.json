@@ -1,4 +1,5 @@
 {
+  "runtime": "bun",
   "result": 216,
   "env": {
     "document": false,
