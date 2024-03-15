@@ -20,7 +20,13 @@ async function expected() {
   const result = await client.fetch(query)
   await writeFile(
     'artifacts/expected.json',
-    JSON.stringify({ runtime: 'node', result, env: client.env, entry, conditions }),
+    JSON.stringify({
+      runtime: 'node',
+      result,
+      env: client.env,
+      entry,
+      conditions,
+    }),
   )
 }
 async function actual() {
