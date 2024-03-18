@@ -1,8 +1,19 @@
 {
   "scripts": {
-    "format": "npx prettier --ignore-path .gitignore --write ."
+    "format": "npx prettier --ignore-path .gitignore --write .",
+    "update": "npm run update:bun && npm run update:cfa && npm run update:cfna && npm run update:dashboard && npm run update:ncjs && npm run update:nesm",
+    "update:bun": "(cd runtimes/bun-script && bun install)",
+    "update:cfa": "(cd runtimes/cloudflare-worker-actual && npm install)",
+    "update:cfna": "(cd runtimes/cloudflare-worker-native-actual && npm install)",
+    "update:dashboard": "(cd dashboard && npm install)",
+    "update:ncjs": "(cd runtimes/node-cjs-script && npm install)",
+    "update:nesm": "(cd runtimes/node-esm-script && npm install)"
   },
   "prettier": {
+    "plugins": [
+      "prettier-plugin-packagejson",
+      "prettier-plugin-tailwindcss"
+    ],
     "semi": false,
     "singleQuote": true,
     "tailwindConfig": "./dashboard/tailwind.config.js"

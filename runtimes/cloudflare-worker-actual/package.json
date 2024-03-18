@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@sanity/client": "6.15.5"
+    "@sanity/client": "6.15.6-canary.0"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240314.0",
