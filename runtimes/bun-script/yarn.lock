@@ -2,14 +2,14 @@
 # yarn lockfile v1
 
 
-"@sanity/client@6.15.6-canary.0":
-  version "6.15.6-canary.0"
-  resolved "https://registry.yarnpkg.com/@sanity/client/-/client-6.15.6-canary.0.tgz#219ba7385bca71ac0f9c9c51b4febedf8ea9db9f"
-  integrity sha512-PFUeXKU1lnaAaiVYCdmJS+kbhNTlqlDkJzh/wXSEs+9hVqcSKentuXp9XVihYuSxdcV62hbYlxdCqdNXZHic2w==
+"@sanity/client@6.15.6":
+  version "6.15.6"
+  resolved "https://registry.yarnpkg.com/@sanity/client/-/client-6.15.6.tgz#cad3732e576e7661e264a8299844b10055d34d22"
+  integrity sha512-pnKmi5kjuyw4fMz9JXzQq7ivAR8A52Thkkzmaue125uz6olPBvVGQmQ8tk1xOuKu3eX73nKZpFuCw4eqkG9/iA==
   dependencies:
     "@sanity/eventsource" "^5.0.0"
     "@vercel/stega" "0.1.0"
-    get-it "8.4.14-canary.0"
+    get-it "^8.4.14"
     rxjs "^7.0.0"
 
 "@sanity/eventsource@^5.0.0":
@@ -108,10 +108,10 @@ from2@^2.3.0:
     inherits "^2.0.1"
     readable-stream "^2.0.0"
 
-get-it@8.4.14-canary.0:
-  version "8.4.14-canary.0"
-  resolved "https://registry.yarnpkg.com/get-it/-/get-it-8.4.14-canary.0.tgz#188cb5ab4548ec0d645394d1b5cfb587f53d6db6"
-  integrity sha512-WavRIbbHVe1F6dmTjJGY+0pySEJElR82BcFTm0uuATEdP62U+Kvl44mbJ0Was7myXd5ejmasXQJxYWJWIJJj2Q==
+get-it@^8.4.14:
+  version "8.4.14"
+  resolved "https://registry.yarnpkg.com/get-it/-/get-it-8.4.14.tgz#71e995b69ebbf48fd0ac18fadc5390384df66f9d"
+  integrity sha512-dhiRE7Xk8/mg/RhKr9u01KY3nQzVPZfN3shKkEWj1TsuACkZtEeVAuQ5tF5np0qIcSayWowKOcQ5dxCnZBM+hg==
   dependencies:
     debug "^4.3.4"
     decompress-response "^7.0.0"
