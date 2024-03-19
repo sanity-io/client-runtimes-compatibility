@@ -111,14 +111,17 @@ jobs:
 
   artifacts:
     runs-on: ubuntu-latest
-    # Re-enable when Bun starts working again
-    # needs: [bun, deno, node]
-    needs: [deno, node]
+    needs: [bun, deno, node]
     name: Commit artifacts to dashboard/public
     if: always()
     # if: github.ref_name == 'main'
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          cache: npm
+          node-version: lts/*
+      - run: npm install
       - uses: actions/download-artifact@v3
         id: download
         with:
