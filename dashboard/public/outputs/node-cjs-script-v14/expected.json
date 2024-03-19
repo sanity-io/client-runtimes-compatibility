@@ -1,1 +1,14 @@
-{"runtime":"node","result":217,"env":{"document":false,"fetch":false,"globals":["globalThis","global"],"process.release.name":"node","process.version":"v14.21.3","process.versions":{"node":"14.21.3","v8":"8.4.371.23-node.88"}},"entry":"exports.require","conditions":["node","node.require","require"]}
+{
+  "runtime": "node",
+  "result": 217,
+  "env": {
+    "document": false,
+    "fetch": false,
+    "globals": ["globalThis", "global"],
+    "process.release.name": "node",
+    "process.version": "v14.21.3",
+    "process.versions": { "node": "14.21.3", "v8": "8.4.371.23-node.88" }
+  },
+  "entry": "exports.require",
+  "conditions": ["node", "node.require", "require"]
+}
