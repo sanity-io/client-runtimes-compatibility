@@ -1,1 +1,24 @@
-{"runtime":"node","result":217,"env":{"document":false,"fetch":true,"globals":["globalThis","global"],"process.release.name":"node","process.version":"v18.19.1","process.versions":{"node":"18.19.1","acorn":"8.10.0","ada":"2.7.2","base64":"0.5.0","cjs_module_lexer":"1.2.2","simdutf":"3.2.18","undici":"5.28.3","uvwasi":"0.0.19","v8":"10.2.154.26-node.28"}},"entry":"exports.require","conditions":["node","node.require","require"]}
+{
+  "runtime": "node",
+  "result": 217,
+  "env": {
+    "document": false,
+    "fetch": true,
+    "globals": ["globalThis", "global"],
+    "process.release.name": "node",
+    "process.version": "v18.19.1",
+    "process.versions": {
+      "node": "18.19.1",
+      "acorn": "8.10.0",
+      "ada": "2.7.2",
+      "base64": "0.5.0",
+      "cjs_module_lexer": "1.2.2",
+      "simdutf": "3.2.18",
+      "undici": "5.28.3",
+      "uvwasi": "0.0.19",
+      "v8": "10.2.154.26-node.28"
+    }
+  },
+  "entry": "exports.require",
+  "conditions": ["node", "node.require", "require"]
+}
