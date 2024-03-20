@@ -1,10 +1,10 @@
 {
   "dependencies": {
-    "@sanity/client": "6.15.6"
+    "@sanity/client": "6.15.7"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20240314.0",
+    "@cloudflare/workers-types": "^4.20240320.1",
     "typescript": "^5.4.2",
-    "wrangler": "^3.34.2"
+    "wrangler": "^3.36.0"
   }
 }
