@@ -6,15 +6,15 @@
     "fetch": true,
     "globals": ["globalThis", "global"],
     "process.release.name": "node",
-    "process.version": "v20.12.0",
+    "process.version": "v20.12.1",
     "process.versions": {
-      "node": "20.12.0",
+      "node": "20.12.1",
       "acorn": "8.11.3",
       "ada": "2.7.6",
       "base64": "0.5.2",
       "cjs_module_lexer": "1.2.2",
       "simdutf": "4.0.8",
-      "undici": "5.28.3",
+      "undici": "5.28.4",
       "uvwasi": "0.0.20",
       "v8": "11.3.244.8-node.19"
     }
