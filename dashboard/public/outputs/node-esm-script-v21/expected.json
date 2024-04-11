@@ -7,9 +7,9 @@
     "globals": ["globalThis", "global", "navigator"],
     "process.release.name": "node",
     "navigator.userAgent": "Node.js/21",
-    "process.version": "v21.7.2",
+    "process.version": "v21.7.3",
     "process.versions": {
-      "node": "21.7.2",
+      "node": "21.7.3",
       "acorn": "8.11.3",
       "ada": "2.7.6",
       "base64": "0.5.2",
