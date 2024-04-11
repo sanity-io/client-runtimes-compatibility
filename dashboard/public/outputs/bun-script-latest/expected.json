@@ -1,34 +1,25 @@
 {
   "runtime": "bun",
-  "result": 218,
+  "result": 221,
   "env": {
     "document": false,
     "fetch": true,
     "globals": ["globalThis", "self", "global", "navigator"],
     "process.isBun": true,
     "process.release.name": "node",
-    "navigator.userAgent": "Bun/1.0.36",
-    "import.meta.url": "file:///home/runner/work/client-runtimes-compatibility/client-runtimes-compatibility/runtimes/bun-script/node_modules/@sanity/runtimes-test-client/lib/env.mjs",
+    "navigator.userAgent": "Bun/1.1.3",
     "process.version": "v21.6.0",
     "process.versions": {
       "node": "21.6.0",
-      "bun": "1.0.36",
+      "bun": "1.1.3",
       "webkit": "a780bdf0255ae1a7ed15e4b3f31c14af705facae",
-      "uwebsockets": "40f61ebb91e1bcf11672e820ecd7bf0af103c6fb",
+      "uwebsockets": "2615dc742e4fd8c87914ca2d07c4b940f1f4731d",
       "tinycc": "2d3ad9e0d32194ad7fd867b66ebe218dcc8cb5cd",
       "lolhtml": "8d4c273ded322193d017042d1f48df2766b0f88b",
-      "usockets": "40f61ebb91e1bcf11672e820ecd7bf0af103c6fb",
+      "usockets": "2615dc742e4fd8c87914ca2d07c4b940f1f4731d",
       "v8": "11.3.244.8-node.15"
     }
   },
-  "entry": "exports.worker",
-  "conditions": [
-    "bun",
-    "import",
-    "node",
-    "node.deno",
-    "node.import",
-    "worker",
-    "worker.node"
-  ]
+  "entry": "exports.node.import+exports.node.require",
+  "conditions": ["bun", "import", "node", "node.deno", "node.import"]
 }
