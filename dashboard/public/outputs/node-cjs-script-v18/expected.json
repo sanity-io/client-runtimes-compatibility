@@ -1,14 +1,14 @@
 {
   "runtime": "node",
-  "result": 221,
+  "result": 222,
   "env": {
     "document": false,
     "fetch": true,
     "globals": ["globalThis", "global"],
     "process.release.name": "node",
-    "process.version": "v18.20.1",
+    "process.version": "v18.20.2",
     "process.versions": {
-      "node": "18.20.1",
+      "node": "18.20.2",
       "acorn": "8.10.0",
       "ada": "2.7.6",
       "base64": "0.5.2",
