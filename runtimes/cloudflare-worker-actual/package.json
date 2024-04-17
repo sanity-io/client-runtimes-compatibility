@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@sanity/client": "6.15.14"
+    "@sanity/client": "6.15.15"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240405.0",
