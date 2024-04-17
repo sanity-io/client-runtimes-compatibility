@@ -2,14 +2,13 @@
 # yarn lockfile v1
 
 
-"@sanity/client@6.15.14":
-  version "6.15.14"
-  resolved "https://registry.yarnpkg.com/@sanity/client/-/client-6.15.14.tgz#546f2551f2454f72ec587f67565deca9570c4206"
-  integrity sha512-GusjgP57Xm/CVqHBAVjv4jLSFD9Pu6KliNpHAQVRRQRKVZ5grl0Rd85UDowXziLFGD3OjHH3ssdQWXR3jzKGkA==
+"@sanity/client@6.15.15":
+  version "6.15.15"
+  resolved "https://registry.yarnpkg.com/@sanity/client/-/client-6.15.15.tgz#c1727f7c825df4eb544ec2b3fc7921a23295ad3e"
+  integrity sha512-1+DMPDu6Lg+tJTACedDtBvx1J7diluk6HVlYIXi/bRQgtv/d4sgpyaIWgEw6NKy0/+V8h5vAv40MZIf1Q6gomw==
   dependencies:
     "@sanity/eventsource" "^5.0.0"
-    "@vercel/stega" "0.1.0"
-    get-it "^8.4.23"
+    get-it "^8.4.24"
     rxjs "^7.0.0"
 
 "@sanity/eventsource@^5.0.0":
@@ -60,11 +59,6 @@
   dependencies:
     "@types/node" "*"
 
-"@vercel/stega@0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@vercel/stega/-/stega-0.1.0.tgz#2eadbbc9eb0eaab26d28b0c443a922d78c23b6e3"
-  integrity sha512-5b0PkOJsFBX5alChuIO3qpkt5vIZBevzLPhUQ1UP8UzVjL3F1VllnZxp/thfD8R5ol7D7WHkgZHIjdUBX4tDpQ==
-
 bun-types@^1.0.29:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/bun-types/-/bun-types-1.1.4.tgz#9116f1014adfd584714b877f66152fa303f58ff2"
@@ -108,7 +102,7 @@ from2@^2.3.0:
     inherits "^2.0.1"
     readable-stream "^2.0.0"
 
-get-it@^8.4.23:
+get-it@^8.4.24:
   version "8.4.24"
   resolved "https://registry.yarnpkg.com/get-it/-/get-it-8.4.24.tgz#013d35fc296793171437349cc2a76d59b49e72c1"
   integrity sha512-6kvKUBHvM5gxbqS616pFly8kmQqbsRsatcJL5Qm1OXd0UJJVTdew7ZRE59KPWoLUEuBVxsr/E5OObTmXMa00Ww==

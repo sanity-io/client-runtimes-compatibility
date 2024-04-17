@@ -4,7 +4,7 @@
     "test": "node test.js"
   },
   "dependencies": {
-    "@sanity/client": "6.15.14",
+    "@sanity/client": "6.15.15",
     "@sanity/runtimes-test-client": "latest",
     "@tsconfig/node-lts-strictest": "^18.12.1",
     "@types/node": "^18.15.5",
