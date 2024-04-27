@@ -7,16 +7,16 @@
     "globals": ["globalThis", "self", "global", "navigator"],
     "process.isBun": true,
     "process.release.name": "node",
-    "navigator.userAgent": "Bun/1.1.4",
+    "navigator.userAgent": "Bun/1.1.5",
     "process.version": "v21.6.0",
     "process.versions": {
       "node": "21.6.0",
-      "bun": "1.1.4",
+      "bun": "1.1.5",
       "webkit": "a780bdf0255ae1a7ed15e4b3f31c14af705facae",
-      "uwebsockets": "fbe2fe0c3fd198530db51d9f54e0a03ffff9f22d",
+      "uwebsockets": "b257a309772db2e9dfb745f97068aea6a32ca151",
       "tinycc": "2d3ad9e0d32194ad7fd867b66ebe218dcc8cb5cd",
       "lolhtml": "8d4c273ded322193d017042d1f48df2766b0f88b",
-      "usockets": "fbe2fe0c3fd198530db51d9f54e0a03ffff9f22d",
+      "usockets": "b257a309772db2e9dfb745f97068aea6a32ca151",
       "v8": "11.3.244.8-node.15"
     }
   },
