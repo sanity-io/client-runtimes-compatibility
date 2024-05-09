@@ -1,20 +1,20 @@
 {
   "runtime": "deno",
-  "result": 225,
+  "result": 226,
   "env": {
     "document": false,
     "fetch": true,
     "globals": ["globalThis", "self", "global", "navigator"],
     "process.release.name": "node",
-    "navigator.userAgent": "Deno/1.43.1",
+    "navigator.userAgent": "Deno/1.43.2",
     "import.meta.url": "file:///home/runner/.cache/deno/npm/registry.npmjs.org/@sanity/runtimes-test-client/2.4.28/lib/env.mjs",
-    "Deno.version.deno": "1.43.1",
+    "Deno.version.deno": "1.43.2",
     "process.version": "v20.11.1",
     "process.versions": {
       "node": "20.11.1",
-      "deno": "1.43.1",
+      "deno": "1.43.2",
       "v8": "12.4.254.12",
-      "typescript": "5.4.3"
+      "typescript": "5.4.5"
     }
   },
   "entry": "exports.deno",
