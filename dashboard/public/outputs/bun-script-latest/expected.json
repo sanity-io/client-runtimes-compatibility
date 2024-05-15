@@ -1,6 +1,6 @@
 {
   "runtime": "bun",
-  "result": 226,
+  "result": 227,
   "env": {
     "document": false,
     "fetch": true,
