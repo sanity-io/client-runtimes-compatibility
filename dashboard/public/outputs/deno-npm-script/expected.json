@@ -1,6 +1,6 @@
 {
   "runtime": "deno",
-  "result": 228,
+  "result": 229,
   "env": {
     "document": false,
     "fetch": true,

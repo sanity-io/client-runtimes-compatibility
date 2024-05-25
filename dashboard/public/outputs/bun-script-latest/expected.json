@@ -1,22 +1,22 @@
 {
   "runtime": "bun",
-  "result": 228,
+  "result": 229,
   "env": {
     "document": false,
     "fetch": true,
     "globals": ["globalThis", "self", "global", "navigator"],
     "process.isBun": true,
     "process.release.name": "node",
-    "navigator.userAgent": "Bun/1.1.9",
+    "navigator.userAgent": "Bun/1.1.10",
     "process.version": "v22.2.0",
     "process.versions": {
       "node": "22.2.0",
-      "bun": "1.1.9",
+      "bun": "1.1.10",
       "webkit": "a780bdf0255ae1a7ed15e4b3f31c14af705facae",
-      "uwebsockets": "bb13798d9802d26770d8467a200022a2b91f7afd",
+      "uwebsockets": "5102a944307d56933a6bb039b99ad76a758b46e4",
       "tinycc": "2d3ad9e0d32194ad7fd867b66ebe218dcc8cb5cd",
       "lolhtml": "8d4c273ded322193d017042d1f48df2766b0f88b",
-      "usockets": "bb13798d9802d26770d8467a200022a2b91f7afd",
+      "usockets": "5102a944307d56933a6bb039b99ad76a758b46e4",
       "v8": "11.3.244.8-node.15"
     }
   },
