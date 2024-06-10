@@ -7,7 +7,7 @@
   "dependencies": {
     "@heroicons/react": "^2.0.16",
     "@sanity/client": "6.15.20",
-    "@sanity/icons": "^2.2.2",
+    "@sanity/icons": "^3.0.0",
     "@sanity/runtimes-test-client": "latest",
     "@sanity/ui": "^2.0.7",
     "@tanstack/react-table": "^8.12.0",
