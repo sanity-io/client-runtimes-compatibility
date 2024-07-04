@@ -1,22 +1,22 @@
 {
   "runtime": "bun",
-  "result": 235,
+  "result": 236,
   "env": {
     "document": false,
     "fetch": true,
     "globals": ["globalThis", "self", "global", "navigator"],
     "process.isBun": true,
     "process.release.name": "node",
-    "navigator.userAgent": "Bun/1.1.17",
+    "navigator.userAgent": "Bun/1.1.18",
     "process.version": "v22.3.0",
     "process.versions": {
       "node": "22.3.0",
-      "bun": "1.1.17",
-      "uwebsockets": "bb66bba1bf6d57983e7efef7ab706bce12137028",
-      "webkit": "64d04ec1a65d91326c5f2298b9c7d05b56125252",
+      "bun": "1.1.18",
+      "uwebsockets": "5a0b93523134ca0043ee7ae84f01003aa4b7ff69",
+      "webkit": "615e8585f96aa718b0f5158210259b83fe8440ea",
       "tinycc": "ab631362d839333660a265d3084d8ff060b96753",
       "lolhtml": "8d4c273ded322193d017042d1f48df2766b0f88b",
-      "usockets": "bb66bba1bf6d57983e7efef7ab706bce12137028",
+      "usockets": "5a0b93523134ca0043ee7ae84f01003aa4b7ff69",
       "lshpack": "3d0f1fc1d6e66a642e7a98c55deb38aa986eb4b0",
       "zstd": "794ea1b0afca0f020f4e57b6732332231fb23c70",
       "v8": "12.4.254.14-node.12"
