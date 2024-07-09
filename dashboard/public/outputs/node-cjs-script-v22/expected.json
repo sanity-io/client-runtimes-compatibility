@@ -1,15 +1,15 @@
 {
   "runtime": "node",
-  "result": 237,
+  "result": 238,
   "env": {
     "document": false,
     "fetch": true,
     "globals": ["globalThis", "global", "navigator"],
     "process.release.name": "node",
     "navigator.userAgent": "Node.js/22",
-    "process.version": "v22.4.0",
+    "process.version": "v22.4.1",
     "process.versions": {
-      "node": "22.4.0",
+      "node": "22.4.1",
       "acorn": "8.11.3",
       "ada": "2.8.0",
       "cjs_module_lexer": "1.2.2",
