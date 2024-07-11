@@ -6,15 +6,15 @@
     "fetch": true,
     "globals": ["globalThis", "self", "window", "global", "navigator"],
     "process.release.name": "node",
-    "navigator.userAgent": "Deno/1.44.4",
+    "navigator.userAgent": "Deno/1.45.0",
     "import.meta.url": "https://esm.sh/v135/@sanity/runtimes-test-client@2.4.28/denonext/runtimes-test-client.mjs",
-    "Deno.version.deno": "1.44.4",
+    "Deno.version.deno": "1.45.0",
     "process.version": "v20.11.1",
     "process.versions": {
       "node": "20.11.1",
-      "deno": "1.44.4",
-      "v8": "12.6.228.9",
-      "typescript": "5.4.5"
+      "deno": "1.45.0",
+      "v8": "12.7.224.12",
+      "typescript": "5.5.2"
     }
   },
   "entry": "exports.deno",
