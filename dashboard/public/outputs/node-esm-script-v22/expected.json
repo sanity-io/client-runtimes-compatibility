@@ -7,19 +7,19 @@
     "globals": ["globalThis", "global", "navigator"],
     "process.release.name": "node",
     "navigator.userAgent": "Node.js/22",
-    "process.version": "v22.4.1",
+    "process.version": "v22.5.0",
     "process.versions": {
-      "node": "22.4.1",
+      "node": "22.5.0",
       "acorn": "8.11.3",
-      "ada": "2.8.0",
+      "ada": "2.9.0",
       "cjs_module_lexer": "1.2.2",
-      "nbytes": "0.0.1",
+      "nbytes": "0.1.0",
       "simdjson": "3.9.4",
-      "simdutf": "5.2.8",
+      "simdutf": "5.3.0",
       "sqlite": "3.46.0",
       "undici": "6.19.2",
       "uvwasi": "0.0.21",
-      "v8": "12.4.254.21-node.15"
+      "v8": "12.4.254.21-node.16"
     }
   },
   "entry": "exports.node.import+exports.node.require",
