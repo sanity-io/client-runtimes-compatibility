@@ -7,9 +7,9 @@
     "globals": ["globalThis", "global", "navigator"],
     "process.release.name": "node",
     "navigator.userAgent": "Node.js/22",
-    "process.version": "v22.5.0",
+    "process.version": "v22.5.1",
     "process.versions": {
-      "node": "22.5.0",
+      "node": "22.5.1",
       "acorn": "8.11.3",
       "ada": "2.9.0",
       "cjs_module_lexer": "1.2.2",
