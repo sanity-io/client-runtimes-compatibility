@@ -1,6 +1,6 @@
 {
   "runtime": "node",
-  "result": 244,
+  "result": 246,
   "env": {
     "document": false,
     "fetch": false,
