@@ -1,18 +1,18 @@
 {
   "runtime": "deno",
-  "result": 249,
+  "result": 250,
   "env": {
     "document": false,
     "fetch": true,
     "globals": ["globalThis", "self", "window", "global", "navigator"],
     "process.release.name": "node",
-    "navigator.userAgent": "Deno/1.46.0",
+    "navigator.userAgent": "Deno/1.46.1",
     "import.meta.url": "https://esm.sh/v135/@sanity/runtimes-test-client@2.4.28/denonext/runtimes-test-client.mjs",
-    "Deno.version.deno": "1.46.0",
+    "Deno.version.deno": "1.46.1",
     "process.version": "v20.11.1",
     "process.versions": {
       "node": "20.11.1",
-      "deno": "1.46.0",
+      "deno": "1.46.1",
       "v8": "12.9.202.2-rusty",
       "typescript": "5.5.2"
     }
