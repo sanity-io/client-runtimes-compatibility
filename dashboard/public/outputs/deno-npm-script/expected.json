@@ -6,13 +6,13 @@
     "fetch": true,
     "globals": ["globalThis", "global", "navigator"],
     "process.release.name": "node",
-    "navigator.userAgent": "Deno/2.0.1",
+    "navigator.userAgent": "Deno/2.0.0",
     "import.meta.url": "file:///home/runner/.cache/deno/npm/registry.npmjs.org/@sanity/runtimes-test-client/2.4.28/lib/env.mjs",
-    "Deno.version.deno": "2.0.1",
+    "Deno.version.deno": "2.0.0",
     "process.version": "v20.11.1",
     "process.versions": {
       "node": "20.11.1",
-      "deno": "2.0.1",
+      "deno": "2.0.0",
       "v8": "12.9.202.13-rusty",
       "typescript": "5.6.2"
     }
