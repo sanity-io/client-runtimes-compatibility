@@ -7,21 +7,21 @@
     "globals": ["globalThis", "global", "navigator"],
     "process.release.name": "node",
     "navigator.userAgent": "Node.js/23",
-    "process.version": "v23.0.0",
+    "process.version": "v23.1.0",
     "process.versions": {
-      "node": "23.0.0",
+      "node": "23.1.0",
       "acorn": "8.12.1",
-      "ada": "2.9.0",
-      "amaro": "0.1.8",
+      "ada": "2.9.2",
+      "amaro": "0.1.9",
       "cjs_module_lexer": "1.4.1",
       "nbytes": "0.1.1",
       "ncrypto": "0.0.1",
       "simdjson": "3.10.0",
-      "simdutf": "5.5.0",
+      "simdutf": "5.6.0",
       "sqlite": "3.46.1",
       "undici": "6.20.0",
       "uvwasi": "0.0.21",
-      "v8": "12.9.202.26-node.10"
+      "v8": "12.9.202.28-node.11"
     }
   },
   "entry": "exports.require",
