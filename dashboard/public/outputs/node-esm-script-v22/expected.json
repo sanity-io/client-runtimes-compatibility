@@ -1,15 +1,15 @@
 {
   "runtime": "node",
-  "result": 261,
+  "result": 264,
   "env": {
     "document": false,
     "fetch": true,
     "globals": ["globalThis", "global", "navigator"],
     "process.release.name": "node",
     "navigator.userAgent": "Node.js/22",
-    "process.version": "v22.9.0",
+    "process.version": "v22.11.0",
     "process.versions": {
-      "node": "22.9.0",
+      "node": "22.11.0",
       "acorn": "8.12.1",
       "ada": "2.9.0",
       "amaro": "0.1.8",
@@ -19,9 +19,9 @@
       "simdjson": "3.10.0",
       "simdutf": "5.5.0",
       "sqlite": "3.46.1",
-      "undici": "6.19.8",
+      "undici": "6.20.0",
       "uvwasi": "0.0.21",
-      "v8": "12.4.254.21-node.19"
+      "v8": "12.4.254.21-node.21"
     }
   },
   "entry": "exports.node.import+exports.node.require",
