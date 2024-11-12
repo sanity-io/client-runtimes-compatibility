@@ -1,25 +1,25 @@
 {
   "runtime": "node",
-  "result": 263,
+  "result": 264,
   "env": {
     "document": false,
     "fetch": true,
     "globals": ["globalThis", "global", "navigator"],
     "process.release.name": "node",
     "navigator.userAgent": "Node.js/23",
-    "process.version": "v23.1.0",
+    "process.version": "v23.2.0",
     "process.versions": {
-      "node": "23.1.0",
-      "acorn": "8.12.1",
+      "node": "23.2.0",
+      "acorn": "8.14.0",
       "ada": "2.9.2",
-      "amaro": "0.1.9",
+      "amaro": "0.2.0",
       "cjs_module_lexer": "1.4.1",
       "nbytes": "0.1.1",
       "ncrypto": "0.0.1",
       "simdjson": "3.10.0",
       "simdutf": "5.6.0",
-      "sqlite": "3.46.1",
-      "undici": "6.20.0",
+      "sqlite": "3.47.0",
+      "undici": "6.20.1",
       "uvwasi": "0.0.21",
       "v8": "12.9.202.28-node.11"
     }
