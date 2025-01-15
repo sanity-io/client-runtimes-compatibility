@@ -4,10 +4,10 @@
   "env": {
     "document": false,
     "fetch": true,
-    "globals": ["globalThis", "self", "global", "navigator"],
+    "globals": ["globalThis", "self", "window", "global", "navigator"],
     "process.release.name": "node",
     "navigator.userAgent": "Deno/2.1.5",
-    "import.meta.url": "https://esm.sh/v135/@sanity/runtimes-test-client@2.4.28/denonext/runtimes-test-client.mjs",
+    "import.meta.url": "https://esm.sh/@sanity/runtimes-test-client@2.4.28/denonext/runtimes-test-client.mjs",
     "Deno.version.deno": "2.1.5",
     "process.version": "v20.11.1",
     "process.versions": {
@@ -18,12 +18,5 @@
     }
   },
   "entry": "exports.deno",
-  "conditions": [
-    "deno",
-    "import",
-    "module",
-    "worker",
-    "worker.browser",
-    "worker.node"
-  ]
+  "conditions": ["deno", "import", "module"]
 }
