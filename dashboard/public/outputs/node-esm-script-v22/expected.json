@@ -7,9 +7,9 @@
     "globals": ["globalThis", "global", "navigator"],
     "process.release.name": "node",
     "navigator.userAgent": "Node.js/22",
-    "process.version": "v22.13.0",
+    "process.version": "v22.13.1",
     "process.versions": {
-      "node": "22.13.0",
+      "node": "22.13.1",
       "acorn": "8.14.0",
       "ada": "2.9.2",
       "amaro": "0.2.0",
@@ -19,7 +19,7 @@
       "simdjson": "3.10.1",
       "simdutf": "5.6.4",
       "sqlite": "3.47.2",
-      "undici": "6.21.0",
+      "undici": "6.21.1",
       "uvwasi": "0.0.21",
       "v8": "12.4.254.21-node.22"
     }
