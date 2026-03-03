@@ -15,7 +15,7 @@ jobs:
       run:
         working-directory: runtimes/bun-script
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: oven-sh/setup-bun@123c6c4e2fea3eb7bffaa91a85eb6b3d505bf7af # v2
         with:
           bun-version: ${{ matrix.node-version }}

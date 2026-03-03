@@ -35,7 +35,7 @@ jobs:
         working-directory: runtimes/${{ matrix.test }}
     name: Bun ${{ matrix.bun-version }} ${{ matrix.test }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: oven-sh/setup-bun@123c6c4e2fea3eb7bffaa91a85eb6b3d505bf7af # v2
         with:
           bun-version: ${{ matrix.node-version }}
@@ -43,7 +43,7 @@ jobs:
       - run: bun run test:expected
       - run: bun run test:actual
         timeout-minutes: 1
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v5
         with:
           name: ${{ matrix.test }}-${{ matrix.bun-version }}
           path: runtimes/${{ matrix.test }}/artifacts/*.json
@@ -62,13 +62,13 @@ jobs:
         working-directory: runtimes/${{ matrix.test }}
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
       - uses: denoland/setup-deno@v1
         with:
           deno-version: vx.x.x
       - run: deno task test
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v5
         with:
           name: ${{ matrix.test }}
           path: runtimes/${{ matrix.test }}/artifacts/*.json
@@ -86,8 +86,8 @@ jobs:
         working-directory: runtimes/${{ matrix.test }}
     name: Node.js ${{ matrix.node-version }} ${{ matrix.test }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           cache: npm
           check-latest: true
@@ -101,7 +101,7 @@ jobs:
         id: version
         with:
           run: node -e "console.log(process.version.split('.')[0])"
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v5
         with:
           name: ${{ matrix.test }}-${{ steps.version.outputs.stdout }}
           path: runtimes/${{ matrix.test }}/artifacts/*.json
@@ -116,8 +116,8 @@ jobs:
     if: always()
     # if: github.ref_name == 'main'
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           cache: npm
           node-version: lts/*
