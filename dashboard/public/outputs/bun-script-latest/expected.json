@@ -1,26 +1,26 @@
 {
   "runtime": "bun",
-  "result": 272,
+  "result": 374,
   "env": {
     "document": false,
     "fetch": true,
     "globals": ["globalThis", "self", "global", "navigator"],
     "process.isBun": true,
     "process.release.name": "node",
-    "navigator.userAgent": "Bun/1.2.1",
-    "process.version": "v22.6.0",
+    "navigator.userAgent": "Bun/1.3.10",
+    "process.version": "v24.3.0",
     "process.versions": {
-      "node": "22.6.0",
-      "bun": "1.2.1",
-      "uwebsockets": "ce532901ceb43e94f9aa0f5b19a19b8b8b404ae1",
-      "webkit": "9e3b60e4a6438d20ee6f8aa5bec6b71d2b7d213f",
+      "node": "24.3.0",
+      "bun": "1.3.10",
+      "uwebsockets": "30e609e08073cf7114bfb278506962a5b19d0677",
+      "webkit": "0ddf6f47af0a9782a354f61e06d7f83d097d9f84",
       "tinycc": "ab631362d839333660a265d3084d8ff060b96753",
       "lolhtml": "8d4c273ded322193d017042d1f48df2766b0f88b",
       "libdeflate": "dc76454a39e7e83b68c3704b6e3784654f8d5ac5",
-      "usockets": "ce532901ceb43e94f9aa0f5b19a19b8b8b404ae1",
+      "usockets": "30e609e08073cf7114bfb278506962a5b19d0677",
       "lshpack": "3d0f1fc1d6e66a642e7a98c55deb38aa986eb4b0",
       "zstd": "794ea1b0afca0f020f4e57b6732332231fb23c70",
-      "v8": "12.4.254.14-node.12"
+      "v8": "13.6.233.10-node.18"
     }
   },
   "entry": "exports.node.import+exports.node.require",
