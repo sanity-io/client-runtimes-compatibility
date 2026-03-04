@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.16",
-    "@sanity/client": "6.20.2",
+    "@sanity/client": "7.16.0",
     "@sanity/icons": "^3.0.0",
     "@sanity/runtimes-test-client": "latest",
     "@sanity/ui": "^2.0.7",
