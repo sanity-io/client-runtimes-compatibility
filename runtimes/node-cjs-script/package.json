@@ -4,11 +4,11 @@
     "test": "node test.js"
   },
   "dependencies": {
-    "@sanity/client": "6.20.2",
+    "@sanity/client": "7.16.0",
     "@sanity/runtimes-test-client": "latest",
     "@tsconfig/node-lts-strictest": "^18.12.1",
     "@types/node": "^18.15.5",
     "typescript": "^5.0.2",
-    "write-file-atomic": "^5.0.0"
+    "write-file-atomic": "^7.0.1"
   }
 }
