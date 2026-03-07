@@ -6,16 +6,16 @@
     "fetch": true,
     "globals": ["globalThis", "global"],
     "process.release.name": "node",
-    "process.version": "v20.20.0",
+    "process.version": "v20.20.1",
     "process.versions": {
-      "node": "20.20.0",
-      "acorn": "8.15.0",
+      "node": "20.20.1",
+      "acorn": "8.16.0",
       "ada": "2.9.2",
-      "cjs_module_lexer": "2.1.0",
+      "cjs_module_lexer": "2.2.0",
       "simdutf": "6.4.2",
       "undici": "6.23.0",
       "uvwasi": "0.0.23",
-      "v8": "11.3.244.8-node.33"
+      "v8": "11.3.244.8-node.34"
     }
   },
   "entry": "exports.require",
