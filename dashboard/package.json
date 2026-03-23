@@ -20,7 +20,7 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@types/node": "^20.19.37",
+    "@types/node": "^22.19.15",
     "@types/react": "^18.3.3",
     "autoprefixer": "^10.4.19",
     "eslint": "^8.57.0",
