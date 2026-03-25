@@ -7,9 +7,9 @@
     "globals": ["globalThis", "global", "navigator"],
     "process.release.name": "node",
     "navigator.userAgent": "Node.js/25",
-    "process.version": "v25.8.1",
+    "process.version": "v25.8.2",
     "process.versions": {
-      "node": "25.8.1",
+      "node": "25.8.2",
       "acorn": "8.16.0",
       "ada": "3.4.3",
       "amaro": "1.1.8",
@@ -20,9 +20,9 @@
       "simdjson": "4.3.1",
       "simdutf": "7.3.3",
       "sqlite": "3.52.0",
-      "undici": "7.22.0",
+      "undici": "7.24.4",
       "uvwasi": "0.0.23",
-      "v8": "14.1.146.11-node.21",
+      "v8": "14.1.146.11-node.24",
       "zstd": "1.5.7"
     }
   },
