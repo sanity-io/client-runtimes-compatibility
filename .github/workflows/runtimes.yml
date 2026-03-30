@@ -132,7 +132,7 @@ jobs:
       - run: git status
       - run: npx prettier --ignore-path .gitignore --write dashboard/public/outputs
       - run: git status
-      - uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9
+      - uses: EndBug/add-and-commit@290ea2c423ad77ca9c62ae0f5b224379612c0321 # v10
         if: always()
         with:
           commit: --no-verify
