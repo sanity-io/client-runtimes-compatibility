@@ -9,7 +9,7 @@
     "@sanity/client": "7.16.0",
     "@sanity/icons": "^3.0.0",
     "@sanity/runtimes-test-client": "latest",
-    "@sanity/ui": "^2.0.7",
+    "@sanity/ui": "^3.1.14",
     "@tanstack/react-table": "^8.12.0",
     "@types/classnames": "^2.3.1",
     "classnames": "^2.3.2",
